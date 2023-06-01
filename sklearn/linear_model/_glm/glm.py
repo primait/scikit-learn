@@ -169,7 +169,7 @@ class _GeneralizedLinearRegressor(RegressorMixin, BaseEstimator):
         self.warm_start = warm_start
         self.verbose = verbose
 
-    def fit(self, X, y, sample_weight=None):
+    def fit(self, X, y, sample_weight=None, offsets=None):
         """Fit a Generalized Linear Model.
 
         Parameters
@@ -182,6 +182,9 @@ class _GeneralizedLinearRegressor(RegressorMixin, BaseEstimator):
 
         sample_weight : array-like of shape (n_samples,), default=None
             Sample weights.
+        
+        offsets : array-like of shape (n_samples,), default=None
+            Offsets to add to the response.
 
         Returns
         -------
@@ -220,6 +223,7 @@ class _GeneralizedLinearRegressor(RegressorMixin, BaseEstimator):
         linear_loss = LinearModelLoss(
             base_loss=self._base_loss,
             fit_intercept=self.fit_intercept,
+            offsets=offsets,
         )
 
         if not linear_loss.base_loss.in_y_true_range(y):
@@ -319,7 +323,7 @@ class _GeneralizedLinearRegressor(RegressorMixin, BaseEstimator):
 
         return self
 
-    def _linear_predictor(self, X):
+    def _linear_predictor(self, X, offsets=None):
         """Compute the linear_predictor = `X @ coef_ + intercept_`.
 
         Note that we often use the term raw_prediction instead of linear predictor.
@@ -343,9 +347,12 @@ class _GeneralizedLinearRegressor(RegressorMixin, BaseEstimator):
             allow_nd=False,
             reset=False,
         )
-        return X @ self.coef_ + self.intercept_
+        offsets = (
+            offsets if offsets is not None else np.zeros(X.shape[0], dtype=X.dtype)
+        )
+        return X @ self.coef_ + self.intercept_ + offsets
 
-    def predict(self, X):
+    def predict(self, X, offsets=None):
         """Predict using GLM with feature matrix X.
 
         Parameters
@@ -359,7 +366,7 @@ class _GeneralizedLinearRegressor(RegressorMixin, BaseEstimator):
             Returns predicted values.
         """
         # check_array is done in _linear_predictor
-        raw_prediction = self._linear_predictor(X)
+        raw_prediction = self._linear_predictor(X, offsets)
         y_pred = self._base_loss.link.inverse(raw_prediction)
         return y_pred
 

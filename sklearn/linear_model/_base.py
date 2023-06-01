@@ -375,7 +375,7 @@ class LinearClassifierMixin(ClassifierMixin):
     Handles prediction for sparse and dense X.
     """
 
-    def decision_function(self, X):
+    def decision_function(self, X, offsets=None):
         """
         Predict confidence scores for samples.
 
@@ -398,10 +398,11 @@ class LinearClassifierMixin(ClassifierMixin):
         xp, _ = get_namespace(X)
 
         X = self._validate_data(X, accept_sparse="csr", reset=False)
-        scores = safe_sparse_dot(X, self.coef_.T, dense_output=True) + self.intercept_
+        offsets = offsets if offsets is not None else np.zeros(X.shape[0], dtype=X.dtype)
+        scores = safe_sparse_dot(X, self.coef_.T, dense_output=True) + self.intercept_ + offsets
         return xp.reshape(scores, -1) if scores.shape[1] == 1 else scores
 
-    def predict(self, X):
+    def predict(self, X, offsets=None):
         """
         Predict class labels for samples in X.
 
@@ -416,7 +417,7 @@ class LinearClassifierMixin(ClassifierMixin):
             Vector containing the class labels for each sample.
         """
         xp, _ = get_namespace(X)
-        scores = self.decision_function(X)
+        scores = self.decision_function(X, offsets)
         if len(scores.shape) == 1:
             indices = xp.astype(scores > 0, int)
         else:

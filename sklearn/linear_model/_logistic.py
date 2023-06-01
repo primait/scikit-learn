@@ -113,6 +113,7 @@ def _logistic_regression_path(
     sample_weight=None,
     l1_ratio=None,
     n_threads=1,
+    offsets=None,
 ):
     """Compute a Logistic Regression model for a list of regularization
     parameters.
@@ -423,19 +424,19 @@ def _logistic_regression_path(
         target = y_bin
         if solver == "lbfgs":
             loss = LinearModelLoss(
-                base_loss=HalfBinomialLoss(), fit_intercept=fit_intercept
+                base_loss=HalfBinomialLoss(), fit_intercept=fit_intercept, offsets=offsets
             )
             func = loss.loss_gradient
         elif solver == "newton-cg":
             loss = LinearModelLoss(
-                base_loss=HalfBinomialLoss(), fit_intercept=fit_intercept
+                base_loss=HalfBinomialLoss(), fit_intercept=fit_intercept, offsets=offsets
             )
             func = loss.loss
             grad = loss.gradient
             hess = loss.gradient_hessian_product  # hess = [gradient, hessp]
         elif solver == "newton-cholesky":
             loss = LinearModelLoss(
-                base_loss=HalfBinomialLoss(), fit_intercept=fit_intercept
+                base_loss=HalfBinomialLoss(), fit_intercept=fit_intercept, offsets=offsets
             )
         warm_start_sag = {"coef": np.expand_dims(w0, axis=1)}
 
@@ -1127,7 +1128,7 @@ class LogisticRegression(LinearClassifierMixin, SparseCoefMixin, BaseEstimator):
         self.n_jobs = n_jobs
         self.l1_ratio = l1_ratio
 
-    def fit(self, X, y, sample_weight=None):
+    def fit(self, X, y, sample_weight=None, offsets=None):
         """
         Fit the model according to the given training data.
 
@@ -1146,6 +1147,8 @@ class LogisticRegression(LinearClassifierMixin, SparseCoefMixin, BaseEstimator):
 
             .. versionadded:: 0.17
                *sample_weight* support to LogisticRegression.
+        
+        offsets : array-like of shape (n_samples, ) default=None
 
         Returns
         -------
@@ -1309,6 +1312,7 @@ class LogisticRegression(LinearClassifierMixin, SparseCoefMixin, BaseEstimator):
                 max_squared_sum=max_squared_sum,
                 sample_weight=sample_weight,
                 n_threads=n_threads,
+                offsets=offsets,
             )
             for class_, warm_start_coef_ in zip(classes_, warm_start_coef)
         )

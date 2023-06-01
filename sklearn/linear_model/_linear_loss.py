@@ -63,9 +63,10 @@ class LinearModelLoss:
     fit_intercept : bool
     """
 
-    def __init__(self, base_loss, fit_intercept):
+    def __init__(self, base_loss, fit_intercept, offsets=None):
         self.base_loss = base_loss
         self.fit_intercept = fit_intercept
+        self.offsets = offsets
 
     def init_zero_coef(self, X, dtype=None):
         """Allocate coef of correct shape with zeros.
@@ -159,10 +160,12 @@ class LinearModelLoss:
         weights, intercept = self.weight_intercept(coef)
 
         if not self.base_loss.is_multiclass:
-            raw_prediction = X @ weights + intercept
-        else:
-            # weights has shape (n_classes, n_dof)
-            raw_prediction = X @ weights.T + intercept  # ndarray, likely C-contiguous
+            offsets = (
+                self.offsets
+                if self.offsets is not None
+                else np.zeros(X.shape[0], dtype=X.dtype)
+            )
+            raw_prediction = X @ weights + intercept + offsets
 
         return weights, intercept, raw_prediction
 
