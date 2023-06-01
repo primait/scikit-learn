@@ -424,19 +424,25 @@ def _logistic_regression_path(
         target = y_bin
         if solver == "lbfgs":
             loss = LinearModelLoss(
-                base_loss=HalfBinomialLoss(), fit_intercept=fit_intercept, offsets=offsets
+                base_loss=HalfBinomialLoss(),
+                fit_intercept=fit_intercept,
+                offsets=offsets,
             )
             func = loss.loss_gradient
         elif solver == "newton-cg":
             loss = LinearModelLoss(
-                base_loss=HalfBinomialLoss(), fit_intercept=fit_intercept, offsets=offsets
+                base_loss=HalfBinomialLoss(),
+                fit_intercept=fit_intercept,
+                offsets=offsets,
             )
             func = loss.loss
             grad = loss.gradient
             hess = loss.gradient_hessian_product  # hess = [gradient, hessp]
         elif solver == "newton-cholesky":
             loss = LinearModelLoss(
-                base_loss=HalfBinomialLoss(), fit_intercept=fit_intercept, offsets=offsets
+                base_loss=HalfBinomialLoss(),
+                fit_intercept=fit_intercept,
+                offsets=offsets,
             )
         warm_start_sag = {"coef": np.expand_dims(w0, axis=1)}
 
@@ -1147,7 +1153,7 @@ class LogisticRegression(LinearClassifierMixin, SparseCoefMixin, BaseEstimator):
 
             .. versionadded:: 0.17
                *sample_weight* support to LogisticRegression.
-        
+
         offsets : array-like of shape (n_samples, ) default=None
 
         Returns

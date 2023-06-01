@@ -159,13 +159,17 @@ class LinearModelLoss:
         """
         weights, intercept = self.weight_intercept(coef)
 
+        offsets = (
+            self.offsets
+            if self.offsets is not None
+            else np.zeros(X.shape[0], dtype=X.dtype)
+        )
+
         if not self.base_loss.is_multiclass:
-            offsets = (
-                self.offsets
-                if self.offsets is not None
-                else np.zeros(X.shape[0], dtype=X.dtype)
-            )
             raw_prediction = X @ weights + intercept + offsets
+        else:
+            # weights has shape (n_classes, n_dof)
+            raw_prediction = X @ weights.T + intercept  # ndarray, likely C-contiguous
 
         return weights, intercept, raw_prediction
 

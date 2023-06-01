@@ -182,7 +182,7 @@ class _GeneralizedLinearRegressor(RegressorMixin, BaseEstimator):
 
         sample_weight : array-like of shape (n_samples,), default=None
             Sample weights.
-        
+
         offsets : array-like of shape (n_samples,), default=None
             Offsets to add to the response.
 
