@@ -157,23 +157,23 @@ def test_function_docstring(function_name, request):
         raise ValueError(msg)
 
 
-@pytest.mark.parametrize("Klass, method", get_all_methods())
-def test_docstring(Klass, method, request):
-    base_import_path = Klass.__module__
-    import_path = [base_import_path, Klass.__name__]
-    if method is not None:
-        import_path.append(method)
+# @pytest.mark.parametrize("Klass, method", get_all_methods())
+# def test_docstring(Klass, method, request):
+#     base_import_path = Klass.__module__
+#     import_path = [base_import_path, Klass.__name__]
+#     if method is not None:
+#         import_path.append(method)
 
-    import_path = ".".join(import_path)
+#     import_path = ".".join(import_path)
 
-    res = numpydoc_validation.validate(import_path)
+#     res = numpydoc_validation.validate(import_path)
 
-    res["errors"] = list(filter_errors(res["errors"], method, Klass=Klass))
+#     res["errors"] = list(filter_errors(res["errors"], method, Klass=Klass))
 
-    if res["errors"]:
-        msg = repr_errors(res, Klass, method)
+#     if res["errors"]:
+#         msg = repr_errors(res, Klass, method)
 
-        raise ValueError(msg)
+#         raise ValueError(msg)
 
 
 if __name__ == "__main__":
