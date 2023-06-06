@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: thomasjpfan/labeler@v2.5.0
       continue-on-error: true
-      if: github.repository == 'primakit-learn/primakit-learn'
+      if: github.repository == 'scikit-learn/scikit-learn'
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         max-labels: "3"
@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: thomasjpfan/labeler@v2.5.0
       continue-on-error: true
-      if: github.repository == 'primakit-learn/primakit-learn'
+      if: github.repository == 'scikit-learn/scikit-learn'
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         configuration-path: ".github/labeler-file-extensions.yml"

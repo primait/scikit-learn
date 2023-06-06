@@ -1046,7 +1046,7 @@ def test_iterative_imputer_min_max_array_like_imputation(min_max_1, min_max_2):
 def test_iterative_imputer_skip_non_missing(skip_complete):
     # check the imputing strategy when missing data are present in the
     # testing set only.
-    # taken from: https://github.com/primakit-learn/primakit-learn/issues/14383
+    # taken from: https://github.com/scikit-learn/scikit-learn/issues/14383
     rng = np.random.RandomState(0)
     X_train = np.array([[5, 2, 2, 1], [10, 1, 2, 7], [3, 1, 1, 1], [8, 4, 2, 2]])
     X_test = np.array([[np.nan, 2, 4, 5], [np.nan, 4, 1, 2], [np.nan, 1, 10, 1]])

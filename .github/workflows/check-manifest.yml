@@ -7,7 +7,7 @@ on:
 jobs:
   check-manifest:
     # Don't run on forks
-    if: github.repository == 'primakit-learn/primakit-learn'
+    if: github.repository == 'scikit-learn/scikit-learn'
 
     runs-on: ubuntu-latest
     steps:

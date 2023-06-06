@@ -546,8 +546,8 @@ def test_check_param_validation(estimator):
 )
 def test_f_contiguous_array_estimator(Estimator):
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/23988
-    # https://github.com/primakit-learn/primakit-learn/issues/24013
+    # https://github.com/scikit-learn/scikit-learn/issues/23988
+    # https://github.com/scikit-learn/scikit-learn/issues/24013
 
     X, _ = make_blobs(n_samples=80, n_features=4, random_state=0)
     X = np.asfortranarray(X)

@@ -397,7 +397,7 @@ def test_incr_mean_variance_axis():
 def test_incr_mean_variance_axis_dim_mismatch(sparse_constructor):
     """Check that we raise proper error when axis=1 and the dimension mismatch.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/pull/18655
+    https://github.com/scikit-learn/scikit-learn/pull/18655
     """
     n_samples, n_features = 60, 4
     rng = np.random.RandomState(42)
@@ -443,7 +443,7 @@ def test_incr_mean_variance_axis_dim_mismatch(sparse_constructor):
 )
 def test_incr_mean_variance_axis_equivalence_mean_variance(X1, X2):
     # non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/16448
+    # https://github.com/scikit-learn/scikit-learn/issues/16448
     # check that computing the incremental mean and variance is equivalent to
     # computing the mean and variance on the stacked dataset.
     axis = 0

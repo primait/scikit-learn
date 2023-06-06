@@ -654,7 +654,7 @@ def test_plot_partial_dependence_does_not_override_ylabel(
     pyplot, clf_diabetes, diabetes
 ):
     # Non-regression test to be sure to not override the ylabel if it has been
-    # See https://github.com/primakit-learn/primakit-learn/issues/15772
+    # See https://github.com/scikit-learn/scikit-learn/issues/15772
     _, axes = pyplot.subplots(1, 2)
     axes[0].set_ylabel("Hello world")
     PartialDependenceDisplay.from_estimator(
@@ -769,7 +769,7 @@ def test_plot_partial_dependence_subsampling(
 ):
     # check that the subsampling is properly working
     # non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/pull/18359
+    # https://github.com/scikit-learn/scikit-learn/pull/18359
     matplotlib = pytest.importorskip("matplotlib")
     grid_resolution = 25
     feature_names = diabetes.feature_names

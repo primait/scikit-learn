@@ -878,7 +878,7 @@ def test_matthews_corrcoef_multiclass():
 
 @pytest.mark.parametrize("n_points", [100, 10000])
 def test_matthews_corrcoef_overflow(n_points):
-    # https://github.com/primakit-learn/primakit-learn/issues/9622
+    # https://github.com/scikit-learn/scikit-learn/issues/9622
     rng = np.random.RandomState(20170906)
 
     def mcc_safe(y_true, y_pred):
@@ -2308,7 +2308,7 @@ def test__check_targets():
 
 
 def test__check_targets_multiclass_with_both_y_true_and_y_pred_binary():
-    # https://github.com/primakit-learn/primakit-learn/issues/8098
+    # https://github.com/scikit-learn/scikit-learn/issues/8098
     y_true = [0, 1]
     y_pred = [0, -1]
     assert _check_targets(y_true, y_pred)[0] == "multiclass"
@@ -2424,7 +2424,7 @@ def test_hinge_loss_multiclass_with_missing_labels():
 
 def test_hinge_loss_multiclass_missing_labels_only_two_unq_in_y_true():
     # non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/17630
+    # https://github.com/scikit-learn/scikit-learn/issues/17630
     # check that we can compute the hinge loss when providing an array
     # with labels allowing to not have all labels in y_true
     pred_decision = np.array(
@@ -2564,7 +2564,7 @@ def test_log_loss_eps_auto(global_dtype):
     """Check the behaviour of `eps="auto"` that changes depending on the input
     array dtype.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/24315
+    https://github.com/scikit-learn/scikit-learn/issues/24315
     """
     y_true = np.array([0, 1], dtype=global_dtype)
     y_pred = y_true.copy()

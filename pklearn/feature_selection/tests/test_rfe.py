@@ -464,7 +464,7 @@ def test_rfe_cv_groups():
 @pytest.mark.parametrize("selector, expected_n_features", [(RFE, 5), (RFECV, 4)])
 def test_rfe_wrapped_estimator(importance_getter, selector, expected_n_features):
     # Non-regression test for
-    # https://github.com/primakit-learn/primakit-learn/issues/15312
+    # https://github.com/scikit-learn/scikit-learn/issues/15312
     X, y = make_friedman1(n_samples=50, n_features=10, random_state=0)
     estimator = LinearSVR(random_state=0)
 
@@ -565,7 +565,7 @@ def test_rfe_pls(ClsRFE, PLSEstimator):
     """Check the behaviour of RFE with PLS estimators.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/12410
+    https://github.com/scikit-learn/scikit-learn/issues/12410
     """
     X, y = make_friedman1(n_samples=50, n_features=10, random_state=0)
     estimator = PLSEstimator(n_components=1)

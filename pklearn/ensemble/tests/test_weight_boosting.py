@@ -84,7 +84,7 @@ def test_samme_proba():
 def test_oneclass_adaboost_proba():
     # Test predict_proba robustness for one class label input.
     # In response to issue #7501
-    # https://github.com/primakit-learn/primakit-learn/issues/7501
+    # https://github.com/scikit-learn/scikit-learn/issues/7501
     y_t = np.ones(len(X))
     clf = AdaBoostClassifier().fit(X, y_t)
     assert_array_almost_equal(clf.predict_proba(X), np.ones((len(X), 1)))
@@ -547,7 +547,7 @@ def test_adaboostregressor_sample_weight():
 def test_adaboost_consistent_predict(algorithm):
     # check that predict_proba and predict give consistent results
     # regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/14084
+    # https://github.com/scikit-learn/scikit-learn/issues/14084
     X_train, X_test, y_train, y_test = train_test_split(
         *datasets.load_digits(return_X_y=True), random_state=42
     )
@@ -580,7 +580,7 @@ def test_adaboost_numerically_stable_feature_importance_with_small_weights():
     instable inputs.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/20320
+    https://github.com/scikit-learn/scikit-learn/issues/20320
     """
     rng = np.random.RandomState(42)
     X = rng.normal(size=(1000, 10))
@@ -639,7 +639,7 @@ def test_deprecated_base_estimator_parameters_can_be_set():
     During the deprecation cycle setting "base_estimator__*" params should
     work.
 
-    Non-regression test for https://github.com/primakit-learn/primakit-learn/issues/25470
+    Non-regression test for https://github.com/scikit-learn/scikit-learn/issues/25470
     """
     # This implicitly sets "estimator", it is how old code (pre v1.2) would
     # have instantiated AdaBoostClassifier and back then it would set

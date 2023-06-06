@@ -207,8 +207,8 @@ been moved to ``_birch.py``).
     let us know by opening an issue!
 
 This work was tracked in `issue 9250
-<https://github.com/primakit-learn/primakit-learn/issues/9250>`_ and `issue
-12927 <https://github.com/primakit-learn/primakit-learn/issues/12927>`_.
+<https://github.com/scikit-learn/scikit-learn/issues/9250>`_ and `issue
+12927 <https://github.com/scikit-learn/scikit-learn/issues/12927>`_.
 
 
 Deprecations: using ``FutureWarning`` from now on

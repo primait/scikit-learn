@@ -708,7 +708,7 @@ def test_approximate_mode():
     to overflow 32-bit signed integer.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/20774
+    https://github.com/scikit-learn/scikit-learn/issues/20774
     """
     X = np.array([99000, 1000], dtype=np.int32)
     ret = _approximate_mode(class_counts=X, n_draws=25000, rng=0)

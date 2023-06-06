@@ -389,7 +389,7 @@ def test_cross_validate_invalid_scoring_param():
 def test_cross_validate_nested_estimator():
     # Non-regression test to ensure that nested
     # estimators are properly returned in a list
-    # https://github.com/primakit-learn/primakit-learn/pull/17745
+    # https://github.com/scikit-learn/scikit-learn/pull/17745
     (X, y) = load_iris(return_X_y=True)
     pipeline = Pipeline(
         [

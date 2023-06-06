@@ -114,7 +114,7 @@ primakit_learn_install() {
 
     if [[ "$UNAMESTR" == "Linux" ]]; then
         # FIXME: temporary fix to link against system libraries on linux
-        # https://github.com/primakit-learn/primakit-learn/issues/20640
+        # https://github.com/scikit-learn/scikit-learn/issues/20640
         export LDFLAGS="$LDFLAGS -Wl,--sysroot=/"
     fi
 

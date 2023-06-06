@@ -625,7 +625,7 @@ def test_sparse_coder_estimator_clone():
 
 def test_sparse_coder_parallel_mmap():
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/5956
+    # https://github.com/scikit-learn/scikit-learn/issues/5956
     # Test that SparseCoder does not error by passing reading only
     # arrays to child processes
 

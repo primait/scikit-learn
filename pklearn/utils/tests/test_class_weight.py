@@ -32,7 +32,7 @@ def test_compute_class_weight_not_present():
     with pytest.raises(ValueError):
         compute_class_weight("balanced", classes=classes, y=y)
     # Fix exception in error message formatting when missing label is a string
-    # https://github.com/primakit-learn/primakit-learn/issues/8312
+    # https://github.com/scikit-learn/scikit-learn/issues/8312
     with pytest.raises(
         ValueError, match=r"The classes, \[0, 1, 2, 3\], are not in class_weight"
     ):

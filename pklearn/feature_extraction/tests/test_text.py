@@ -397,7 +397,7 @@ def test_fit_countvectorizer_twice():
 def test_countvectorizer_custom_token_pattern():
     """Check `get_feature_names_out()` when a custom token pattern is passed.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/12971
+    https://github.com/scikit-learn/scikit-learn/issues/12971
     """
     corpus = [
         "This is the 1st document in my corpus.",
@@ -416,7 +416,7 @@ def test_countvectorizer_custom_token_pattern():
 def test_countvectorizer_custom_token_pattern_with_several_group():
     """Check that we raise an error if token pattern capture several groups.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/12971
+    https://github.com/scikit-learn/scikit-learn/issues/12971
     """
     corpus = [
         "This is the 1st document in my corpus.",
@@ -1085,7 +1085,7 @@ def test_pickling_vectorizer():
 )
 def test_pickling_built_processors(factory):
     """Tokenizers cannot be pickled
-    https://github.com/primakit-learn/primakit-learn/issues/12833
+    https://github.com/scikit-learn/scikit-learn/issues/12833
     """
     vec = CountVectorizer()
     function = factory(vec)
@@ -1397,7 +1397,7 @@ def test_countvectorizer_sort_features_64bit_sparse_indices():
     feature matrix.
 
     This test is skipped on 32bit platforms, see:
-        https://github.com/primakit-learn/primakit-learn/pull/11295
+        https://github.com/scikit-learn/scikit-learn/pull/11295
     for more details.
     """
 

@@ -85,7 +85,7 @@ def test_fastica_simple(add_noise, global_random_seed, global_dtype):
         pytest.xfail(
             "FastICA instability with Ubuntu Atlas build with float32 "
             "global_dtype. For more details, see "
-            "https://github.com/primakit-learn/primakit-learn/issues/24131#issuecomment-1208091119"  # noqa
+            "https://github.com/scikit-learn/scikit-learn/issues/24131#issuecomment-1208091119"  # noqa
         )
 
     # Test the FastICA algorithm on very simple data.

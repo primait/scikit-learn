@@ -1522,7 +1522,7 @@ def test_quantile_transform_nan():
 @pytest.mark.parametrize("array_type", ["array", "sparse"])
 def test_quantile_transformer_sorted_quantiles(array_type):
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/15733
+    # https://github.com/scikit-learn/scikit-learn/issues/15733
     # Taken from upstream bug report:
     # https://github.com/numpy/numpy/issues/14685
     X = np.array([0, 1, 1, 2, 2, 3, 3, 4, 5, 5, 1, 1, 9, 9, 9, 8, 8, 7] * 10)
@@ -2559,7 +2559,7 @@ def test_power_transformer_copy_False(method, standardize):
 )
 def test_standard_scaler_sparse_partial_fit_finite_variance(X_2):
     # non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/16448
+    # https://github.com/scikit-learn/scikit-learn/issues/16448
     X_1 = sparse.random(5, 1, density=0.8)
     scaler = StandardScaler(with_mean=False)
     scaler.fit(X_1).partial_fit(X_2)
@@ -2584,7 +2584,7 @@ def test_standard_scaler_raise_error_for_1d_input():
     """Check that `inverse_transform` from `StandardScaler` raises an error
     with 1D array.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/19518
+    https://github.com/scikit-learn/scikit-learn/issues/19518
     """
     scaler = StandardScaler().fit(X_2d)
     err_msg = "Expected 2D array, got 1D array instead"
@@ -2597,7 +2597,7 @@ def test_power_transformer_significantly_non_gaussian():
 
     For some explored lambdas, the transformed data may be constant and will
     be rejected. Non-regression test for
-    https://github.com/primakit-learn/primakit-learn/issues/14959
+    https://github.com/scikit-learn/scikit-learn/issues/14959
     """
 
     X_non_gaussian = 1e6 * np.array(

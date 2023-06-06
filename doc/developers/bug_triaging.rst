@@ -3,7 +3,7 @@
 Bug triaging and issue curation
 ===============================
 
-The `issue tracker <https://github.com/primakit-learn/primakit-learn/issues>`_
+The `issue tracker <https://github.com/scikit-learn/scikit-learn/issues>`_
 is important to the communication in the project: it helps
 developers identify major projects to work on, as well as to discuss
 priorities. For this reason, it is important to curate it, adding labels
@@ -58,7 +58,7 @@ can do the following important tasks:
 
 - Update :ref:`labels for issues and PRs <issue_tracker_tags>`: see the list of
   the `available github labels
-  <https://github.com/primakit-learn/primakit-learn/labels>`_.
+  <https://github.com/scikit-learn/scikit-learn/labels>`_.
 
 - :ref:`Determine if a PR must be relabeled as stalled <stalled_pull_request>`
   or needs help (this is typically very important in the context

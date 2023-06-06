@@ -614,7 +614,7 @@ def test_kwargs_in_init():
     # Make sure the changed_only=True mode is OK when an argument is passed as
     # kwargs.
     # Non-regression test for
-    # https://github.com/primakit-learn/primakit-learn/issues/17206
+    # https://github.com/scikit-learn/scikit-learn/issues/17206
 
     class WithKWargs(BaseEstimator):
         # Estimator with a kwargs argument. These need to hack around
@@ -650,7 +650,7 @@ def test_complexity_print_changed_only():
     # Make sure `__repr__` is called the same amount of times
     # whether `print_changed_only` is True or False
     # Non-regression test for
-    # https://github.com/primakit-learn/primakit-learn/issues/18490
+    # https://github.com/scikit-learn/scikit-learn/issues/18490
 
     class DummyEstimator(TransformerMixin, BaseEstimator):
         nb_times_repr_called = 0

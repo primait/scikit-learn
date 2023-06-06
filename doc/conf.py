@@ -543,7 +543,7 @@ def generate_min_dependency_substitutions(app):
 # Config for sphinx_issues
 
 # we use the issues path for PRs since the issues URL will forward
-issues_github_path = "primakit-learn/primakit-learn"
+issues_github_path = "scikit-learn/scikit-learn"
 
 
 def disable_plot_gallery_for_linkcheck(app):

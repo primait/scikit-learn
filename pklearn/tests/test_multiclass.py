@@ -726,7 +726,7 @@ def test_ecoc_float_y():
 
 def test_ecoc_delegate_sparse_base_estimator():
     # Non-regression test for
-    # https://github.com/primakit-learn/primakit-learn/issues/17218
+    # https://github.com/scikit-learn/scikit-learn/issues/17218
     X, y = iris.data, iris.target
     X_sp = sp.csc_matrix(X)
 

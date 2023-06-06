@@ -900,7 +900,7 @@ def test_check_consistent_length():
 
 def test_check_dataframe_fit_attribute():
     # check pandas dataframe with 'fit' column does not raise error
-    # https://github.com/primakit-learn/primakit-learn/issues/8415
+    # https://github.com/scikit-learn/scikit-learn/issues/8415
     try:
         import pandas as pd
 
@@ -943,7 +943,7 @@ def test_check_dataframe_mixed_float_dtypes(dtype, bool_dtype):
     # with np.result_type which will return a float
     # check_array needs to explicitly check for bool dtype in a dataframe for
     # this situation
-    # https://github.com/primakit-learn/primakit-learn/issues/15787
+    # https://github.com/scikit-learn/scikit-learn/issues/15787
 
     if bool_dtype == "boolean":
         # boolean extension arrays was introduced in 1.0

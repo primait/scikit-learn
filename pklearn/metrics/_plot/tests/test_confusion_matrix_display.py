@@ -326,7 +326,7 @@ def test_confusion_matrix_with_unknown_labels(pyplot, constructor_name):
     """Check that when labels=None, the unique values in `y_pred` and `y_true`
     will be used.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/pull/18405
+    https://github.com/scikit-learn/scikit-learn/pull/18405
     """
     n_classes = 5
     X, y = make_classification(

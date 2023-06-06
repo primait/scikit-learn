@@ -326,7 +326,7 @@ def test_equivalence_components_pca_spca(global_random_seed):
     """Check the equivalence of the components found by PCA and SparsePCA.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/23932
+    https://github.com/scikit-learn/scikit-learn/issues/23932
     """
     rng = np.random.RandomState(global_random_seed)
     X = rng.randn(50, 4)

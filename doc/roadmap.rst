@@ -55,7 +55,7 @@ external to the core library.
   and infrastructures (e.g. distributed processing)
 
 Many of the more fine-grained goals can be found under the `API tag
-<https://github.com/primakit-learn/primakit-learn/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3AAPI>`_
+<https://github.com/scikit-learn/scikit-learn/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3AAPI>`_
 on the issue tracker.
 
 Architectural / general goals

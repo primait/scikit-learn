@@ -741,7 +741,7 @@ def test_warm_start():
 @pytest.mark.parametrize("MLPEstimator", [MLPClassifier, MLPRegressor])
 def test_warm_start_full_iteration(MLPEstimator):
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/16812
+    # https://github.com/scikit-learn/scikit-learn/issues/16812
     # Check that the MLP estimator accomplish `max_iter` with a
     # warm started estimator.
     X, y = X_iris, y_iris

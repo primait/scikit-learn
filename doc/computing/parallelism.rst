@@ -43,7 +43,7 @@ When the underlying implementation uses joblib, the number of workers
     Where (and how) parallelization happens in the estimators using joblib by
     specifying `n_jobs` is currently poorly documented.
     Please help us by improving our docs and tackle `issue 14228
-    <https://github.com/primakit-learn/primakit-learn/issues/14228>`_!
+    <https://github.com/scikit-learn/scikit-learn/issues/14228>`_!
 
 Joblib is able to support both multi-processing and multi-threading. Whether
 joblib chooses to spawn a thread or a process depends on the **backend**

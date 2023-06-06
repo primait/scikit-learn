@@ -9,7 +9,7 @@ Contributing
 This project is a community effort, and everyone is welcome to
 contribute.
 
-The project is hosted on https://github.com/primakit-learn/primakit-learn
+The project is hosted on https://github.com/scikit-learn/scikit-learn
 
 The decision making process and governance structure of primakit-learn is laid
 out in the governance document: :ref:`governance`.
@@ -44,7 +44,7 @@ See :ref:`new_contributors` to get started.
 In case you experience issues using this package, do not hesitate to submit a
 ticket to the
 `GitHub issue tracker
-<https://github.com/primakit-learn/primakit-learn/issues>`_. You are also
+<https://github.com/scikit-learn/scikit-learn/issues>`_. You are also
 welcome to post feature requests or pull requests.
 
 Ways to contribute
@@ -70,9 +70,9 @@ link to it from your website, or simply star to say "I use it":
 
 .. raw:: html
 
-   <a class="github-button" href="https://github.com/primakit-learn/primakit-learn"
+   <a class="github-button" href="https://github.com/scikit-learn/scikit-learn"
    data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star
-   primakit-learn/primakit-learn on GitHub">Star</a>
+   scikit-learn/scikit-learn on GitHub">Star</a>
    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 In case a contribution/issue involves changes to the API principles
@@ -113,15 +113,15 @@ an issue if you have found a bug or wish to see a feature implemented.
 
 In case you experience issues using this package, do not hesitate to submit a
 ticket to the
-`Bug Tracker <https://github.com/primakit-learn/primakit-learn/issues>`_. You are
+`Bug Tracker <https://github.com/scikit-learn/scikit-learn/issues>`_. You are
 also welcome to post feature requests or pull requests.
 
 It is recommended to check that your issue complies with the
 following rules before submitting:
 
 -  Verify that your issue is not being currently addressed by other
-   `issues <https://github.com/primakit-learn/primakit-learn/issues?q=>`_
-   or `pull requests <https://github.com/primakit-learn/primakit-learn/pulls?q=>`_.
+   `issues <https://github.com/scikit-learn/scikit-learn/issues?q=>`_
+   or `pull requests <https://github.com/scikit-learn/scikit-learn/pulls?q=>`_.
 
 -  If you are submitting an algorithm or feature request, please verify that
    the algorithm fulfills our
@@ -137,7 +137,7 @@ How to make a good bug report
 -----------------------------
 
 When you submit an issue to `Github
-<https://github.com/primakit-learn/primakit-learn/issues>`__, please do your best to
+<https://github.com/scikit-learn/scikit-learn/issues>`__, please do your best to
 follow these guidelines! This will make it a lot easier to provide you with good
 feedback:
 
@@ -174,11 +174,11 @@ Contributing code
 .. note::
 
   To avoid duplicating work, it is highly advised that you search through the
-  `issue tracker <https://github.com/primakit-learn/primakit-learn/issues>`_ and
-  the `PR list <https://github.com/primakit-learn/primakit-learn/pulls>`_.
+  `issue tracker <https://github.com/scikit-learn/scikit-learn/issues>`_ and
+  the `PR list <https://github.com/scikit-learn/scikit-learn/pulls>`_.
   If in doubt about duplicated work, or if you want to work on a non-trivial
   feature, it's recommended to first open an issue in
-  the `issue tracker <https://github.com/primakit-learn/primakit-learn/issues>`_
+  the `issue tracker <https://github.com/scikit-learn/scikit-learn/issues>`_
   to get some feedbacks from core developers.
 
   One easy way to find an issue to work on is by applying the "help wanted"
@@ -224,7 +224,7 @@ How to contribute
 -----------------
 
 The preferred way to contribute to primakit-learn is to fork the `main
-repository <https://github.com/primakit-learn/primakit-learn/>`__ on GitHub,
+repository <https://github.com/scikit-learn/scikit-learn/>`__ on GitHub,
 then submit a "pull request" (PR).
 
 In the first few steps, we explain how to locally install primakit-learn, and
@@ -234,7 +234,7 @@ how to set up your git repository:
    GitHub if you do not already have one.
 
 2. Fork the `project repository
-   <https://github.com/primakit-learn/primakit-learn>`__: click on the 'Fork'
+   <https://github.com/scikit-learn/scikit-learn>`__: click on the 'Fork'
    button near the top of the page. This creates a copy of the code under your
    account on the GitHub user account. For more details on how to fork a
    repository see `this guide <https://help.github.com/articles/fork-a-repo/>`_.
@@ -264,15 +264,15 @@ how to set up your git repository:
 
    .. prompt:: bash $
 
-        git remote add upstream git@github.com:primakit-learn/primakit-learn.git
+        git remote add upstream git@github.com:scikit-learn/scikit-learn.git
 
 6. Check that the `upstream` and `origin` remote aliases are configured correctly
    by running `git remote -v` which should display::
 
         origin	git@github.com:YourLogin/primakit-learn.git (fetch)
         origin	git@github.com:YourLogin/primakit-learn.git (push)
-        upstream	git@github.com:primakit-learn/primakit-learn.git (fetch)
-        upstream	git@github.com:primakit-learn/primakit-learn.git (push)
+        upstream	git@github.com:scikit-learn/scikit-learn.git (fetch)
+        upstream	git@github.com:scikit-learn/scikit-learn.git (push)
 
 You should now have a working installation of primakit-learn, and your git
 repository properly configured. The next steps now describe the process of
@@ -462,7 +462,7 @@ complies with the following rules before marking a PR as ``[MRG]``. The
     performance and efficiency (see :ref:`monitoring_performances`) or through
     examples of usage. Examples also illustrate the features and intricacies of
     the library to users. Have a look at other examples in the `examples/
-    <https://github.com/primakit-learn/primakit-learn/tree/main/examples>`_
+    <https://github.com/scikit-learn/scikit-learn/tree/main/examples>`_
     directory for reference. Examples should demonstrate why the new
     functionality is useful in practice and, if possible, compare it to other
     methods available in primakit-learn.
@@ -601,7 +601,7 @@ Stalled and Unclaimed Issues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Generally speaking, issues which are up for grabs will have a
-`"help wanted" <https://github.com/primakit-learn/primakit-learn/labels/help%20wanted>`_.
+`"help wanted" <https://github.com/scikit-learn/scikit-learn/labels/help%20wanted>`_.
 tag. However, not all issues which need contributors will have this tag,
 as the "help wanted" tag is not always up-to-date with the state
 of the issue. Contributors can find issues which are still up for grabs
@@ -641,7 +641,7 @@ underestimate how easy an issue is to solve!
 
     A great way to start contributing to primakit-learn is to pick an item from
     the list of `good first issues
-    <https://github.com/primakit-learn/primakit-learn/labels/good%20first%20issue>`_
+    <https://github.com/scikit-learn/scikit-learn/labels/good%20first%20issue>`_
     in the issue tracker. Resolving these issues allow you to start contributing
     to the project without much prior knowledge. If you have already contributed
     to primakit-learn, you should look at Easy issues instead.
@@ -650,7 +650,7 @@ underestimate how easy an issue is to solve!
 
     If you have already contributed to primakit-learn, another great way to contribute
     to primakit-learn is to pick an item from the list of `Easy issues
-    <https://github.com/primakit-learn/primakit-learn/labels/Easy>`_ in the issue
+    <https://github.com/scikit-learn/scikit-learn/labels/Easy>`_ in the issue
     tracker. Your assistance in this area will be greatly appreciated by the
     more experienced developers as it helps free up their time to concentrate on
     other issues.
@@ -661,7 +661,7 @@ underestimate how easy an issue is to solve!
     we use the help wanted tag to mark Pull Requests which have been abandoned
     by their original contributor and are available for someone to pick up where the original
     contributor left off. The list of issues with the help wanted tag can be found
-    `here <https://github.com/primakit-learn/primakit-learn/labels/help%20wanted>`_.
+    `here <https://github.com/scikit-learn/scikit-learn/labels/help%20wanted>`_.
 
     Note that not all issues which need contributors will have this tag.
 
@@ -675,22 +675,22 @@ We are glad to accept any sort of documentation:
 * **function/method/class docstrings** (also known as "API documentation") -
   these describe what the object does and details any parameters, attributes and
   methods. Docstrings live alongside the code in
-  `pklearn/ <https://github.com/primakit-learn/primakit-learn/tree/main/pklearn>`_.
+  `pklearn/ <https://github.com/scikit-learn/scikit-learn/tree/main/pklearn>`_.
 * **user guide** - these provide more detailed information about the algorithms
   implemented in primakit-learn and generally live in the root
-  `doc/ <https://github.com/primakit-learn/primakit-learn/tree/main/doc>`_ directory
+  `doc/ <https://github.com/scikit-learn/scikit-learn/tree/main/doc>`_ directory
   and
-  `doc/modules/ <https://github.com/primakit-learn/primakit-learn/tree/main/doc/modules>`_.
+  `doc/modules/ <https://github.com/scikit-learn/scikit-learn/tree/main/doc/modules>`_.
 * **tutorials** - these introduce various statistical learning and machine learning
   concepts and are located in
-  `doc/tutorial <https://github.com/primakit-learn/primakit-learn/tree/main/doc/tutorial>`_.
+  `doc/tutorial <https://github.com/scikit-learn/scikit-learn/tree/main/doc/tutorial>`_.
 * **examples** - these provide full code examples that may demonstrate the use
   of primakit-learn modules, compare different algorithms or discuss their
   interpretation etc. Examples live in
-  `examples/ <https://github.com/primakit-learn/primakit-learn/tree/main/examples>`_
+  `examples/ <https://github.com/scikit-learn/scikit-learn/tree/main/examples>`_
 * **other reStructuredText documents** (like this one) - provide various other
   useful information (e.g., our guide to contributing) and live in
-  `doc/ <https://github.com/primakit-learn/primakit-learn/tree/main/doc>`_.
+  `doc/ <https://github.com/scikit-learn/scikit-learn/tree/main/doc>`_.
 
 You can edit the documentation using any text editor, and then generate the
 HTML output by following :ref:`building_documentation`. The resulting HTML files
@@ -1123,7 +1123,7 @@ Issue Tracker Tags
 ==================
 
 All issues and pull requests on the
-`GitHub issue tracker <https://github.com/primakit-learn/primakit-learn/issues>`_
+`GitHub issue tracker <https://github.com/scikit-learn/scikit-learn/issues>`_
 should have (at least) one of the following tags:
 
 :Bug / Crash:

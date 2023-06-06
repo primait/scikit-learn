@@ -218,7 +218,7 @@ def graphical_lasso(
         errors = dict(invalid="raise")
     try:
         # be robust to the max_iter=0 edge case, see:
-        # https://github.com/primakit-learn/primakit-learn/issues/4134
+        # https://github.com/scikit-learn/scikit-learn/issues/4134
         d_gap = np.inf
         # set a sub_covariance buffer
         sub_covariance = np.copy(covariance_[1:, 1:], order="C")

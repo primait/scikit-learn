@@ -245,7 +245,7 @@ def test_predicted_outlier_number(expected_outliers):
 def test_sparse():
     # LocalOutlierFactor must support CSR inputs
     # TODO: compare results on dense and sparse data as proposed in:
-    # https://github.com/primakit-learn/primakit-learn/pull/23585#discussion_r968388186
+    # https://github.com/scikit-learn/scikit-learn/pull/23585#discussion_r968388186
     X = csr_matrix(iris.data)
 
     lof = neighbors.LocalOutlierFactor(novelty=True)

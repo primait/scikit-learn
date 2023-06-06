@@ -1854,7 +1854,7 @@ def _check_fit_params(X, fit_params, indices=None):
             X
         ):
             # Non-indexable pass-through (for now for backward-compatibility).
-            # https://github.com/primakit-learn/primakit-learn/issues/15805
+            # https://github.com/scikit-learn/scikit-learn/issues/15805
             fit_params_validated[param_key] = param_value
         else:
             # Any other fit_params should support indexing

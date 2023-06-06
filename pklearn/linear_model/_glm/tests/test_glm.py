@@ -405,7 +405,7 @@ def test_glm_regression_unpenalized(solver, fit_intercept, glm_dataset):
             # equal.
             assert norm_model > (1 + 1e-12) * norm_solution
 
-            # See https://github.com/primakit-learn/primakit-learn/issues/23670.
+            # See https://github.com/scikit-learn/scikit-learn/issues/23670.
             # Note: Even adding a tiny penalty does not give the minimal norm solution.
             # XXX: We could have naively expected LBFGS to find the minimal norm
             # solution by adding a very small penalty. Even that fails for a reason we

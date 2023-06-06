@@ -26,7 +26,7 @@ jobs:
   check_build_trigger:
     name: Check build trigger
     runs-on: ubuntu-latest
-    if: github.repository == 'primakit-learn/primakit-learn'
+    if: github.repository == 'scikit-learn/scikit-learn'
     outputs:
       build: ${{ steps.check_build_trigger.outputs.build }}
 
@@ -54,7 +54,7 @@ jobs:
         include:
           # Window 64 bit
           # Note: windows-2019 is needed for older Python versions:
-          # https://github.com/primakit-learn/primakit-learn/issues/22530
+          # https://github.com/scikit-learn/scikit-learn/issues/22530
           - os: windows-2019
             python: 38
             platform_id: win_amd64

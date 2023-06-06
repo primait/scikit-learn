@@ -915,7 +915,7 @@ class StandardScaler(OneToOneFeatureMixin, TransformerMixin, BaseEstimator):
                         weights=sample_weight,
                     )
                 # We force the mean and variance to float64 for large arrays
-                # See https://github.com/primakit-learn/primakit-learn/pull/12338
+                # See https://github.com/scikit-learn/scikit-learn/pull/12338
                 self.mean_ = self.mean_.astype(np.float64, copy=False)
                 self.var_ = self.var_.astype(np.float64, copy=False)
             else:

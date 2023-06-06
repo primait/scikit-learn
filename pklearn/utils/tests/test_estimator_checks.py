@@ -1209,7 +1209,7 @@ def test_decision_proba_tie_ranking():
     """Check that in case with some probabilities ties, we relax the
     ranking comparison with the decision function.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/24025
+    https://github.com/scikit-learn/scikit-learn/issues/24025
     """
     estimator = SGDClassifier(loss="log_loss")
     check_decision_proba_consistency("SGDClassifier", estimator)

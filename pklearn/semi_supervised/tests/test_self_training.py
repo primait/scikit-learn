@@ -285,7 +285,7 @@ def test_base_estimator_meta_estimator():
     # `predict_proba` will work even if it does not expose this method before being
     # fitted.
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/19119
+    # https://github.com/scikit-learn/scikit-learn/issues/19119
 
     base_estimator = StackingClassifier(
         estimators=[

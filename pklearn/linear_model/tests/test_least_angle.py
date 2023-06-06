@@ -531,7 +531,7 @@ def test_lars_path_readonly_data():
     # When using automated memory mapping on large input, the
     # fold data is in read-only mode
     # This is a non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/4597
+    # https://github.com/scikit-learn/scikit-learn/issues/4597
     splitted_data = train_test_split(X, y, random_state=42)
     with TempMemmap(splitted_data) as (X_train, X_test, y_train, y_test):
         # The following should not fail despite copy=False

@@ -1107,7 +1107,7 @@ def test_sample():
         assert_array_almost_equal(gmm.means_, means_s, decimal=1)
 
         # Check shapes of sampled data, see
-        # https://github.com/primakit-learn/primakit-learn/issues/7701
+        # https://github.com/scikit-learn/scikit-learn/issues/7701
         assert X_s.shape == (n_samples, n_features)
 
         for sample_size in range(1, 100):
@@ -1140,7 +1140,7 @@ def test_gaussian_mixture_setting_best_params():
     must be set appropriately in the case of divergence.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/18216
+    https://github.com/scikit-learn/scikit-learn/issues/18216
     """
     rnd = np.random.RandomState(0)
     n_samples = 30
@@ -1276,7 +1276,7 @@ def test_gaussian_mixture_precisions_init_diag():
     If the initialization is wrong then the number of iterations will increase.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/16944
+    https://github.com/scikit-learn/scikit-learn/issues/16944
     """
     # generate a toy dataset
     n_samples = 300

@@ -62,9 +62,9 @@ print("Web-based documentation is available for versions listed below:")
 print()
 
 ROOT_URL = (
-    "https://api.github.com/repos/primakit-learn/primakit-learn.github.io/contents/"  # noqa
+    "https://api.github.com/repos/scikit-learn/scikit-learn.github.io/contents/"  # noqa
 )
-RAW_FMT = "https://raw.githubusercontent.com/primakit-learn/primakit-learn.github.io/master/%s/index.html"  # noqa
+RAW_FMT = "https://raw.githubusercontent.com/scikit-learn/scikit-learn.github.io/master/%s/index.html"  # noqa
 VERSION_RE = re.compile(r"primakit-learn ([\w\.\-]+) documentation</title>")
 NAMED_DIRS = ["dev", "stable"]
 

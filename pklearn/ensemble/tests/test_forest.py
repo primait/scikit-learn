@@ -1723,7 +1723,7 @@ def test_mse_criterion_object_segfault_smoke_test(Forest):
     # This is a smoke test to ensure that passing a mutable criterion
     # does not cause a segfault when fitting with concurrent threads.
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/12623
+    # https://github.com/scikit-learn/scikit-learn/issues/12623
     from pklearn.tree._criterion import MSE
 
     y = y_reg.reshape(-1, 1)
@@ -1782,7 +1782,7 @@ def test_base_estimator_property_deprecated(name):
 def test_read_only_buffer(monkeypatch):
     """RandomForestClassifier must work on readonly sparse data.
 
-    Non-regression test for: https://github.com/primakit-learn/primakit-learn/issues/25333
+    Non-regression test for: https://github.com/scikit-learn/scikit-learn/issues/25333
     """
     monkeypatch.setattr(
         pklearn.ensemble._forest,

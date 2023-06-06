@@ -144,7 +144,7 @@ Currently transform only works for features X in a pipeline.
 There's a long-standing discussion about
 not being able to transform y in a pipeline.
 Follow on github issue
-`#4143 <https://github.com/primakit-learn/primakit-learn/issues/4143>`_.
+`#4143 <https://github.com/scikit-learn/scikit-learn/issues/4143>`_.
 Meanwhile check out
 :class:`~compose.TransformedTargetRegressor`,
 `pipegraph <https://github.com/mcasl/PipeGraph>`_,
@@ -315,10 +315,10 @@ please make sure to include the full traceback that you obtain when running the
 reproduction script.
 
 For bug reports or feature requests, please make use of the
-`issue tracker on GitHub <https://github.com/primakit-learn/primakit-learn/issues>`_.
+`issue tracker on GitHub <https://github.com/scikit-learn/scikit-learn/issues>`_.
 
 There is also a `primakit-learn Gitter channel
-<https://gitter.im/primakit-learn/primakit-learn>`_ where some users and developers
+<https://gitter.im/scikit-learn/scikit-learn>`_ where some users and developers
 might be found.
 
 **Please do not email any authors directly to ask for assistance, report bugs,

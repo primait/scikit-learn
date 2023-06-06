@@ -123,7 +123,7 @@ def test_available_if():
 
 def test_available_if_unbound_method():
     # This is a non regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/20614
+    # https://github.com/scikit-learn/scikit-learn/issues/20614
     # to make sure that decorated functions can be used as an unbound method,
     # for instance when monkeypatching.
     est = AvailableParameterEstimator()
@@ -142,7 +142,7 @@ def test_if_delegate_has_method_numpy_array():
     """Check that we can check for an attribute that is a NumPy array.
 
     This is a non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/21144
+    https://github.com/scikit-learn/scikit-learn/issues/21144
     """
     estimator = MetaEst(HasPredictAsNDArray())
     assert hasattr(estimator, "predict")

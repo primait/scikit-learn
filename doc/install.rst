@@ -170,7 +170,7 @@ https://github.com/conda-forge/miniforge
 The following issue tracks progress on making it possible to install
 primakit-learn from PyPI with pip:
 
-https://github.com/primakit-learn/primakit-learn/issues/19137
+https://github.com/scikit-learn/scikit-learn/issues/19137
 
 
 .. _install_by_distribution:

@@ -298,7 +298,7 @@ source code:
     mkdir arm64
     pushd arm64
     wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
-    git clone https://github.com/primakit-learn/primakit-learn.git
+    git clone https://github.com/scikit-learn/scikit-learn.git
 
 Use docker to install QEMU user mode and run an ARM64v8 container with access
 to your shared folder under the `/io` mount point:

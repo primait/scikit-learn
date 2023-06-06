@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Tweet URL of last commit as @pklearn_commits
-        if: github.repository == 'primakit-learn/primakit-learn'
+        if: github.repository == 'scikit-learn/scikit-learn'
         uses: docker://thomasjpfan/twitter-action:0.3
         with:
-          args: "-message \"https://github.com/primakit-learn/primakit-learn/commit/${{ github.sha }}\""
+          args: "-message \"https://github.com/scikit-learn/scikit-learn/commit/${{ github.sha }}\""
         env:
           TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
           TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}

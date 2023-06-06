@@ -413,7 +413,7 @@ def test_discretenb_degenerate_one_class_case(
     # case of a single class in the training set, when fitting with `fit` or
     # `partial_fit`.
     # Non-regression test for handling degenerate one-class case:
-    # https://github.com/primakit-learn/primakit-learn/issues/18974
+    # https://github.com/scikit-learn/scikit-learn/issues/18974
 
     X = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
     y = [1, 1, 2]
@@ -933,7 +933,7 @@ def test_check_alpha():
     used if alpha < _ALPHA_MIN and force_alpha is True.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/10772
+    https://github.com/scikit-learn/scikit-learn/issues/10772
     """
     _ALPHA_MIN = 1e-10
     b = BernoulliNB(alpha=0, force_alpha=True)

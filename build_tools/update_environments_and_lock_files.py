@@ -117,7 +117,7 @@ conda_build_metadata_list = [
             # should be compatible but actually are not. This pin can be
             # removed when scipy 1.8 is available in conda defaults channel.
             # For more details, see
-            # https://github.com/primakit-learn/primakit-learn/pull/24363#issuecomment-1236927660
+            # https://github.com/scikit-learn/scikit-learn/pull/24363#issuecomment-1236927660
             # and https://github.com/scipy/scipy/issues/16964
             "numpy": "1.22",
             # XXX: coverage is temporary pinned to 6.2 because 6.3 is not

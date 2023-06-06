@@ -216,7 +216,7 @@ def test_mutual_information_symmetry_classif_regression(correlated, global_rando
     versa.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/23720
+    https://github.com/scikit-learn/scikit-learn/issues/23720
     """
     rng = np.random.RandomState(global_random_seed)
     n = 100

@@ -123,7 +123,7 @@ def test_regression_metrics(n_samples=50):
 
 def test_mean_squared_error_multioutput_raw_value_squared():
     # non-regression test for
-    # https://github.com/primakit-learn/primakit-learn/pull/16323
+    # https://github.com/scikit-learn/scikit-learn/pull/16323
     mse1 = mean_squared_error([[1]], [[10]], multioutput="raw_values", squared=True)
     mse2 = mean_squared_error([[1]], [[10]], multioutput="raw_values", squared=False)
     assert np.sqrt(mse1) == pytest.approx(mse2)

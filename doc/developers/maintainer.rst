@@ -48,7 +48,7 @@ Before a release
 
 **Permissions**
 
-The release manager must be a *maintainer* of the ``primakit-learn/primakit-learn``
+The release manager must be a *maintainer* of the ``scikit-learn/scikit-learn``
 repository to be able to publish on ``pypi.org`` and ``test.pypi.org``
 (via a manual trigger of a dedicated Github Actions workflow).
 
@@ -226,7 +226,7 @@ Making a release
     git commit --allow-empty -m "Trigger wheel builder workflow: [cd build]"
 
    The wheel building workflow is managed by GitHub Actions and the results be browsed at:
-   https://github.com/primakit-learn/primakit-learn/actions?query=workflow%3A%22Wheel+builder%22
+   https://github.com/scikit-learn/scikit-learn/actions?query=workflow%3A%22Wheel+builder%22
 
 .. note::
 
@@ -256,7 +256,7 @@ Making a release
    files) to https://test.pypi.org using the "Run workflow" form for the
    following GitHub Actions workflow:
 
-   https://github.com/primakit-learn/primakit-learn/actions?query=workflow%3A%22Publish+to+Pypi%22
+   https://github.com/scikit-learn/scikit-learn/actions?query=workflow%3A%22Publish+to+Pypi%22
 
 5. If this went fine, you can proceed with tagging. Proceed with caution.
    Ideally, tags should be created when you're almost certain that the release
@@ -269,7 +269,7 @@ Making a release
    .. prompt:: bash $
 
      git tag -a 0.99.0  # in the 0.99.X branch
-     git push git@github.com:primakit-learn/primakit-learn.git 0.99.0
+     git push git@github.com:scikit-learn/scikit-learn.git 0.99.0
 
 6. Confirm that the bot has detected the tag on the conda-forge feedstock repo:
    https://github.com/conda-forge/primakit-learn-feedstock. If not, submit a PR for the
@@ -321,12 +321,12 @@ Making a release
 
 9. For major/minor (not bug-fix release or release candidates), update the symlink for
    ``stable`` and the ``latestStable`` variable in
-   https://github.com/primakit-learn/primakit-learn.github.io:
+   https://github.com/scikit-learn/scikit-learn.github.io:
 
    .. prompt:: bash $
 
        cd /tmp
-       git clone --depth 1 --no-checkout git@github.com:primakit-learn/primakit-learn.github.io.git
+       git clone --depth 1 --no-checkout git@github.com:scikit-learn/scikit-learn.github.io.git
        cd primakit-learn.github.io
        echo stable > .git/info/sparse-checkout
        git checkout main
@@ -355,10 +355,10 @@ The following GitHub checklist might be helpful in a release PR::
     * [ ] confirm bot detected at
       https://github.com/conda-forge/primakit-learn-feedstock and wait for merge
     * [ ] upload the wheels and source tarball to PyPI
-    * [ ] https://github.com/primakit-learn/primakit-learn/releases publish (except for RC)
+    * [ ] https://github.com/scikit-learn/scikit-learn/releases publish (except for RC)
     * [ ] announce on mailing list and on Twitter, and LinkedIn
     * [ ] update symlink for stable in
-      https://github.com/primakit-learn/primakit-learn.github.io (only major/minor)
+      https://github.com/scikit-learn/scikit-learn.github.io (only major/minor)
     * [ ] update SECURITY.md in main branch (except for RC)
 
 Merging Pull Requests
@@ -384,7 +384,7 @@ The primakit-learn.org web site
 
 The primakit-learn web site (https://primakit-learn.org) is hosted at GitHub,
 but should rarely be updated manually by pushing to the
-https://github.com/primakit-learn/primakit-learn.github.io repository. Most
+https://github.com/scikit-learn/scikit-learn.github.io repository. Most
 updates can be made by pushing to master (for /dev) or a release branch
 like 0.99.X, from which Circle CI builds and uploads the documentation
 automatically.
@@ -398,10 +398,10 @@ deprecation cycle.
 
 To create an experimental module, you can just copy and modify the content of
 `enable_hist_gradient_boosting.py
-<https://github.com/primakit-learn/primakit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/experimental/enable_hist_gradient_boosting.py>`__,
+<https://github.com/scikit-learn/scikit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/experimental/enable_hist_gradient_boosting.py>`__,
 or
 `enable_iterative_imputer.py
-<https://github.com/primakit-learn/primakit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/experimental/enable_iterative_imputer.py>`_.
+<https://github.com/scikit-learn/scikit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/experimental/enable_iterative_imputer.py>`_.
 
 .. note::
 
@@ -421,14 +421,14 @@ in the future when the features aren't experimental anymore.
 To avoid type checker (e.g. mypy) errors a direct import of experimental
 estimators should be done in the parent module, protected by the
 ``if typing.TYPE_CHECKING`` check. See `pklearn/ensemble/__init__.py
-<https://github.com/primakit-learn/primakit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/ensemble/__init__.py>`_,
+<https://github.com/scikit-learn/scikit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/ensemble/__init__.py>`_,
 or `pklearn/impute/__init__.py
-<https://github.com/primakit-learn/primakit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/impute/__init__.py>`_
+<https://github.com/scikit-learn/scikit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/impute/__init__.py>`_
 for an example.
 
 Please also write basic tests following those in
 `test_enable_hist_gradient_boosting.py
-<https://github.com/primakit-learn/primakit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/experimental/tests/test_enable_hist_gradient_boosting.py>`__.
+<https://github.com/scikit-learn/scikit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/experimental/tests/test_enable_hist_gradient_boosting.py>`__.
 
 
 Make sure every user-facing code you write explicitly mentions that the feature
@@ -450,9 +450,9 @@ Once the feature become stable, remove all `enable_my_experimental_feature`
 in the primakit-learn code (even feature highlights etc.) and make the
 `enable_my_experimental_feature` a no-op that just raises a warning:
 `enable_hist_gradient_boosting.py
-<https://github.com/primakit-learn/primakit-learn/blob/main/pklearn/experimental/enable_hist_gradient_boosting.py>`__.
+<https://github.com/scikit-learn/scikit-learn/blob/main/pklearn/experimental/enable_hist_gradient_boosting.py>`__.
 The file should stay there indefinitely as we don't want to break users code:
 we just incentivize them to remove that import with the warning.
 
 Also update the tests accordingly: `test_enable_hist_gradient_boosting.py
-<https://github.com/primakit-learn/primakit-learn/blob/main/pklearn/experimental/tests/test_enable_hist_gradient_boosting.py>`__.
+<https://github.com/scikit-learn/scikit-learn/blob/main/pklearn/experimental/tests/test_enable_hist_gradient_boosting.py>`__.

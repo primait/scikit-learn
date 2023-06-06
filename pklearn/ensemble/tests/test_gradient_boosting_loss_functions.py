@@ -325,7 +325,7 @@ def test_exponential_loss():
     """Check that we compute the negative gradient of the exponential loss.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/9666
+    https://github.com/scikit-learn/scikit-learn/issues/9666
     """
     loss = ExponentialLoss(n_classes=2)
     y_true = np.array([0])

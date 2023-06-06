@@ -581,7 +581,7 @@ def test_cv_results(Est):
     sh.fit(X, y)
 
     # non-regression check for
-    # https://github.com/primakit-learn/primakit-learn/issues/19203
+    # https://github.com/scikit-learn/scikit-learn/issues/19203
     assert isinstance(sh.cv_results_["iter"], np.ndarray)
     assert isinstance(sh.cv_results_["n_resources"], np.ndarray)
 
