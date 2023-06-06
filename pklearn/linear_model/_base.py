@@ -398,15 +398,12 @@ class LinearClassifierMixin(ClassifierMixin):
         xp, _ = get_namespace(X)
 
         X = self._validate_data(X, accept_sparse="csr", reset=False)
-        offsets = (
-            offsets if offsets is not None else np.zeros((X.shape[0], 1), dtype=X.dtype)
-        )
 
-        scores = (
-            safe_sparse_dot(X, self.coef_.T, dense_output=True)
-            + self.intercept_
-            + offsets
-        )
+        scores = safe_sparse_dot(X, self.coef_.T, dense_output=True) + self.intercept_
+
+        if offsets is not None:
+            scores += offsets
+
         return xp.reshape(scores, -1) if scores.shape[1] == 1 else scores
 
     def predict(self, X, offsets=None):
