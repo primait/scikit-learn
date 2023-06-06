@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 
-from sklearn.utils.random import sample_without_replacement
+from pklearn.utils.random import sample_without_replacement
 
 
 def compute_time(t_start, delta):
@@ -207,7 +207,7 @@ if __name__ == "__main__":
     print("Results are averaged over %s repetition(s)." % opts.n_times)
     print("")
 
-    fig = plt.figure("scikit-learn sample w/o replacement benchmark results")
+    fig = plt.figure("primakit-learn sample w/o replacement benchmark results")
     plt.title("n_population = %s, n_times = %s" % (opts.n_population, opts.n_times))
     ax = fig.add_subplot(111)
     for name in sampling_algorithm:

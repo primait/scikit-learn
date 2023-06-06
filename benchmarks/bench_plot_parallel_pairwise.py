@@ -4,9 +4,9 @@ import time
 
 import matplotlib.pyplot as plt
 
-from sklearn.utils import check_random_state
-from sklearn.metrics.pairwise import pairwise_distances
-from sklearn.metrics.pairwise import pairwise_kernels
+from pklearn.utils import check_random_state
+from pklearn.metrics.pairwise import pairwise_distances
+from pklearn.metrics.pairwise import pairwise_kernels
 
 
 def plot(func):
@@ -26,7 +26,7 @@ def plot(func):
         func(X, n_jobs=-1)
         multi_core.append(time.time() - start)
 
-    plt.figure("scikit-learn parallel %s benchmark results" % func.__name__)
+    plt.figure("primakit-learn parallel %s benchmark results" % func.__name__)
     plt.plot(sample_sizes, one_core, label="one core")
     plt.plot(sample_sizes, multi_core, label="multi core")
     plt.xlabel("n_samples")

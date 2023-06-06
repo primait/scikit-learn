@@ -94,7 +94,7 @@ quotes = []
 for symbol in symbols:
     print("Fetching quote history for %r" % symbol, file=sys.stderr)
     url = (
-        "https://raw.githubusercontent.com/scikit-learn/examples-data/"
+        "https://raw.githubusercontent.com/primakit-learn/examples-data/"
         "master/financial-data/{}.csv"
     )
     quotes.append(pd.read_csv(url.format(symbol)))
@@ -117,7 +117,7 @@ variation = close_prices - open_prices
 # symbol, the symbols that it is connected to are those useful to explain
 # its fluctuations.
 
-from sklearn import covariance
+from pklearn import covariance
 
 alphas = np.logspace(-1.5, 1, num=10)
 edge_model = covariance.GraphicalLassoCV(alphas=alphas)
@@ -134,7 +134,7 @@ edge_model.fit(X)
 #
 # We use clustering to group together quotes that behave similarly. Here,
 # amongst the :ref:`various clustering techniques <clustering>` available
-# in the scikit-learn, we use :ref:`affinity_propagation` as it does
+# in the primakit-learn, we use :ref:`affinity_propagation` as it does
 # not enforce equal-size clusters, and it can choose automatically the
 # number of clusters from the data.
 #
@@ -144,7 +144,7 @@ edge_model.fit(X)
 # be considered as having a similar impact at the level of the full stock
 # market.
 
-from sklearn import cluster
+from pklearn import cluster
 
 _, labels = cluster.affinity_propagation(edge_model.covariance_, random_state=0)
 n_labels = labels.max()
@@ -166,7 +166,7 @@ for i in range(n_labels + 1):
 # Finding a low-dimension embedding for visualization: find the best position of
 # the nodes (the stocks) on a 2D plane
 
-from sklearn import manifold
+from pklearn import manifold
 
 node_position_model = manifold.LocallyLinearEmbedding(
     n_components=2, eigen_solver="dense", n_neighbors=6

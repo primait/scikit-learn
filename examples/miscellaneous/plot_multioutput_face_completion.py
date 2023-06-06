@@ -15,13 +15,13 @@ regression and ridge regression complete the lower half of those faces.
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.datasets import fetch_olivetti_faces
-from sklearn.utils.validation import check_random_state
+from pklearn.datasets import fetch_olivetti_faces
+from pklearn.utils.validation import check_random_state
 
-from sklearn.ensemble import ExtraTreesRegressor
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.linear_model import LinearRegression
-from sklearn.linear_model import RidgeCV
+from pklearn.ensemble import ExtraTreesRegressor
+from pklearn.neighbors import KNeighborsRegressor
+from pklearn.linear_model import LinearRegression
+from pklearn.linear_model import RidgeCV
 
 # Load the faces datasets
 data, targets = fetch_olivetti_faces(return_X_y=True)

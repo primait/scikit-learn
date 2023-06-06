@@ -23,7 +23,7 @@ In what follows, we will discuss in details the different strategies.
 # Dataset
 # -------
 # In this example, we will use the diabetes dataset.
-from sklearn.datasets import load_diabetes
+from pklearn.datasets import load_diabetes
 
 X, y = load_diabetes(return_X_y=True, as_frame=True)
 X.head()
@@ -47,21 +47,21 @@ X[X.columns[::3]].head()
 # %%
 # Selecting Lasso via an information criterion
 # --------------------------------------------
-# :class:`~sklearn.linear_model.LassoLarsIC` provides a Lasso estimator that
+# :class:`~pklearn.linear_model.LassoLarsIC` provides a Lasso estimator that
 # uses the Akaike information criterion (AIC) or the Bayes information
 # criterion (BIC) to select the optimal value of the regularization
 # parameter alpha.
 #
 # Before fitting the model, we will standardize the data with a
-# :class:`~sklearn.preprocessing.StandardScaler`. In addition, we will
+# :class:`~pklearn.preprocessing.StandardScaler`. In addition, we will
 # measure the time to fit and tune the hyperparameter alpha in order to
 # compare with the cross-validation strategy.
 #
 # We will first fit a Lasso model with the AIC criterion.
 import time
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LassoLarsIC
-from sklearn.pipeline import make_pipeline
+from pklearn.preprocessing import StandardScaler
+from pklearn.linear_model import LassoLarsIC
+from pklearn.pipeline import make_pipeline
 
 start_time = time.time()
 lasso_lars_ic = make_pipeline(StandardScaler(), LassoLarsIC(criterion="aic")).fit(X, y)
@@ -142,9 +142,9 @@ _ = ax.set_title(
 # descent and least angle regression. They differ with regards to their
 # execution speed and sources of numerical errors.
 #
-# In scikit-learn, two different estimators are available with integrated
-# cross-validation: :class:`~sklearn.linear_model.LassoCV` and
-# :class:`~sklearn.linear_model.LassoLarsCV` that respectively solve the
+# In primakit-learn, two different estimators are available with integrated
+# cross-validation: :class:`~pklearn.linear_model.LassoCV` and
+# :class:`~pklearn.linear_model.LassoLarsCV` that respectively solve the
 # problem with coordinate descent and least angle regression.
 #
 # In the remainder of this section, we will present both approaches. For both
@@ -153,8 +153,8 @@ _ = ax.set_title(
 # Lasso via coordinate descent
 # ............................
 # Let's start by making the hyperparameter tuning using
-# :class:`~sklearn.linear_model.LassoCV`.
-from sklearn.linear_model import LassoCV
+# :class:`~pklearn.linear_model.LassoCV`.
+from pklearn.linear_model import LassoCV
 
 start_time = time.time()
 model = make_pipeline(StandardScaler(), LassoCV(cv=20)).fit(X, y)
@@ -187,8 +187,8 @@ _ = plt.title(
 # Lasso via least angle regression
 # ................................
 # Let's start by making the hyperparameter tuning using
-# :class:`~sklearn.linear_model.LassoLarsCV`.
-from sklearn.linear_model import LassoLarsCV
+# :class:`~pklearn.linear_model.LassoLarsCV`.
+from pklearn.linear_model import LassoLarsCV
 
 start_time = time.time()
 model = make_pipeline(StandardScaler(), LassoLarsCV(cv=20)).fit(X, y)

@@ -21,9 +21,9 @@ the biclusters.
 import numpy as np
 from matplotlib import pyplot as plt
 
-from sklearn.datasets import make_biclusters
-from sklearn.cluster import SpectralCoclustering
-from sklearn.metrics import consensus_score
+from pklearn.datasets import make_biclusters
+from pklearn.cluster import SpectralCoclustering
+from pklearn.metrics import consensus_score
 
 data, rows, columns = make_biclusters(
     shape=(300, 300), n_clusters=5, noise=5, shuffle=False, random_state=0

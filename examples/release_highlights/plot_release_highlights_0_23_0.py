@@ -1,23 +1,23 @@
 # flake8: noqa
 """
 ========================================
-Release Highlights for scikit-learn 0.23
+Release Highlights for primakit-learn 0.23
 ========================================
 
-.. currentmodule:: sklearn
+.. currentmodule:: pklearn
 
-We are pleased to announce the release of scikit-learn 0.23! Many bug fixes
+We are pleased to announce the release of primakit-learn 0.23! Many bug fixes
 and improvements were added, as well as some new key features. We detail
 below a few of the major features of this release. **For an exhaustive list of
 all the changes**, please refer to the :ref:`release notes <changes_0_23>`.
 
 To install the latest version (with pip)::
 
-    pip install --upgrade scikit-learn
+    pip install --upgrade primakit-learn
 
 or with conda::
 
-    conda install -c conda-forge scikit-learn
+    conda install -c conda-forge primakit-learn
 
 """
 
@@ -26,18 +26,18 @@ or with conda::
 # -----------------------------------------------------------------
 # Long-awaited Generalized Linear Models with non-normal loss functions are now
 # available. In particular, three new regressors were implemented:
-# :class:`~sklearn.linear_model.PoissonRegressor`,
-# :class:`~sklearn.linear_model.GammaRegressor`, and
-# :class:`~sklearn.linear_model.TweedieRegressor`. The Poisson regressor can be
+# :class:`~pklearn.linear_model.PoissonRegressor`,
+# :class:`~pklearn.linear_model.GammaRegressor`, and
+# :class:`~pklearn.linear_model.TweedieRegressor`. The Poisson regressor can be
 # used to model positive integer counts, or relative frequencies. Read more in
 # the :ref:`User Guide <Generalized_linear_regression>`. Additionally,
-# :class:`~sklearn.ensemble.HistGradientBoostingRegressor` supports a new
+# :class:`~pklearn.ensemble.HistGradientBoostingRegressor` supports a new
 # 'poisson' loss as well.
 
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import PoissonRegressor
-from sklearn.ensemble import HistGradientBoostingRegressor
+from pklearn.model_selection import train_test_split
+from pklearn.linear_model import PoissonRegressor
+from pklearn.ensemble import HistGradientBoostingRegressor
 
 n_samples, n_features = 1000, 20
 rng = np.random.RandomState(0)
@@ -62,12 +62,12 @@ print(gbdt.score(X_test, y_test))
 # elements.  See :ref:`visualizing_composite_estimators` for how you can use
 # this feature.
 
-from sklearn import set_config
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.impute import SimpleImputer
-from sklearn.compose import make_column_transformer
-from sklearn.linear_model import LogisticRegression
+from pklearn import set_config
+from pklearn.pipeline import make_pipeline
+from pklearn.preprocessing import OneHotEncoder, StandardScaler
+from pklearn.impute import SimpleImputer
+from pklearn.compose import make_column_transformer
+from pklearn.linear_model import LogisticRegression
 
 set_config(display="diagram")
 
@@ -88,7 +88,7 @@ clf
 ##############################################################################
 # Scalability and stability improvements to KMeans
 # ------------------------------------------------
-# The :class:`~sklearn.cluster.KMeans` estimator was entirely re-worked, and it
+# The :class:`~pklearn.cluster.KMeans` estimator was entirely re-worked, and it
 # is now significantly faster and more stable. In addition, the Elkan algorithm
 # is now compatible with sparse matrices. The estimator uses OpenMP based
 # parallelism instead of relying on joblib, so the `n_jobs` parameter has no
@@ -96,10 +96,10 @@ clf
 # please refer to our :ref:`parallelism` notes.
 import scipy
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.cluster import KMeans
-from sklearn.datasets import make_blobs
-from sklearn.metrics import completeness_score
+from pklearn.model_selection import train_test_split
+from pklearn.cluster import KMeans
+from pklearn.datasets import make_blobs
+from pklearn.metrics import completeness_score
 
 rng = np.random.RandomState(0)
 X, y = make_blobs(random_state=rng)
@@ -112,8 +112,8 @@ print(completeness_score(kmeans.predict(X_test), y_test))
 # Improvements to the histogram-based Gradient Boosting estimators
 # ----------------------------------------------------------------
 # Various improvements were made to
-# :class:`~sklearn.ensemble.HistGradientBoostingClassifier` and
-# :class:`~sklearn.ensemble.HistGradientBoostingRegressor`. On top of the
+# :class:`~pklearn.ensemble.HistGradientBoostingClassifier` and
+# :class:`~pklearn.ensemble.HistGradientBoostingRegressor`. On top of the
 # Poisson loss mentioned above, these estimators now support :ref:`sample
 # weights <sw_hgbdt>`. Also, an automatic early-stopping criterion was added:
 # early-stopping is enabled by default when the number of samples exceeds 10k.
@@ -125,11 +125,11 @@ print(completeness_score(kmeans.predict(X_test), y_test))
 # effect of the first feature, instead of fitting the noise.
 import numpy as np
 from matplotlib import pyplot as plt
-from sklearn.model_selection import train_test_split
+from pklearn.model_selection import train_test_split
 
-# from sklearn.inspection import plot_partial_dependence
-from sklearn.inspection import PartialDependenceDisplay
-from sklearn.ensemble import HistGradientBoostingRegressor
+# from pklearn.inspection import plot_partial_dependence
+from pklearn.inspection import PartialDependenceDisplay
+from pklearn.ensemble import HistGradientBoostingRegressor
 
 n_samples = 500
 rng = np.random.RandomState(0)
@@ -169,12 +169,12 @@ plt.show()
 ##############################################################################
 # Sample-weight support for Lasso and ElasticNet
 # ----------------------------------------------
-# The two linear regressors :class:`~sklearn.linear_model.Lasso` and
-# :class:`~sklearn.linear_model.ElasticNet` now support sample weights.
+# The two linear regressors :class:`~pklearn.linear_model.Lasso` and
+# :class:`~pklearn.linear_model.ElasticNet` now support sample weights.
 
-from sklearn.model_selection import train_test_split
-from sklearn.datasets import make_regression
-from sklearn.linear_model import Lasso
+from pklearn.model_selection import train_test_split
+from pklearn.datasets import make_regression
+from pklearn.linear_model import Lasso
 import numpy as np
 
 n_samples, n_features = 1000, 20

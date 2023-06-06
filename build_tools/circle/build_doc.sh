@@ -180,7 +180,7 @@ source activate $CONDA_ENV_NAME
 show_installed_libraries
 
 # Set parallelism to 3 to overlap IO bound tasks with CPU bound tasks on CI
-# workers with 2 cores when building the compiled extensions of scikit-learn.
+# workers with 2 cores when building the compiled extensions of primakit-learn.
 export SKLEARN_BUILD_PARALLEL=3
 pip install -e . --no-build-isolation
 
@@ -206,7 +206,7 @@ set -o pipefail && cd doc && make $make_args 2>&1 | tee ~/log.txt
 
 # Insert the version warning for deployment
 find _build/html/stable -name "*.html" | xargs sed -i '/<\/body>/ i \
-\    <script src="https://scikit-learn.org/versionwarning.js"></script>'
+\    <script src="https://primakit-learn.org/versionwarning.js"></script>'
 
 cd -
 set +o pipefail
@@ -215,10 +215,10 @@ affected_doc_paths() {
     files=$(git diff --name-only origin/main...$CIRCLE_SHA1)
     echo "$files" | grep ^doc/.*\.rst | sed 's/^doc\/\(.*\)\.rst$/\1.html/'
     echo "$files" | grep ^examples/.*.py | sed 's/^\(.*\)\.py$/auto_\1.html/'
-    sklearn_files=$(echo "$files" | grep '^sklearn/')
-    if [ -n "$sklearn_files" ]
+    pklearn_files=$(echo "$files" | grep '^pklearn/')
+    if [ -n "$pklearn_files" ]
     then
-        grep -hlR -f<(echo "$sklearn_files" | sed 's/^/scikit-learn\/blob\/[a-z0-9]*\//') doc/_build/html/stable/modules/generated | cut -d/ -f5-
+        grep -hlR -f<(echo "$pklearn_files" | sed 's/^/primakit-learn\/blob\/[a-z0-9]*\//') doc/_build/html/stable/modules/generated | cut -d/ -f5-
     fi
 }
 
@@ -250,7 +250,7 @@ then
     echo "$affected"
     (
     echo '<html><body><ul>'
-    echo "$affected" | sed 's|.*|<li><a href="&">&</a> [<a href="https://scikit-learn.org/dev/&">dev</a>, <a href="https://scikit-learn.org/stable/&">stable</a>]</li>|'
+    echo "$affected" | sed 's|.*|<li><a href="&">&</a> [<a href="https://primakit-learn.org/dev/&">dev</a>, <a href="https://primakit-learn.org/stable/&">stable</a>]</li>|'
     echo '</ul><p>General: <a href="index.html">Home</a> | <a href="modules/classes.html">API Reference</a> | <a href="auto_examples/index.html">Examples</a></p>'
     echo '<strong>Sphinx Warnings in affected files</strong><ul>'
     echo "$warnings" | sed 's/\/home\/circleci\/project\//<li>/g'

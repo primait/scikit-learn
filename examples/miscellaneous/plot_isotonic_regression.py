@@ -27,9 +27,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
 
-from sklearn.linear_model import LinearRegression
-from sklearn.isotonic import IsotonicRegression
-from sklearn.utils import check_random_state
+from pklearn.linear_model import LinearRegression
+from pklearn.isotonic import IsotonicRegression
+from pklearn.utils import check_random_state
 
 n = 100
 x = np.arange(n)

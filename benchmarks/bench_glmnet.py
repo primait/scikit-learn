@@ -2,7 +2,7 @@
 To run this, you'll need to have installed.
 
   * glmnet-python
-  * scikit-learn (of course)
+  * primakit-learn (of course)
 
 Does two benchmarks
 
@@ -19,7 +19,7 @@ In both cases, only 10% of the features are informative.
 import numpy as np
 import gc
 from time import time
-from sklearn.datasets import make_regression
+from pklearn.datasets import make_regression
 
 alpha = 0.1
 # alpha = 0.01
@@ -46,7 +46,7 @@ def bench(factory, X, Y, X_test, Y_test, ref_coef):
 
 if __name__ == "__main__":
     from glmnet.elastic_net import Lasso as GlmnetLasso
-    from sklearn.linear_model import Lasso as ScikitLasso
+    from pklearn.linear_model import Lasso as ScikitLasso
 
     # Delayed import of matplotlib.pyplot
     import matplotlib.pyplot as plt
@@ -76,7 +76,7 @@ if __name__ == "__main__":
         X = X[: (i * step)]
         Y = Y[: (i * step)]
 
-        print("benchmarking scikit-learn: ")
+        print("benchmarking primakit-learn: ")
         scikit_results.append(bench(ScikitLasso, X, Y, X_test, Y_test, coef_))
         print("benchmarking glmnet: ")
         glmnet_results.append(bench(GlmnetLasso, X, Y, X_test, Y_test, coef_))
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     plt.clf()
     xx = range(0, n * step, step)
     plt.title("Lasso regression on sample dataset (%d features)" % n_features)
-    plt.plot(xx, scikit_results, "b-", label="scikit-learn")
+    plt.plot(xx, scikit_results, "b-", label="primakit-learn")
     plt.plot(xx, glmnet_results, "r-", label="glmnet")
     plt.legend()
     plt.xlabel("number of samples to classify")
@@ -120,15 +120,15 @@ if __name__ == "__main__":
         X = X[:n_samples]
         Y = Y[:n_samples]
 
-        print("benchmarking scikit-learn: ")
+        print("benchmarking primakit-learn: ")
         scikit_results.append(bench(ScikitLasso, X, Y, X_test, Y_test, coef_))
         print("benchmarking glmnet: ")
         glmnet_results.append(bench(GlmnetLasso, X, Y, X_test, Y_test, coef_))
 
     xx = np.arange(100, 100 + n * step, step)
-    plt.figure("scikit-learn vs. glmnet benchmark results")
+    plt.figure("primakit-learn vs. glmnet benchmark results")
     plt.title("Regression in high dimensional spaces (%d samples)" % n_samples)
-    plt.plot(xx, scikit_results, "b-", label="scikit-learn")
+    plt.plot(xx, scikit_results, "b-", label="primakit-learn")
     plt.plot(xx, glmnet_results, "r-", label="glmnet")
     plt.legend()
     plt.xlabel("number of features")

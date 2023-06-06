@@ -1,6 +1,6 @@
-# scikit-learn Brand Guidelines
+# primakit-learn Brand Guidelines
 
-This section contains information around scikit-learn's brand standards and the use of scikit-learn assets. The purpose of these guidelines are to ensure the scikit-learn logo remains consistent and recognizable across all uses and communications. These guidelines also provide a common language for referring to the logos and their components.
+This section contains information around primakit-learn's brand standards and the use of primakit-learn assets. The purpose of these guidelines are to ensure the primakit-learn logo remains consistent and recognizable across all uses and communications. These guidelines also provide a common language for referring to the logos and their components.
 
 File types:
 - `PNG` is a higher-quality compression format; size of file is generally larger
@@ -13,16 +13,16 @@ File types:
 <br>
 
 ## Brand Name
-The official name of the package is __scikit-learn__. Do not abbreviate or otherwise alter the name. Always spell ‘scikit’ with a lowercase ‘s’.
+The official name of the package is __primakit-learn__. Do not abbreviate or otherwise alter the name. Always spell ‘scikit’ with a lowercase ‘s’.
 
 
 ## Color Palette
 
-![#29ABE2 Cyan](brand_colors/colorswatch_29ABE2_cyan.png) `RGB 41/171/226 | HEX #29ABE2 | scikit-learn Cyan` | More info: [#29ABE2](https://www.color-hex.com/color/29abe2)
+![#29ABE2 Cyan](brand_colors/colorswatch_29ABE2_cyan.png) `RGB 41/171/226 | HEX #29ABE2 | primakit-learn Cyan` | More info: [#29ABE2](https://www.color-hex.com/color/29abe2)
 
-![#F7931E Orange](brand_colors/colorswatch_F7931E_orange.png)  `RGB 247/147/30 | HEX #F7931E | scikit-learn Orange` | More info: [#F7931E](https://www.color-hex.com/color/f7931e)
+![#F7931E Orange](brand_colors/colorswatch_F7931E_orange.png)  `RGB 247/147/30 | HEX #F7931E | primakit-learn Orange` | More info: [#F7931E](https://www.color-hex.com/color/f7931e)
 
-![#9B4600 Brown](brand_colors/colorswatch_9B4600_brown.png) `RGB 155/70/0| HEX #9B4600 | scikit-learn Brown` | More info: [#9B4600](https://www.color-hex.com/color/9b4600)
+![#9B4600 Brown](brand_colors/colorswatch_9B4600_brown.png) `RGB 155/70/0| HEX #9B4600 | primakit-learn Brown` | More info: [#9B4600](https://www.color-hex.com/color/9b4600)
 
 
 ## Typography
@@ -32,28 +32,28 @@ The following typeface is used in the logo:
 
 
 ## Logos
-You may highlight or reference your work with scikit-learn by using one of the logos provided below. Any use must abide by the Logo Integrity Standards defined below.
+You may highlight or reference your work with primakit-learn by using one of the logos provided below. Any use must abide by the Logo Integrity Standards defined below.
 
 | | |
 | - | - |
-|  <img src="1280px-scikit-learn-logo.png" height="100px"> | __Logo 1__ <br> File type: PNG <br> File size: 49 KB (1280 x 689 px) <br> File name: [1280px-scikit-learn-logo.png](https://github.com/scikit-learn/scikit-learn/blob/main/doc/logos/1280px-scikit-learn-logo.png) | 
-|  <img src="favicon.ico" height="100px"> | __Logo 2__ <br> File type: ICO <br> File size:  2 KB (32 x 32 px) <br> File name: [favicon.ico](https://github.com/scikit-learn/scikit-learn/blob/main/doc/logos/favicon.ico) |
-|  <img src="scikit-learn-logo-without-subtitle.svg" height="100px"> | __Logo 3__ <br> File type: SVG <br> File size: 5 KB <br> File name: [scikit-learn-logo-without-subtitle.svg](https://github.com/scikit-learn/scikit-learn/blob/main/doc/logos/scikit-learn-logo-without-subtitle.svg) | 
-|  <img src="scikit-learn-logo.svg" height="200px"> | __Logo 4__ <br> File type: SVG <br> File size: 4.59 KB <br> File name: [scikit-learn-logo.svg](https://github.com/scikit-learn/scikit-learn/blob/main/doc/logos/scikit-learn-logo.svg) | 
+|  <img src="1280px-primakit-learn-logo.png" height="100px"> | __Logo 1__ <br> File type: PNG <br> File size: 49 KB (1280 x 689 px) <br> File name: [1280px-primakit-learn-logo.png](https://github.com/primakit-learn/primakit-learn/blob/main/doc/logos/1280px-primakit-learn-logo.png) | 
+|  <img src="favicon.ico" height="100px"> | __Logo 2__ <br> File type: ICO <br> File size:  2 KB (32 x 32 px) <br> File name: [favicon.ico](https://github.com/primakit-learn/primakit-learn/blob/main/doc/logos/favicon.ico) |
+|  <img src="primakit-learn-logo-without-subtitle.svg" height="100px"> | __Logo 3__ <br> File type: SVG <br> File size: 5 KB <br> File name: [primakit-learn-logo-without-subtitle.svg](https://github.com/primakit-learn/primakit-learn/blob/main/doc/logos/primakit-learn-logo-without-subtitle.svg) | 
+|  <img src="primakit-learn-logo.svg" height="200px"> | __Logo 4__ <br> File type: SVG <br> File size: 4.59 KB <br> File name: [primakit-learn-logo.svg](https://github.com/primakit-learn/primakit-learn/blob/main/doc/logos/primakit-learn-logo.svg) | 
 
 <br>
 
 
 ### Logo Integrity Standards
 
-- __Minimum Size:__ For consistent legibility, please do not display the scikit-learn logo at less than 50px wide.
+- __Minimum Size:__ For consistent legibility, please do not display the primakit-learn logo at less than 50px wide.
 - __Scale:__ Ensure any logos used are scaled proportionally. Stretched, compressed, or otherwise distorted versions of the logo should not be displayed.
 
 - __Clear Space:__ To ensure the logo is clearly visible in all uses, surround it with a sufficient amount of clear space that is free of type, graphics, and other elements that might cause visual clutter. Do not overlap or obscure the logo with text, images, or other elements. The image below demonstrates the suggested amount of clear space margins to use around the logo. <br> <center><img src="brand_guidelines/scikitlearn_logo_clearspace_updated.png" width="250px"></center>
 
 - __Colors:__ Only use logos in the approved color palette defined above. Do not recolor the logo. 
 - __Typeface:__ Do not change the typeface used in the logo. 
-- __No Modification:__ Do not attempt recreate or otherwise modify the scikit-learn logo.
+- __No Modification:__ Do not attempt recreate or otherwise modify the primakit-learn logo.
 
 
 
@@ -63,4 +63,4 @@ You may highlight or reference your work with scikit-learn by using one of the l
 - [color-hex](https://www.color-hex.com): Glossary of Color Palettes
 
 ## Other
-You can find more variations of the logos here:  https://github.com/scikit-learn/blog/tree/main/assets/images
+You can find more variations of the logos here:  https://github.com/primakit-learn/blog/tree/main/assets/images

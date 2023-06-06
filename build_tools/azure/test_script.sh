@@ -14,12 +14,12 @@ fi
 if [[ "$BUILD_REASON" == "Schedule" ]]; then
     # Enable global random seed randomization to discover seed-sensitive tests
     # only on nightly builds.
-    # https://scikit-learn.org/stable/computing/parallelism.html#environment-variables
+    # https://primakit-learn.org/stable/computing/parallelism.html#environment-variables
     export SKLEARN_TESTS_GLOBAL_RANDOM_SEED="any"
 
     # Enable global dtype fixture for all nightly builds to discover
     # numerical-sensitive tests.
-    # https://scikit-learn.org/stable/computing/parallelism.html#environment-variables
+    # https://primakit-learn.org/stable/computing/parallelism.html#environment-variables
     export SKLEARN_RUN_FLOAT32_TESTS=1
 fi
 
@@ -35,7 +35,7 @@ cp setup.cfg $TEST_DIR
 cd $TEST_DIR
 
 python -c "import joblib; print(f'Number of cores: {joblib.cpu_count()}')"
-python -c "import sklearn; sklearn.show_versions()"
+python -c "import pklearn; pklearn.show_versions()"
 
 show_installed_libraries
 
@@ -48,7 +48,7 @@ if [[ "$COVERAGE" == "true" ]]; then
     # report that otherwise hides the test failures and forces long scrolls in
     # the CI logs.
     export COVERAGE_PROCESS_START="$BUILD_SOURCESDIRECTORY/.coveragerc"
-    TEST_CMD="$TEST_CMD --cov-config='$COVERAGE_PROCESS_START' --cov sklearn --cov-report="
+    TEST_CMD="$TEST_CMD --cov-config='$COVERAGE_PROCESS_START' --cov pklearn --cov-report="
 fi
 
 if [[ -n "$CHECK_WARNINGS" ]]; then
@@ -85,5 +85,5 @@ if [[ -n "$SELECTED_TESTS" ]]; then
 fi
 
 set -x
-eval "$TEST_CMD --pyargs sklearn"
+eval "$TEST_CMD --pyargs pklearn"
 set +x

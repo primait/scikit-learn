@@ -35,18 +35,18 @@ except ImportError:
     sys.exit()
 
 # %%
-# We define a wrapper class for implementing the scikit-learn API to the
+# We define a wrapper class for implementing the primakit-learn API to the
 # `nmslib`, as well as a loading function.
 import joblib
 import numpy as np
 from scipy.sparse import csr_matrix
-from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.datasets import fetch_openml
-from sklearn.utils import shuffle
+from pklearn.base import BaseEstimator, TransformerMixin
+from pklearn.datasets import fetch_openml
+from pklearn.utils import shuffle
 
 
 class NMSlibTransformer(TransformerMixin, BaseEstimator):
-    """Wrapper for using nmslib as sklearn's KNeighborsTransformer"""
+    """Wrapper for using nmslib as pklearn's KNeighborsTransformer"""
 
     def __init__(self, n_neighbors=5, metric="euclidean", method="sw-graph", n_jobs=-1):
         self.n_neighbors = n_neighbors
@@ -111,9 +111,9 @@ def load_mnist(n_samples):
 # We benchmark the different exact/approximate nearest neighbors transformers.
 import time
 
-from sklearn.manifold import TSNE
-from sklearn.neighbors import KNeighborsTransformer
-from sklearn.pipeline import make_pipeline
+from pklearn.manifold import TSNE
+from pklearn.neighbors import KNeighborsTransformer
+from pklearn.pipeline import make_pipeline
 
 datasets = [
     ("MNIST_10000", load_mnist(n_samples=10_000)),
@@ -205,7 +205,7 @@ for dataset_name, (X, y) in datasets:
 # `fit` and the first `transform` due to the overhead of the numba just in time
 # compiler. But after the first call, the compiled Python code is kept in a
 # cache by numba and subsequent calls do not suffer from this initial overhead.
-# Both :class:`~sklearn.neighbors.KNeighborsTransformer` and `NMSlibTransformer`
+# Both :class:`~pklearn.neighbors.KNeighborsTransformer` and `NMSlibTransformer`
 # are only run once here as they would show more stable `fit` and `transform`
 # times (they don't have the cold start problem of PyNNDescentTransformer).
 
@@ -289,12 +289,12 @@ plt.show()
 #     TSNE with KNeighborsTransformer     50.994 sec (fit_transform)
 #     TSNE with NMSlibTransformer         43.536 sec (fit_transform)
 #
-# We can observe that the default :class:`~sklearn.manifold.TSNE` estimator with
-# its internal :class:`~sklearn.neighbors.NearestNeighbors` implementation is
-# roughly equivalent to the pipeline with :class:`~sklearn.manifold.TSNE` and
-# :class:`~sklearn.neighbors.KNeighborsTransformer` in terms of performance.
+# We can observe that the default :class:`~pklearn.manifold.TSNE` estimator with
+# its internal :class:`~pklearn.neighbors.NearestNeighbors` implementation is
+# roughly equivalent to the pipeline with :class:`~pklearn.manifold.TSNE` and
+# :class:`~pklearn.neighbors.KNeighborsTransformer` in terms of performance.
 # This is expected because both pipelines rely internally on the same
-# :class:`~sklearn.neighbors.NearestNeighbors` implementation that performs
+# :class:`~pklearn.neighbors.NearestNeighbors` implementation that performs
 # exacts neighbors search. The approximate `NMSlibTransformer` is already
 # slightly faster than the exact search on the smallest dataset but this speed
 # difference is expected to become more significant on datasets with a larger
@@ -302,10 +302,10 @@ plt.show()
 #
 # Notice however that not all approximate search methods are guaranteed to
 # improve the speed of the default exact search method: indeed the exact search
-# implementation significantly improved since scikit-learn 1.1. Furthermore, the
+# implementation significantly improved since primakit-learn 1.1. Furthermore, the
 # brute-force exact search method does not require building an index at `fit`
 # time. So, to get an overall performance improvement in the context of the
-# :class:`~sklearn.manifold.TSNE` pipeline, the gains of the approximate search
+# :class:`~pklearn.manifold.TSNE` pipeline, the gains of the approximate search
 # at `transform` need to be larger than the extra time spent to build the
 # approximate search index at `fit` time.
 #

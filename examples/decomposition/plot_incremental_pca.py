@@ -25,8 +25,8 @@ incremental approaches.
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.datasets import load_iris
-from sklearn.decomposition import PCA, IncrementalPCA
+from pklearn.datasets import load_iris
+from pklearn.decomposition import PCA, IncrementalPCA
 
 iris = load_iris()
 X = iris.data

@@ -8,8 +8,8 @@
 *.swo
 .DS_Store
 build
-sklearn/datasets/__config__.py
-sklearn/**/*.html
+pklearn/datasets/__config__.py
+pklearn/**/*.html
 
 dist/
 MANIFEST
@@ -21,7 +21,7 @@ doc/min_dependency_table.rst
 doc/min_dependency_substitutions.rst
 *.pdf
 pip-log.txt
-scikit_learn.egg-info/
+primakit_learn.egg-info/
 .coverage
 coverage
 *.py,cover
@@ -76,24 +76,24 @@ _configtest.o.d
 .mypy_cache/
 
 # virtualenv from advanced installation guide
-sklearn-env/
+pklearn-env/
 
 # files generated from a template
-sklearn/_loss/_loss.pyx
-sklearn/utils/_seq_dataset.pyx
-sklearn/utils/_seq_dataset.pxd
-sklearn/utils/_weight_vector.pyx
-sklearn/utils/_weight_vector.pxd
-sklearn/linear_model/_sag_fast.pyx
-sklearn/metrics/_dist_metrics.pyx
-sklearn/metrics/_dist_metrics.pxd
-sklearn/metrics/_pairwise_distances_reduction/_argkmin.pxd
-sklearn/metrics/_pairwise_distances_reduction/_argkmin.pyx
-sklearn/metrics/_pairwise_distances_reduction/_base.pxd
-sklearn/metrics/_pairwise_distances_reduction/_base.pyx
-sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.pxd
-sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.pyx
-sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.pxd
-sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.pyx
-sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.pxd
-sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.pyx
+pklearn/_loss/_loss.pyx
+pklearn/utils/_seq_dataset.pyx
+pklearn/utils/_seq_dataset.pxd
+pklearn/utils/_weight_vector.pyx
+pklearn/utils/_weight_vector.pxd
+pklearn/linear_model/_sag_fast.pyx
+pklearn/metrics/_dist_metrics.pyx
+pklearn/metrics/_dist_metrics.pxd
+pklearn/metrics/_pairwise_distances_reduction/_argkmin.pxd
+pklearn/metrics/_pairwise_distances_reduction/_argkmin.pyx
+pklearn/metrics/_pairwise_distances_reduction/_base.pxd
+pklearn/metrics/_pairwise_distances_reduction/_base.pyx
+pklearn/metrics/_pairwise_distances_reduction/_datasets_pair.pxd
+pklearn/metrics/_pairwise_distances_reduction/_datasets_pair.pyx
+pklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.pxd
+pklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.pyx
+pklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.pxd
+pklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.pyx

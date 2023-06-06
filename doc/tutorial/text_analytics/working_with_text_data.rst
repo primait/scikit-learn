@@ -4,7 +4,7 @@
 Working With Text Data
 ======================
 
-The goal of this guide is to explore some of the main ``scikit-learn``
+The goal of this guide is to explore some of the main ``primakit-learn``
 tools on a single practical task: analyzing a collection of text
 documents (newsgroups posts) on twenty different topics.
 
@@ -24,17 +24,17 @@ Tutorial setup
 --------------
 
 To get started with this tutorial, you must first install
-*scikit-learn* and all of its required dependencies.
+*primakit-learn* and all of its required dependencies.
 
 Please refer to the :ref:`installation instructions <installation-instructions>`
 page for more information and for system-specific instructions.
 
-The source of this tutorial can be found within your scikit-learn folder::
+The source of this tutorial can be found within your primakit-learn folder::
 
-    scikit-learn/doc/tutorial/text_analytics/
+    primakit-learn/doc/tutorial/text_analytics/
 
 The source can also be found `on Github
-<https://github.com/scikit-learn/scikit-learn/tree/main/doc/tutorial/text_analytics>`_.
+<https://github.com/primakit-learn/primakit-learn/tree/main/doc/tutorial/text_analytics>`_.
 
 The tutorial folder should contain the following sub-folders:
 
@@ -48,13 +48,13 @@ The tutorial folder should contain the following sub-folders:
 
 
 You can already copy the skeletons into a new folder somewhere
-on your hard-drive named ``sklearn_tut_workspace``, where you
+on your hard-drive named ``pklearn_tut_workspace``, where you
 will edit your own files for the exercises while keeping
 the original skeletons intact:
 
 .. prompt:: bash $
 
-  cp -r skeletons work_directory/sklearn_tut_workspace
+  cp -r skeletons work_directory/pklearn_tut_workspace
 
 
 Machine learning algorithms need data. Go to each ``$TUTORIAL_HOME/data``
@@ -87,8 +87,8 @@ description, quoted from the `website
   such as text classification and text clustering.
 
 In the following we will use the built-in dataset loader for 20 newsgroups
-from scikit-learn. Alternatively, it is possible to download the dataset
-manually from the website and use the :func:`sklearn.datasets.load_files`
+from primakit-learn. Alternatively, it is possible to download the dataset
+manually from the website and use the :func:`pklearn.datasets.load_files`
 function by pointing it to the ``20news-bydate-train`` sub-folder of the
 uncompressed archive folder.
 
@@ -101,11 +101,11 @@ in the dataset::
 
 We can now load the list of files matching those categories as follows::
 
-  >>> from sklearn.datasets import fetch_20newsgroups
+  >>> from pklearn.datasets import fetch_20newsgroups
   >>> twenty_train = fetch_20newsgroups(subset='train',
   ...     categories=categories, shuffle=True, random_state=42)
 
-The returned dataset is a ``scikit-learn`` "bunch": a simple holder
+The returned dataset is a ``primakit-learn`` "bunch": a simple holder
 object with fields that can be both accessed as python ``dict``
 keys or ``object`` attributes for convenience, for instance the
 ``target_names`` holds the list of the requested category names::
@@ -136,7 +136,7 @@ document in the training set. In this case the category is the name of the
 newsgroup which also happens to be the name of the folder holding the
 individual documents.
 
-For speed and space efficiency reasons, ``scikit-learn`` loads the
+For speed and space efficiency reasons, ``primakit-learn`` loads the
 target attribute as an array of integers that corresponds to the
 index of the category name in the ``target_names`` list. The category
 integer id of each sample is stored in the ``target`` attribute::
@@ -172,7 +172,7 @@ Extracting features from text files
 In order to perform machine learning on text documents, we first need to
 turn the text content into numerical feature vectors.
 
-.. currentmodule:: sklearn.feature_extraction.text
+.. currentmodule:: pklearn.feature_extraction.text
 
 
 Bags of words
@@ -203,17 +203,17 @@ used. For this reason we say that bags of words are typically
 only storing the non-zero parts of the feature vectors in memory.
 
 ``scipy.sparse`` matrices are data structures that do exactly this,
-and ``scikit-learn`` has built-in support for these structures.
+and ``primakit-learn`` has built-in support for these structures.
 
 
-Tokenizing text with ``scikit-learn``
+Tokenizing text with ``primakit-learn``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Text preprocessing, tokenizing and filtering of stopwords are all included
 in :class:`CountVectorizer`, which builds a dictionary of features and
 transforms documents to feature vectors::
 
-  >>> from sklearn.feature_extraction.text import CountVectorizer
+  >>> from pklearn.feature_extraction.text import CountVectorizer
   >>> count_vect = CountVectorizer()
   >>> X_train_counts = count_vect.fit_transform(twenty_train.data)
   >>> X_train_counts.shape
@@ -265,7 +265,7 @@ Inverse Document Frequency".
 Both **tf** and **tf–idf** can be computed as follows using
 :class:`TfidfTransformer`::
 
-  >>> from sklearn.feature_extraction.text import TfidfTransformer
+  >>> from pklearn.feature_extraction.text import TfidfTransformer
   >>> tf_transformer = TfidfTransformer(use_idf=False).fit(X_train_counts)
   >>> X_train_tf = tf_transformer.transform(X_train_counts)
   >>> X_train_tf.shape
@@ -291,11 +291,11 @@ Training a classifier
 Now that we have our features, we can train a classifier to try to predict
 the category of a post. Let's start with a :ref:`naïve Bayes <naive_bayes>`
 classifier, which
-provides a nice baseline for this task. ``scikit-learn`` includes several
+provides a nice baseline for this task. ``primakit-learn`` includes several
 variants of this classifier, and the one most suitable for word counts is the
 multinomial variant::
 
-  >>> from sklearn.naive_bayes import MultinomialNB
+  >>> from pklearn.naive_bayes import MultinomialNB
   >>> clf = MultinomialNB().fit(X_train_tfidf, twenty_train.target)
 
 To try to predict the outcome on a new document we need to extract
@@ -320,10 +320,10 @@ Building a pipeline
 -------------------
 
 In order to make the vectorizer => transformer => classifier easier
-to work with, ``scikit-learn`` provides a :class:`~sklearn.pipeline.Pipeline` class that behaves
+to work with, ``primakit-learn`` provides a :class:`~pklearn.pipeline.Pipeline` class that behaves
 like a compound classifier::
 
-  >>> from sklearn.pipeline import Pipeline
+  >>> from pklearn.pipeline import Pipeline
   >>> text_clf = Pipeline([
   ...     ('vect', CountVectorizer()),
   ...     ('tfidf', TfidfTransformer()),
@@ -359,7 +359,7 @@ the best text classification algorithms (although it's also a bit slower
 than naïve Bayes). We can change the learner by simply plugging a different
 classifier object into our pipeline::
 
-  >>> from sklearn.linear_model import SGDClassifier
+  >>> from pklearn.linear_model import SGDClassifier
   >>> text_clf = Pipeline([
   ...     ('vect', CountVectorizer()),
   ...     ('tfidf', TfidfTransformer()),
@@ -374,10 +374,10 @@ classifier object into our pipeline::
   >>> np.mean(predicted == twenty_test.target)
   0.9101...
 
-We achieved 91.3% accuracy using the SVM. ``scikit-learn`` provides further
+We achieved 91.3% accuracy using the SVM. ``primakit-learn`` provides further
 utilities for more detailed performance analysis of the results::
 
-  >>> from sklearn import metrics
+  >>> from pklearn import metrics
   >>> print(metrics.classification_report(twenty_test.target, predicted,
   ...     target_names=twenty_test.target_names))
                           precision    recall  f1-score   support
@@ -412,7 +412,7 @@ with computer graphics.
   the classifier model to tune its parameters for the linear Support
   Vector Machine cost function.
 
-  Alternatively we could have used ``sklearn.svm.LinearSVC`` (Linear
+  Alternatively we could have used ``pklearn.svm.LinearSVC`` (Linear
   Support Vector Machine Classifier) that provides an alternative
   optimizer for the same cost function based on the liblinear_ C++
   library.
@@ -436,7 +436,7 @@ parameters on a grid of possible values. We try out all classifiers
 on either words or bigrams, with or without idf, and with a penalty
 parameter of either 0.01 or 0.001 for the linear SVM::
 
-  >>> from sklearn.model_selection import GridSearchCV
+  >>> from pklearn.model_selection import GridSearchCV
   >>> parameters = {
   ...     'vect__ngram_range': [(1, 1), (1, 2)],
   ...     'tfidf__use_idf': (True, False),
@@ -452,7 +452,7 @@ are installed and use them all::
 
   >>> gs_clf = GridSearchCV(text_clf, parameters, cv=5, n_jobs=-1)
 
-The grid search instance behaves like a normal ``scikit-learn``
+The grid search instance behaves like a normal ``primakit-learn``
 model. Let's perform the search on a smaller subset of the training data
 to speed up the computation::
 
@@ -560,7 +560,7 @@ predictions.
 Where to from here
 ------------------
 
-Here are a few suggestions to help further your scikit-learn intuition
+Here are a few suggestions to help further your primakit-learn intuition
 upon the completion of this tutorial:
 
 

@@ -23,9 +23,9 @@ The visualization shows coefficients of the models for varying C.
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.linear_model import LogisticRegression
-from sklearn import datasets
-from sklearn.preprocessing import StandardScaler
+from pklearn.linear_model import LogisticRegression
+from pklearn import datasets
+from pklearn.preprocessing import StandardScaler
 
 X, y = datasets.load_digits(return_X_y=True)
 

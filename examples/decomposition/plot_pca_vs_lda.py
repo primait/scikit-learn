@@ -20,9 +20,9 @@ LDA, in contrast to PCA, is a supervised method, using known class labels.
 
 import matplotlib.pyplot as plt
 
-from sklearn import datasets
-from sklearn.decomposition import PCA
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from pklearn import datasets
+from pklearn.decomposition import PCA
+from pklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
 iris = datasets.load_iris()
 

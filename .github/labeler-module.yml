@@ -1,80 +1,80 @@
 module:cluster:
-- sklearn/cluster/**/*
+- pklearn/cluster/**/*
 
 module:common:
-- sklearn/common/**/*
+- pklearn/common/**/*
 
 module:compose:
-- sklearn/compose/**/*
+- pklearn/compose/**/*
 
 module:covariance:
-- sklearn/covariance/**/*
+- pklearn/covariance/**/*
 
 module:cross_decomposition:
-- sklearn/cross_decomposition/**/*
+- pklearn/cross_decomposition/**/*
 
 module:datasets:
-- sklearn/datasets/**/*
+- pklearn/datasets/**/*
 
 module:decomposition:
-- sklearn/decomposition/**/*
+- pklearn/decomposition/**/*
 
 module:ensemble:
-- sklearn/ensemble/**/*
+- pklearn/ensemble/**/*
 
 module:feature_extraction:
-- sklearn/feature_extraction/**/*
+- pklearn/feature_extraction/**/*
 
 module:feature_selection:
-- sklearn/feature_selection/**/*
+- pklearn/feature_selection/**/*
 
 module:gaussian_process:
-- sklearn/gaussian_process/**/*
+- pklearn/gaussian_process/**/*
 
 module:impute:
-- sklearn/impute/**/*
+- pklearn/impute/**/*
 
 module:inspection:
-- sklearn/inspection/**/*
+- pklearn/inspection/**/*
 
 module:linear_model:
-- sklearn/linear_model/**/*
+- pklearn/linear_model/**/*
 
 module:manifold:
-- sklearn/manifold/**/*
+- pklearn/manifold/**/*
 
 module:metrics:
-- sklearn/metrics/**/*
+- pklearn/metrics/**/*
 
 module:mixture:
-- sklearn/mixture/**/*
+- pklearn/mixture/**/*
 
 module:model_selection:
-- sklearn/model_selection/**/*
+- pklearn/model_selection/**/*
 
 module:naive_bayes:
-- sklearn/naive_bayes.py
+- pklearn/naive_bayes.py
 
 module:neighbors:
-- sklearn/neighbors/**/*
+- pklearn/neighbors/**/*
 
 module:neural_network:
-- sklearn/neural_network/**/*
+- pklearn/neural_network/**/*
 
 module:pipeline:
-- sklearn/pipeline.py
+- pklearn/pipeline.py
 
 module:preprocessing:
-- sklearn/preprocessing/**/*
+- pklearn/preprocessing/**/*
 
 module:semi_supervised:
-- sklearn/semi_supervised/**/*
+- pklearn/semi_supervised/**/*
 
 module:svm:
-- sklearn/svm/**/*
+- pklearn/svm/**/*
 
 module:tree:
-- sklearn/tree/**/*
+- pklearn/tree/**/*
 
 module:utils:
-- sklearn/utils/**/*
+- pklearn/utils/**/*

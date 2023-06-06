@@ -4,7 +4,7 @@
 Decision Trees
 ==============
 
-.. currentmodule:: sklearn.tree
+.. currentmodule:: pklearn.tree
 
 **Decision Trees (DTs)** are a non-parametric supervised learning method used
 for :ref:`classification <tree_classification>` and :ref:`regression
@@ -33,7 +33,7 @@ Some advantages of decision trees are:
     - The cost of using the tree (i.e., predicting data) is logarithmic in the
       number of data points used to train the tree.
 
-    - Able to handle both numerical and categorical data. However, the scikit-learn
+    - Able to handle both numerical and categorical data. However, the primakit-learn
       implementation does not support categorical variables for now. Other
       techniques are usually specialized in analyzing datasets that have only one type
       of variable. See :ref:`algorithms <tree_algorithms>` for more
@@ -100,7 +100,7 @@ an array X, sparse or dense, of shape ``(n_samples, n_features)`` holding the
 training samples, and an array Y of integer values, shape ``(n_samples,)``,
 holding the class labels for the training samples::
 
-    >>> from sklearn import tree
+    >>> from pklearn import tree
     >>> X = [[0, 0], [1, 1]]
     >>> Y = [0, 1]
     >>> clf = tree.DecisionTreeClassifier()
@@ -128,8 +128,8 @@ labels are [-1, 1]) classification and multiclass (where the labels are
 
 Using the Iris dataset, we can construct a tree as follows::
 
-    >>> from sklearn.datasets import load_iris
-    >>> from sklearn import tree
+    >>> from pklearn.datasets import load_iris
+    >>> from pklearn import tree
     >>> iris = load_iris()
     >>> X, y = iris.data, iris.target
     >>> clf = tree.DecisionTreeClassifier()
@@ -195,9 +195,9 @@ Alternatively, the tree can also be exported in textual format with the
 function :func:`export_text`. This method doesn't require the installation
 of external libraries and is more compact:
 
-    >>> from sklearn.datasets import load_iris
-    >>> from sklearn.tree import DecisionTreeClassifier
-    >>> from sklearn.tree import export_text
+    >>> from pklearn.datasets import load_iris
+    >>> from pklearn.tree import DecisionTreeClassifier
+    >>> from pklearn.tree import export_text
     >>> iris = load_iris()
     >>> decision_tree = DecisionTreeClassifier(random_state=0, max_depth=2)
     >>> decision_tree = decision_tree.fit(iris.data, iris.target)
@@ -234,7 +234,7 @@ As in the classification setting, the fit method will take as argument arrays X
 and y, only that in this case y is expected to have floating point values
 instead of integer values::
 
-    >>> from sklearn import tree
+    >>> from pklearn import tree
     >>> X = [[0, 0], [2, 2]]
     >>> y = [0.5, 2.5]
     >>> clf = tree.DecisionTreeRegressor()
@@ -401,7 +401,7 @@ Tree algorithms: ID3, C4.5, C5.0 and CART
 ==========================================
 
 What are all the various decision tree algorithms and how do they differ
-from each other? Which one is implemented in scikit-learn?
+from each other? Which one is implemented in primakit-learn?
 
 ID3_ (Iterative Dichotomiser 3) was developed in 1986 by Ross Quinlan.
 The algorithm creates a multiway tree, finding for each node (i.e. in
@@ -428,8 +428,8 @@ it differs in that it supports numerical target variables (regression) and
 does not compute rule sets. CART constructs binary trees using the feature
 and threshold that yield the largest information gain at each node.
 
-scikit-learn uses an optimized version of the CART algorithm; however, the
-scikit-learn implementation does not support categorical variables for now.
+primakit-learn uses an optimized version of the CART algorithm; however, the
+primakit-learn implementation does not support categorical variables for now.
 
 .. _ID3: https://en.wikipedia.org/wiki/ID3_algorithm
 
@@ -590,7 +590,7 @@ a given tree :math:`T`:
 
 where :math:`|\widetilde{T}|` is the number of terminal nodes in :math:`T` and :math:`R(T)`
 is traditionally defined as the total misclassification rate of the terminal
-nodes. Alternatively, scikit-learn uses the total sample weighted impurity of
+nodes. Alternatively, primakit-learn uses the total sample weighted impurity of
 the terminal nodes for :math:`R(T)`. As shown above, the impurity of a node
 depends on the criterion. Minimal cost-complexity pruning finds the subtree of
 :math:`T` that minimizes :math:`R_\alpha(T)`.

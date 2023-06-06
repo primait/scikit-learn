@@ -92,12 +92,12 @@ python_environment_install_and_activate() {
     fi
 }
 
-scikit_learn_install() {
+primakit_learn_install() {
     setup_ccache
     show_installed_libraries
 
     # Set parallelism to 3 to overlap IO bound tasks with CPU bound tasks on CI
-    # workers with 2 cores when building the compiled extensions of scikit-learn.
+    # workers with 2 cores when building the compiled extensions of primakit-learn.
     export SKLEARN_BUILD_PARALLEL=3
 
     if [[ "$UNAMESTR" == "Darwin" && "$SKLEARN_TEST_NO_OPENMP" == "true" ]]; then
@@ -114,13 +114,13 @@ scikit_learn_install() {
 
     if [[ "$UNAMESTR" == "Linux" ]]; then
         # FIXME: temporary fix to link against system libraries on linux
-        # https://github.com/scikit-learn/scikit-learn/issues/20640
+        # https://github.com/primakit-learn/primakit-learn/issues/20640
         export LDFLAGS="$LDFLAGS -Wl,--sysroot=/"
     fi
 
     # TODO use a specific variable for this rather than using a particular build ...
     if [[ "$DISTRIB" == "conda-pip-latest" ]]; then
-        # Check that pip can automatically build scikit-learn with the build
+        # Check that pip can automatically build primakit-learn with the build
         # dependencies specified in pyproject.toml using an isolated build
         # environment:
         pip install --verbose --editable .
@@ -136,7 +136,7 @@ scikit_learn_install() {
 main() {
     pre_python_environment_install
     python_environment_install_and_activate
-    scikit_learn_install
+    primakit_learn_install
 }
 
 main

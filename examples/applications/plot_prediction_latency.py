@@ -3,7 +3,7 @@
 Prediction Latency
 ==================
 
-This is an example showing the prediction latency of various scikit-learn
+This is an example showing the prediction latency of various primakit-learn
 estimators.
 
 The goal is to measure the latency one can expect when doing predictions
@@ -23,14 +23,14 @@ import gc
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.datasets import make_regression
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import Ridge
-from sklearn.linear_model import SGDRegressor
-from sklearn.svm import SVR
-from sklearn.utils import shuffle
+from pklearn.preprocessing import StandardScaler
+from pklearn.model_selection import train_test_split
+from pklearn.datasets import make_regression
+from pklearn.ensemble import RandomForestRegressor
+from pklearn.linear_model import Ridge
+from pklearn.linear_model import SGDRegressor
+from pklearn.svm import SVR
+from pklearn.utils import shuffle
 
 
 def _not_in_sphinx():

@@ -14,7 +14,7 @@ Supervised learning: predicting an output variable from high-dimensional observa
    ``y`` is a 1D array of length ``n_samples``.
 
    All supervised `estimators <https://en.wikipedia.org/wiki/Estimator>`_
-   in scikit-learn implement a ``fit(X, y)`` method to fit the model
+   in primakit-learn implement a ``fit(X, y)`` method to fit the model
    and a ``predict(X)`` method that, given unlabeled observations ``X``,
    returns the predicted labels ``y``.
 
@@ -26,12 +26,12 @@ Supervised learning: predicting an output variable from high-dimensional observa
    is to predict a continuous target variable, it is said to be a
    **regression** task.
 
-   When doing classification in scikit-learn, ``y`` is a vector of integers
+   When doing classification in primakit-learn, ``y`` is a vector of integers
    or strings.
 
-   Note: See the :ref:`Introduction to machine learning with scikit-learn
+   Note: See the :ref:`Introduction to machine learning with primakit-learn
    Tutorial <introduction>` for a quick run-through on the basic machine
-   learning vocabulary used within scikit-learn.
+   learning vocabulary used within primakit-learn.
 
 Nearest neighbor and the curse of dimensionality
 =================================================
@@ -43,7 +43,7 @@ Nearest neighbor and the curse of dimensionality
     their petal and sepal length and width::
 
         >>> import numpy as np
-        >>> from sklearn import datasets
+        >>> from pklearn import datasets
         >>> iris_X, iris_y = datasets.load_iris(return_X_y=True)
         >>> np.unique(iris_y)
         array([0, 1, 2])
@@ -89,7 +89,7 @@ Scikit-learn documentation for more information about this type of classifier.)
     >>> iris_X_test = iris_X[indices[-10:]]
     >>> iris_y_test = iris_y[indices[-10:]]
     >>> # Create and fit a nearest-neighbor classifier
-    >>> from sklearn.neighbors import KNeighborsClassifier
+    >>> from pklearn.neighbors import KNeighborsClassifier
     >>> knn = KNeighborsClassifier()
     >>> knn.fit(iris_X_train, iris_y_train)
     KNeighborsClassifier()
@@ -148,7 +148,7 @@ Linear model: from regression to sparsity
 Linear regression
 ------------------
 
-.. currentmodule:: sklearn.linear_model
+.. currentmodule:: pklearn.linear_model
 
 :class:`LinearRegression`,
 in its simplest form, fits a linear model to the data set by adjusting
@@ -169,7 +169,7 @@ Linear models: :math:`y = X\beta + \epsilon`
 
 ::
 
-    >>> from sklearn import linear_model
+    >>> from pklearn import linear_model
     >>> regr = linear_model.LinearRegression()
     >>> regr.fit(diabetes_X_train, diabetes_y_train)
     LinearRegression()
@@ -330,10 +330,10 @@ application of Occam's razor: *prefer simpler models*.
 .. topic:: **Different algorithms for the same problem**
 
     Different algorithms can be used to solve the same mathematical
-    problem. For instance the ``Lasso`` object in scikit-learn
+    problem. For instance the ``Lasso`` object in primakit-learn
     solves the lasso regression problem using a
     `coordinate descent <https://en.wikipedia.org/wiki/Coordinate_descent>`_ method,
-    that is efficient on large datasets. However, scikit-learn also
+    that is efficient on large datasets. However, primakit-learn also
     provides the :class:`LassoLars` object using the *LARS* algorithm,
     which is very efficient for problems in which the weight vector estimated
     is very sparse (i.e. problems with very few observations).
@@ -414,7 +414,7 @@ is calculated using many or all of the observations around the separating line
 a large value for ``C`` means the margin is calculated on observations close to
 the separating line (less regularization).
 
-.. currentmodule :: sklearn.svm
+.. currentmodule :: pklearn.svm
 
 .. figure:: /auto_examples/svm/images/sphx_glr_plot_svm_margin_001.png
    :target: ../../auto_examples/svm/plot_svm_margin.html
@@ -436,7 +436,7 @@ classification --:class:`SVC` (Support Vector Classification).
 
 ::
 
-    >>> from sklearn import svm
+    >>> from pklearn import svm
     >>> svc = svm.SVC(kernel='linear')
     >>> svc.fit(iris_X_train, iris_y_train)
     SVC(kernel='linear')

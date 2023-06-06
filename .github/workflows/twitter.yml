@@ -1,4 +1,4 @@
-# Tweet the URL of a commit on @sklearn_commits whenever a push event
+# Tweet the URL of a commit on @pklearn_commits whenever a push event
 # happens on the main branch
 name: Twitter Push Notification
 
@@ -14,11 +14,11 @@ jobs:
     name: Twitter Notification
     runs-on: ubuntu-latest
     steps:
-      - name: Tweet URL of last commit as @sklearn_commits
-        if: github.repository == 'scikit-learn/scikit-learn'
+      - name: Tweet URL of last commit as @pklearn_commits
+        if: github.repository == 'primakit-learn/primakit-learn'
         uses: docker://thomasjpfan/twitter-action:0.3
         with:
-          args: "-message \"https://github.com/scikit-learn/scikit-learn/commit/${{ github.sha }}\""
+          args: "-message \"https://github.com/primakit-learn/primakit-learn/commit/${{ github.sha }}\""
         env:
           TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
           TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}

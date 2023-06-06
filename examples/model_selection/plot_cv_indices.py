@@ -1,5 +1,5 @@
 """
-Visualizing cross-validation behavior in scikit-learn
+Visualizing cross-validation behavior in primakit-learn
 =====================================================
 
 Choosing the right cross-validation object is a crucial part of fitting a
@@ -7,12 +7,12 @@ model properly. There are many ways to split data into training and test
 sets in order to avoid model overfitting, to standardize the number of
 groups in test sets, etc.
 
-This example visualizes the behavior of several common scikit-learn objects
+This example visualizes the behavior of several common primakit-learn objects
 for comparison.
 
 """
 
-from sklearn.model_selection import (
+from pklearn.model_selection import (
     TimeSeriesSplit,
     KFold,
     ShuffleSplit,
@@ -142,7 +142,7 @@ def plot_cv_indices(cv, X, y, group, ax, n_splits, lw=10):
 
 
 # %%
-# Let's see how it looks for the :class:`~sklearn.model_selection.KFold`
+# Let's see how it looks for the :class:`~pklearn.model_selection.KFold`
 # cross-validation object:
 
 fig, ax = plt.subplots()
@@ -180,7 +180,7 @@ for cv in cvs:
 # ------------------------------------------------------
 #
 # Let's visually compare the cross validation behavior for many
-# scikit-learn cross-validation objects. Below we will loop through several
+# primakit-learn cross-validation objects. Below we will loop through several
 # common cross-validation objects, visualizing the behavior of each.
 #
 # Note how some use the group/class information while others do not.

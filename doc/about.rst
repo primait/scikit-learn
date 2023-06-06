@@ -19,20 +19,20 @@ been leading the development.
 Governance
 ----------
 
-The decision making process and governance structure of scikit-learn is laid
+The decision making process and governance structure of primakit-learn is laid
 out in the :ref:`governance document <governance>`.
 
 Authors
 -------
 
-The following people are currently core contributors to scikit-learn's development
+The following people are currently core contributors to primakit-learn's development
 and maintenance:
 
 .. include:: authors.rst
 
 Please do not email the authors directly to ask for assistance or report issues.
-Instead, please see `What's the best way to ask questions about scikit-learn
-<https://scikit-learn.org/stable/faq.html#what-s-the-best-way-to-get-help-on-scikit-learn-usage>`_
+Instead, please see `What's the best way to ask questions about primakit-learn
+<https://primakit-learn.org/stable/faq.html#what-s-the-best-way-to-get-help-on-primakit-learn-usage>`_
 in the FAQ.
 
 .. seealso::
@@ -51,7 +51,7 @@ maintenance:
 Communication Team
 ------------------
 
-The following people help with :ref:`communication around scikit-learn
+The following people help with :ref:`communication around primakit-learn
 <communication_team>`.
 
 .. include:: communication_team.rst
@@ -74,12 +74,12 @@ past, but no longer have communication responsibilities:
 .. include:: communication_team_emeritus.rst
 
 
-.. _citing-scikit-learn:
+.. _citing-primakit-learn:
 
-Citing scikit-learn
+Citing primakit-learn
 -------------------
 
-If you use scikit-learn in a scientific publication, we would appreciate
+If you use primakit-learn in a scientific publication, we would appreciate
 citations to the following paper:
 
   `Scikit-learn: Machine Learning in Python
@@ -88,7 +88,7 @@ citations to the following paper:
 
   Bibtex entry::
 
-    @article{scikit-learn,
+    @article{primakit-learn,
      title={Scikit-learn: Machine Learning in {P}ython},
      author={Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
              and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
@@ -100,21 +100,21 @@ citations to the following paper:
      year={2011}
     }
 
-If you want to cite scikit-learn for its API or design, you may also want to consider the
+If you want to cite primakit-learn for its API or design, you may also want to consider the
 following paper:
 
-  :arxiv:`API design for machine learning software: experiences from the scikit-learn
+  :arxiv:`API design for machine learning software: experiences from the primakit-learn
   project <1309.0238>`, Buitinck *et al.*, 2013.
 
   Bibtex entry::
 
-    @inproceedings{sklearn_api,
+    @inproceedings{pklearn_api,
       author    = {Lars Buitinck and Gilles Louppe and Mathieu Blondel and
                    Fabian Pedregosa and Andreas Mueller and Olivier Grisel and
                    Vlad Niculae and Peter Prettenhofer and Alexandre Gramfort
                    and Jaques Grobler and Robert Layton and Jake VanderPlas and
                    Arnaud Joly and Brian Holt and Ga{\"{e}}l Varoquaux},
-      title     = {{API} design for machine learning software: experiences from the scikit-learn
+      title     = {{API} design for machine learning software: experiences from the primakit-learn
                    project},
       booktitle = {ECML PKDD Workshop: Languages for Data Mining and Machine Learning},
       year      = {2013},
@@ -125,10 +125,10 @@ Artwork
 -------
 
 High quality PNG and SVG logos are available in the `doc/logos/
-<https://github.com/scikit-learn/scikit-learn/tree/main/doc/logos>`_
+<https://github.com/primakit-learn/primakit-learn/tree/main/doc/logos>`_
 source directory.
 
-.. image:: images/scikit-learn-logo-notext.png
+.. image:: images/primakit-learn-logo-notext.png
    :align: center
 
 Funding
@@ -145,9 +145,9 @@ The project would like to thank the following funders.
    <div class="sk-sponsor-div">
    <div class="sk-sponsor-div-box">
 
-The `Members <https://scikit-learn.fondation-inria.fr/en/home/#sponsors>`_ of
+The `Members <https://primakit-learn.fondation-inria.fr/en/home/#sponsors>`_ of
 the `Scikit-Learn Consortium at Inria Foundation
-<https://scikit-learn.fondation-inria.fr/en/home/>`_  fund Olivier
+<https://primakit-learn.fondation-inria.fr/en/home/>`_  fund Olivier
 Grisel, Guillaume Lemaitre, and Jérémie du Boisberranger.
 
 .. raw:: html
@@ -354,7 +354,7 @@ Past Sponsors
    <div class="sk-sponsor-div">
    <div class="sk-sponsor-div-box">
 
-Andreas Müller received a grant to improve scikit-learn from the
+Andreas Müller received a grant to improve primakit-learn from the
 `Alfred P. Sloan Foundation <https://sloan.org>`_ .
 This grant supported the position of Nicolas Hug and Thomas J. Fan.
 
@@ -466,7 +466,7 @@ part-time.
 
 `Télécom Paristech <https://www.telecom-paristech.fr/>`_ funded Manoj Kumar
 (2014), Tom Dupré la Tour (2015), Raghav RV (2015-2017), Thierry Guillemot
-(2016-2017) and Albert Thomas (2017) to work on scikit-learn.
+(2016-2017) and Albert Thomas (2017) to work on primakit-learn.
 
 .. raw:: html
 
@@ -492,8 +492,8 @@ part-time.
 
 `The Labex DigiCosme <https://digicosme.lri.fr>`_ funded Nicolas Goix
 (2015-2016), Tom Dupré la Tour (2015-2016 and 2017-2018), Mathurin Massias
-(2018-2019) to work part time on scikit-learn during their PhDs. It also
-funded a scikit-learn coding sprint in 2015.
+(2018-2019) to work part time on primakit-learn during their PhDs. It also
+funded a primakit-learn coding sprint in 2015.
 
 .. raw:: html
 
@@ -518,7 +518,7 @@ funded a scikit-learn coding sprint in 2015.
    <div class="sk-sponsor-div-box">
 
 `The Chan-Zuckerberg Initiative <https://chanzuckerberg.com/>`_ funded Nicolas
-Hug to work full-time on scikit-learn in 2020.
+Hug to work full-time on primakit-learn in 2020.
 
 .. raw:: html
 
@@ -538,7 +538,7 @@ Hug to work full-time on scikit-learn in 2020.
 ......................
 
 The following students were sponsored by `Google
-<https://opensource.google/>`_ to work on scikit-learn through
+<https://opensource.google/>`_ to work on primakit-learn through
 the `Google Summer of Code <https://en.wikipedia.org/wiki/Google_Summer_of_Code>`_
 program.
 
@@ -587,12 +587,12 @@ Donating to the project
 
 If you are interested in donating to the project or to one of our code-sprints,
 please donate via the `NumFOCUS Donations Page
-<https://numfocus.org/donate-to-scikit-learn>`_.
+<https://numfocus.org/donate-to-primakit-learn>`_.
 
 .. raw :: html
 
    <div style="text-align: center;">
-   <a class="btn btn-warning btn-big sk-donate-btn mb-1" href="https://numfocus.org/donate-to-scikit-learn">Help us, <strong>donate!</strong></a>
+   <a class="btn btn-warning btn-big sk-donate-btn mb-1" href="https://numfocus.org/donate-to-primakit-learn">Help us, <strong>donate!</strong></a>
    </div>
    </br>
 
@@ -601,10 +601,10 @@ All donations will be handled by `NumFOCUS
 managed by a board of `Scipy community members
 <https://numfocus.org/board.html>`_. NumFOCUS's mission is to foster
 scientific computing software, in particular in Python. As a fiscal home
-of scikit-learn, it ensures that money is available when needed to keep
+of primakit-learn, it ensures that money is available when needed to keep
 the project funded and available while in compliance with tax regulations.
 
-The received donations for the scikit-learn project mostly will go towards
+The received donations for the primakit-learn project mostly will go towards
 covering travel-expenses for code sprints, as well as towards the organization
 budget of the project [#f1]_.
 

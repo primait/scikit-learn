@@ -29,8 +29,8 @@ jobs:
         python -m wheelhouse_uploader fetch \
           --version $SKLEARN_VERSION \
           --local-folder dist/ \
-          scikit-learn \
-          https://pypi.anaconda.org/scikit-learn-wheels-staging/simple/scikit-learn/
+          primakit-learn \
+          https://pypi.anaconda.org/primakit-learn-wheels-staging/simple/primakit-learn/
     - name: Check dist has the correct number of artifacts
       run: |
         python build_tools/github/check_wheels.py

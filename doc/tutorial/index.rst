@@ -9,7 +9,7 @@
 .. include:: ../tune_toc.rst
 
 ======================
-scikit-learn Tutorials
+primakit-learn Tutorials
 ======================
 
 |

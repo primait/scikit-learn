@@ -1,5 +1,5 @@
 """
-Benchmark scikit-learn's Ward implement compared to SciPy's
+Benchmark primakit-learn's Ward implement compared to SciPy's
 """
 
 import time
@@ -8,7 +8,7 @@ import numpy as np
 from scipy.cluster import hierarchy
 import matplotlib.pyplot as plt
 
-from sklearn.cluster import AgglomerativeClustering
+from pklearn.cluster import AgglomerativeClustering
 
 ward = AgglomerativeClustering(n_clusters=3, linkage="ward")
 
@@ -30,7 +30,7 @@ for i, n in enumerate(n_samples):
 
 ratio = scikits_time / scipy_time
 
-plt.figure("scikit-learn Ward's method benchmark results")
+plt.figure("primakit-learn Ward's method benchmark results")
 plt.imshow(np.log(ratio), aspect="auto", origin="lower")
 plt.colorbar()
 plt.contour(

@@ -3,7 +3,7 @@
 Classification of text documents using sparse features
 ======================================================
 
-This is an example showing how scikit-learn can be used to classify documents by
+This is an example showing how primakit-learn can be used to classify documents by
 topics using a `Bag of Words approach
 <https://en.wikipedia.org/wiki/Bag-of-words_model>`_. This example uses a
 Tf-idf-weighted document-term sparse matrix to encode the features and
@@ -36,8 +36,8 @@ script :ref:`sphx_glr_auto_examples_text_plot_document_clustering.py`.
 # the classification problem "too easy". This is achieved using simple
 # heuristics that are neither perfect nor standard, hence disabled by default.
 
-from sklearn.datasets import fetch_20newsgroups
-from sklearn.feature_extraction.text import TfidfVectorizer
+from pklearn.datasets import fetch_20newsgroups
+from pklearn.feature_extraction.text import TfidfVectorizer
 from time import time
 
 categories = [
@@ -140,15 +140,15 @@ X_train, X_test, y_train, y_test, feature_names, target_names = load_dataset(
 
 # %%
 # Our first model is an instance of the
-# :class:`~sklearn.linear_model.RidgeClassifier` class. This is a linear
+# :class:`~pklearn.linear_model.RidgeClassifier` class. This is a linear
 # classification model that uses the mean squared error on {-1, 1} encoded
 # targets, one for each possible class. Contrary to
-# :class:`~sklearn.linear_model.LogisticRegression`,
-# :class:`~sklearn.linear_model.RidgeClassifier` does not
+# :class:`~pklearn.linear_model.LogisticRegression`,
+# :class:`~pklearn.linear_model.RidgeClassifier` does not
 # provide probabilistic predictions (no `predict_proba` method),
 # but it is often faster to train.
 
-from sklearn.linear_model import RidgeClassifier
+from pklearn.linear_model import RidgeClassifier
 
 clf = RidgeClassifier(tol=1e-2, solver="sparse_cg")
 clf.fit(X_train, y_train)
@@ -159,7 +159,7 @@ pred = clf.predict(X_test)
 # in the classification errors.
 
 import matplotlib.pyplot as plt
-from sklearn.metrics import ConfusionMatrixDisplay
+from pklearn.metrics import ConfusionMatrixDisplay
 
 fig, ax = plt.subplots(figsize=(10, 5))
 ConfusionMatrixDisplay.from_predictions(y_test, pred, ax=ax)
@@ -265,7 +265,7 @@ for doc in data_train.data:
 # Model with metadata stripping
 # -----------------------------
 #
-# The `remove` option of the 20 newsgroups dataset loader in scikit-learn allows
+# The `remove` option of the 20 newsgroups dataset loader in primakit-learn allows
 # to heuristically attempt to filter out some of this unwanted metadata that
 # makes the classification problem artificially easier. Be aware that such
 # filtering of the text contents is far from perfect.
@@ -316,8 +316,8 @@ _ = plot_feature_effects().set_title("Average feature effects on filtered docume
 # training time and testing time. For such purpose we define the following
 # benchmarking utilities:
 
-from sklearn.utils.extmath import density
-from sklearn import metrics
+from pklearn.utils.extmath import density
+from pklearn import metrics
 
 
 def benchmark(clf, custom_name=False):
@@ -362,13 +362,13 @@ def benchmark(clf, custom_name=False):
 # :ref:`sphx_glr_auto_examples_model_selection_plot_grid_search_text_feature_extraction.py`
 # for a demo on how such tuning can be done.
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import LinearSVC
-from sklearn.linear_model import SGDClassifier
-from sklearn.naive_bayes import ComplementNB
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.neighbors import NearestCentroid
-from sklearn.ensemble import RandomForestClassifier
+from pklearn.linear_model import LogisticRegression
+from pklearn.svm import LinearSVC
+from pklearn.linear_model import SGDClassifier
+from pklearn.naive_bayes import ComplementNB
+from pklearn.neighbors import KNeighborsClassifier
+from pklearn.neighbors import NearestCentroid
+from pklearn.ensemble import RandomForestClassifier
 
 
 results = []

@@ -15,15 +15,15 @@ The dataset used in this example is a preprocessed excerpt of the
 from time import time
 import matplotlib.pyplot as plt
 
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn.datasets import fetch_lfw_people
-from sklearn.metrics import classification_report
-from sklearn.metrics import ConfusionMatrixDisplay
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
-from sklearn.svm import SVC
-from sklearn.utils.fixes import loguniform
+from pklearn.model_selection import train_test_split
+from pklearn.model_selection import RandomizedSearchCV
+from pklearn.datasets import fetch_lfw_people
+from pklearn.metrics import classification_report
+from pklearn.metrics import ConfusionMatrixDisplay
+from pklearn.preprocessing import StandardScaler
+from pklearn.decomposition import PCA
+from pklearn.svm import SVC
+from pklearn.utils.fixes import loguniform
 
 
 # %%
@@ -159,5 +159,5 @@ plt.show()
 # %%
 # Face recognition problem would be much more effectively solved by training
 # convolutional neural networks but this family of models is outside of the scope of
-# the scikit-learn library. Interested readers should instead try to use pytorch or
+# the primakit-learn library. Interested readers should instead try to use pytorch or
 # tensorflow to implement such models.

@@ -11,7 +11,7 @@ from_branch=$1
 to_file=$2
 
 logged_prs() {
-	git log --oneline $from_branch..main sklearn/ |
+	git log --oneline $from_branch..main pklearn/ |
 		grep -wv -e CLN -e TST -e CI -e DOC -e doc -e MNT -e MAINT -e BLD -e COSMIT -e EXA -e examples -e example -e minor -e STY -e Style -e docstring |
 		grep -o '(#[0-9][0-9]\+)$' |
 		grep -o '[0-9]\+'
@@ -25,7 +25,7 @@ mentioned_issues() {
 
 get_closed_issues() {
 	pr=$1
-	url=https://api.github.com/repos/scikit-learn/scikit-learn/pulls/$pr
+	url=https://api.github.com/repos/primakit-learn/primakit-learn/pulls/$pr
 	python - $url <<EOF
 import json
 import sys
@@ -36,7 +36,7 @@ from urllib import request
 req = request.Request(sys.argv[1], headers={"Authorization": "token %s" % os.environ['GITHUB_TOKEN']})
 body = json.loads(request.urlopen(req).read().decode('utf8'))['body']
 body = re.sub('<!--.*?-->', '', body, flags=re.DOTALL)
-matches = re.findall(r'(?i)\\b(?:fix|fixes|resolve|resolves|close|closes) +(?:https?://github.com/scikit-learn/scikit-learn/(?:pull|issues)/|#)?([0-9]+)',
+matches = re.findall(r'(?i)\\b(?:fix|fixes|resolve|resolves|close|closes) +(?:https?://github.com/primakit-learn/primakit-learn/(?:pull|issues)/|#)?([0-9]+)',
                           body)
 print(' '.join(matches))
 EOF

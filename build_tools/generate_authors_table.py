@@ -1,6 +1,6 @@
 """
 This script generates an html table of contributors, with names and avatars.
-The list is generated from scikit-learn's teams on GitHub, plus a small number
+The list is generated from primakit-learn's teams on GitHub, plus a small number
 of hard-coded contributors.
 
 The table should be updated for each new inclusion in the teams.
@@ -48,7 +48,7 @@ def get_contributors():
     contributor_experience_team_slug = "contributor-experience-team"
     comm_team_slug = "communication-team"
 
-    entry_point = "https://api.github.com/orgs/scikit-learn/"
+    entry_point = "https://api.github.com/orgs/primakit-learn/"
 
     for team_slug, lst in zip(
         (core_devs_slug, contributor_experience_team_slug, comm_team_slug),
@@ -58,7 +58,7 @@ def get_contributors():
             reply = get(f"{entry_point}teams/{team_slug}/members?page={page}")
             lst.extend(reply.json())
 
-    # get members of scikit-learn on GitHub
+    # get members of primakit-learn on GitHub
     members = []
     for page in [1, 2, 3]:  # 30 per page
         reply = get(f"{entry_point}members?page={page}")
@@ -75,7 +75,7 @@ def get_contributors():
     # add missing contributors without GitHub accounts
     members |= {"Angel Soler Gollonet"}
     # remove CI bots
-    members -= {"sklearn-ci", "sklearn-wheels", "sklearn-lgtm"}
+    members -= {"pklearn-ci", "pklearn-wheels", "pklearn-lgtm"}
     contributor_experience_team -= (
         core_devs  # remove ogrisel from contributor_experience_team
     )

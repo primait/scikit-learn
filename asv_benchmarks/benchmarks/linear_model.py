@@ -1,4 +1,4 @@
-from sklearn.linear_model import (
+from pklearn.linear_model import (
     LogisticRegression,
     Ridge,
     ElasticNet,

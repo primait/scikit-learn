@@ -2,5 +2,5 @@
 env/
 html/
 results/
-scikit-learn/
+primakit-learn/
 benchmarks/cache/

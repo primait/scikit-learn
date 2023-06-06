@@ -3,19 +3,19 @@
 Introducing the `set_output` API
 ================================
 
-.. currentmodule:: sklearn
+.. currentmodule:: pklearn
 
 This example will demonstrate the `set_output` API to configure transformers to
 output pandas DataFrames. `set_output` can be configured per estimator by calling
 the `set_output` method or globally by setting `set_config(transform_output="pandas")`.
 For details, see
-`SLEP018 <https://scikit-learn-enhancement-proposals.readthedocs.io/en/latest/slep018/proposal.html>`__.
+`SLEP018 <https://primakit-learn-enhancement-proposals.readthedocs.io/en/latest/slep018/proposal.html>`__.
 """  # noqa
 
 # %%
 # First, we load the iris dataset as a DataFrame to demonstrate the `set_output` API.
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
+from pklearn.datasets import load_iris
+from pklearn.model_selection import train_test_split
 
 X, y = load_iris(as_frame=True, return_X_y=True)
 X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=0)
@@ -25,7 +25,7 @@ X_train.head()
 # To configure an estimator such as :class:`preprocessing.StandardScaler` to return
 # DataFrames, call `set_output`. This feature requires pandas to be installed.
 
-from sklearn.preprocessing import StandardScaler
+from pklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler().set_output(transform="pandas")
 
@@ -48,9 +48,9 @@ print(f"Configured pandas output type: {type(X_test_df).__name__}")
 # %%
 # In a :class:`pipeline.Pipeline`, `set_output` configures all steps to output
 # DataFrames.
-from sklearn.pipeline import make_pipeline
-from sklearn.linear_model import LogisticRegression
-from sklearn.feature_selection import SelectPercentile
+from pklearn.pipeline import make_pipeline
+from pklearn.linear_model import LogisticRegression
+from pklearn.feature_selection import SelectPercentile
 
 clf = make_pipeline(
     StandardScaler(), SelectPercentile(percentile=75), LogisticRegression()
@@ -66,7 +66,7 @@ clf[-1].feature_names_in_
 # %%
 # Next we load the titanic dataset to demonstrate `set_output` with
 # :class:`compose.ColumnTransformer` and heterogenous data.
-from sklearn.datasets import fetch_openml
+from pklearn.datasets import fetch_openml
 
 X, y = fetch_openml(
     "titanic", version=1, as_frame=True, return_X_y=True, parser="pandas"
@@ -76,10 +76,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y)
 # %%
 # The `set_output` API can be configured globally by using :func:`set_config` and
 # setting `transform_output` to `"pandas"`.
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.impute import SimpleImputer
-from sklearn import set_config
+from pklearn.compose import ColumnTransformer
+from pklearn.preprocessing import OneHotEncoder, StandardScaler
+from pklearn.impute import SimpleImputer
+from pklearn import set_config
 
 set_config(transform_output="pandas")
 
@@ -113,7 +113,7 @@ _ = coef.sort_values().plot.barh()
 
 # %%
 # This resets `transform_output` to its default value to avoid impacting other
-# examples when generating the scikit-learn documentation
+# examples when generating the primakit-learn documentation
 set_config(transform_output="default")
 
 # %%
@@ -121,7 +121,7 @@ set_config(transform_output="default")
 # configuration at the time when `transform` or `fit_transform` are
 # called is what counts. Setting these only when you construct or fit
 # the transformer has no effect.
-from sklearn import config_context
+from pklearn import config_context
 
 scaler = StandardScaler()
 scaler.fit(X_train[num_cols])

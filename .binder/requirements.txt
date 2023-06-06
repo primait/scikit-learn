@@ -1,4 +1,4 @@
---find-links https://pypi.anaconda.org/scipy-wheels-nightly/simple/scikit-learn
+--find-links https://pypi.anaconda.org/scipy-wheels-nightly/simple/primakit-learn
 --pre
 matplotlib
 scikit-image
@@ -6,4 +6,4 @@ pandas
 seaborn
 Pillow
 sphinx-gallery
-scikit-learn
+primakit-learn

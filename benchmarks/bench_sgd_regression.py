@@ -8,9 +8,9 @@ import gc
 
 from time import time
 
-from sklearn.linear_model import Ridge, SGDRegressor, ElasticNet
-from sklearn.metrics import mean_squared_error
-from sklearn.datasets import make_regression
+from pklearn.linear_model import Ridge, SGDRegressor, ElasticNet
+from pklearn.metrics import mean_squared_error
+from pklearn.datasets import make_regression
 
 """
 Benchmark for SGD regression
@@ -123,7 +123,7 @@ if __name__ == "__main__":
     # Plot results
     i = 0
     m = len(list_n_features)
-    plt.figure("scikit-learn SGD regression benchmark results", figsize=(5 * 2, 4 * m))
+    plt.figure("primakit-learn SGD regression benchmark results", figsize=(5 * 2, 4 * m))
     for j in range(m):
         plt.subplot(m, 2, i + 1)
         plt.plot(list_n_samples, np.sqrt(elnet_results[:, j, 0]), label="ElasticNet")

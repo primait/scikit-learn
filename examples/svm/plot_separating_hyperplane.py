@@ -10,9 +10,9 @@ linear kernel.
 """
 
 import matplotlib.pyplot as plt
-from sklearn import svm
-from sklearn.datasets import make_blobs
-from sklearn.inspection import DecisionBoundaryDisplay
+from pklearn import svm
+from pklearn.datasets import make_blobs
+from pklearn.inspection import DecisionBoundaryDisplay
 
 
 # we create 40 separable points

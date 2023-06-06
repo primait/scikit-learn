@@ -1,7 +1,7 @@
 """
 To run this, you'll need to have installed.
 
-  * scikit-learn
+  * primakit-learn
 
 Does two benchmarks
 
@@ -26,9 +26,9 @@ mu_second = 0.0 + 10**6  # number of microseconds in a second
 
 
 def bench_scikit_tree_classifier(X, Y):
-    """Benchmark with scikit-learn decision tree classifier"""
+    """Benchmark with primakit-learn decision tree classifier"""
 
-    from sklearn.tree import DecisionTreeClassifier
+    from pklearn.tree import DecisionTreeClassifier
 
     gc.collect()
 
@@ -43,9 +43,9 @@ def bench_scikit_tree_classifier(X, Y):
 
 
 def bench_scikit_tree_regressor(X, Y):
-    """Benchmark with scikit-learn decision tree regressor"""
+    """Benchmark with primakit-learn decision tree regressor"""
 
-    from sklearn.tree import DecisionTreeRegressor
+    from pklearn.tree import DecisionTreeRegressor
 
     gc.collect()
 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
         bench_scikit_tree_regressor(X, Y)
 
     xx = range(0, n * step, step)
-    plt.figure("scikit-learn tree benchmark results")
+    plt.figure("primakit-learn tree benchmark results")
     plt.subplot(211)
     plt.title("Learning with varying number of samples")
     plt.plot(xx, scikit_classifier_results, "g-", label="classification")

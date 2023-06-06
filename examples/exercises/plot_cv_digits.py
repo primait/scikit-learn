@@ -11,8 +11,8 @@ This exercise is used in the :ref:`cv_generators_tut` part of the
 """
 
 import numpy as np
-from sklearn.model_selection import cross_val_score
-from sklearn import datasets, svm
+from pklearn.model_selection import cross_val_score
+from pklearn import datasets, svm
 
 X, y = datasets.load_digits(return_X_y=True)
 
