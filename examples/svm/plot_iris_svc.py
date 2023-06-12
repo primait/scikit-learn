@@ -35,8 +35,8 @@ kernel and its parameters.
 """
 
 import matplotlib.pyplot as plt
-from sklearn import svm, datasets
-from sklearn.inspection import DecisionBoundaryDisplay
+from pklearn import svm, datasets
+from pklearn.inspection import DecisionBoundaryDisplay
 
 
 # import some data to play with

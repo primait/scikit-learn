@@ -9,9 +9,9 @@ from time import time
 
 import numpy as np
 
-from sklearn.linear_model import lars_path, lars_path_gram
-from sklearn.linear_model import lasso_path
-from sklearn.datasets import make_regression
+from pklearn.linear_model import lars_path, lars_path_gram
+from pklearn.linear_model import lasso_path
+from pklearn.datasets import make_regression
 
 
 def compute_bench(samples_range, features_range):
@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
     max_time = max(max(t) for t in results.values())
 
-    fig = plt.figure("scikit-learn Lasso path benchmark results")
+    fig = plt.figure("primakit-learn Lasso path benchmark results")
     i = 1
     for c, (label, timings) in zip("bcry", sorted(results.items())):
         ax = fig.add_subplot(2, 2, i, projection="3d")

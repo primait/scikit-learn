@@ -38,12 +38,12 @@ with randomly ordered chains).
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.datasets import fetch_openml
-from sklearn.multioutput import ClassifierChain
-from sklearn.model_selection import train_test_split
-from sklearn.multiclass import OneVsRestClassifier
-from sklearn.metrics import jaccard_score
-from sklearn.linear_model import LogisticRegression
+from pklearn.datasets import fetch_openml
+from pklearn.multioutput import ClassifierChain
+from pklearn.model_selection import train_test_split
+from pklearn.multiclass import OneVsRestClassifier
+from pklearn.metrics import jaccard_score
+from pklearn.linear_model import LogisticRegression
 
 # Load a multi-label dataset from https://www.openml.org/d/40597
 X, Y = fetch_openml("yeast", version=4, return_X_y=True, parser="pandas")

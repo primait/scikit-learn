@@ -25,7 +25,7 @@ algorithms. The simplest clustering algorithm is :ref:`k_means`.
 
 ::
 
-    >>> from sklearn import cluster, datasets
+    >>> from pklearn import cluster, datasets
     >>> X_iris, y_iris = datasets.load_iris(return_X_y=True)
 
     >>> k_means = cluster.KMeans(n_clusters=3)
@@ -45,7 +45,7 @@ algorithms. The simplest clustering algorithm is :ref:`k_means`.
     There is absolutely no guarantee of recovering a ground truth. First,
     choosing the right number of clusters is hard. Second, the algorithm
     is sensitive to initialization, and can fall into local minima,
-    although scikit-learn employs several tricks to mitigate this issue.
+    although primakit-learn employs several tricks to mitigate this issue.
 
     For instance, on the image above, we can observe the difference between the
     ground-truth (bottom right figure) and different clustering. We do not
@@ -117,7 +117,7 @@ Connectivity-constrained clustering
 .....................................
 
 With agglomerative clustering, it is possible to specify which samples can be
-clustered together by giving a connectivity graph. Graphs in scikit-learn
+clustered together by giving a connectivity graph. Graphs in primakit-learn
 are represented by their adjacency matrix. Often, a sparse matrix is used.
 This can be useful, for instance, to retrieve connected regions (sometimes
 also referred to as connected components) when clustering an image.
@@ -141,14 +141,14 @@ also referred to as connected components) when clustering an image.
 We need a vectorized version of the image. `'rescaled_coins'` is a down-scaled
 version of the coins image to speed up the process::
 
-    >>> from sklearn.feature_extraction import grid_to_graph
+    >>> from pklearn.feature_extraction import grid_to_graph
     >>> connectivity = grid_to_graph(*rescaled_coins.shape)
 
 Define the graph structure of the data. Pixels connected to their neighbors::
 
     >>> n_clusters = 27  # number of regions
 
-    >>> from sklearn.cluster import AgglomerativeClustering
+    >>> from pklearn.cluster import AgglomerativeClustering
     >>> ward = AgglomerativeClustering(n_clusters=n_clusters, linkage='ward',
     ...                                connectivity=connectivity)
     >>> ward.fit(X)
@@ -237,7 +237,7 @@ data by projecting on a principal subspace.
     >>> x3 = x1 + x2
     >>> X = np.c_[x1, x2, x3]
 
-    >>> from sklearn import decomposition
+    >>> from pklearn import decomposition
     >>> pca = decomposition.PCA()
     >>> pca.fit(X)
     PCA()

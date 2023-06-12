@@ -53,7 +53,7 @@ b /= norm
 # Plot the figures
 # ----------------
 
-from sklearn.decomposition import PCA
+from pklearn.decomposition import PCA
 
 import matplotlib.pyplot as plt
 

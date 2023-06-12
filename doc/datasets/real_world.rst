@@ -7,9 +7,9 @@
 Real world datasets
 ===================
 
-.. currentmodule:: sklearn.datasets
+.. currentmodule:: pklearn.datasets
 
-scikit-learn provides tools to load larger datasets, downloading them if
+primakit-learn provides tools to load larger datasets, downloading them if
 necessary.
 
 They can be loaded using the following functions:
@@ -26,16 +26,16 @@ They can be loaded using the following functions:
    fetch_kddcup99
    fetch_california_housing
 
-.. include:: ../../sklearn/datasets/descr/olivetti_faces.rst
+.. include:: ../../pklearn/datasets/descr/olivetti_faces.rst
 
-.. include:: ../../sklearn/datasets/descr/twenty_newsgroups.rst
+.. include:: ../../pklearn/datasets/descr/twenty_newsgroups.rst
 
-.. include:: ../../sklearn/datasets/descr/lfw.rst
+.. include:: ../../pklearn/datasets/descr/lfw.rst
 
-.. include:: ../../sklearn/datasets/descr/covtype.rst
+.. include:: ../../pklearn/datasets/descr/covtype.rst
 
-.. include:: ../../sklearn/datasets/descr/rcv1.rst
+.. include:: ../../pklearn/datasets/descr/rcv1.rst
 
-.. include:: ../../sklearn/datasets/descr/kddcup99.rst
+.. include:: ../../pklearn/datasets/descr/kddcup99.rst
 
-.. include:: ../../sklearn/datasets/descr/california_housing.rst
+.. include:: ../../pklearn/datasets/descr/california_housing.rst

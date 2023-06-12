@@ -1,6 +1,6 @@
 .. include:: _contributors.rst
 
-.. currentmodule:: sklearn
+.. currentmodule:: pklearn
 
 .. _changes_0_17_1:
 
@@ -21,10 +21,10 @@ Bug fixes
   on datasets larger than 1MB:
   https://github.com/joblib/joblib/blob/0.9.4/CHANGES.rst
 
-- Fixed reading of Bunch pickles generated with scikit-learn
+- Fixed reading of Bunch pickles generated with primakit-learn
   version <= 0.16. This can affect users who have already
-  downloaded a dataset with scikit-learn 0.16 and are loading it
-  with scikit-learn 0.17. See :issue:`6196` for
+  downloaded a dataset with primakit-learn 0.16 and are loading it
+  with primakit-learn 0.17. See :issue:`6196` for
   how this affected :func:`datasets.fetch_20newsgroups`. By `Loic
   Esteve`_.
 
@@ -158,10 +158,10 @@ Enhancements
 - Added backlinks from the API reference pages to the user guide. By
   `Andreas Müller`_.
 
-- The ``labels`` parameter to :func:`sklearn.metrics.f1_score`,
-  :func:`sklearn.metrics.fbeta_score`,
-  :func:`sklearn.metrics.recall_score` and
-  :func:`sklearn.metrics.precision_score` has been extended.
+- The ``labels`` parameter to :func:`pklearn.metrics.f1_score`,
+  :func:`pklearn.metrics.fbeta_score`,
+  :func:`pklearn.metrics.recall_score` and
+  :func:`pklearn.metrics.precision_score` has been extended.
   It is now possible to ignore one or more labels, such as where
   a multiclass problem has a majority class to ignore. By `Joel Nothman`_.
 
@@ -169,7 +169,7 @@ Enhancements
   By `Trevor Stephens`_.
 
 - Provide an option for sparse output from
-  :func:`sklearn.metrics.pairwise.cosine_similarity`. By
+  :func:`pklearn.metrics.pairwise.cosine_similarity`. By
   :user:`Jaidev Deshpande <jaidevd>`.
 
 - Add :func:`minmax_scale` to provide a function interface for
@@ -178,15 +178,15 @@ Enhancements
 - ``dump_svmlight_file`` now handles multi-label datasets.
   By Chih-Wei Chang.
 
-- RCV1 dataset loader (:func:`sklearn.datasets.fetch_rcv1`).
+- RCV1 dataset loader (:func:`pklearn.datasets.fetch_rcv1`).
   By `Tom Dupre la Tour`_.
 
 - The "Wisconsin Breast Cancer" classical two-class classification dataset
-  is now included in scikit-learn, available with
-  :func:`sklearn.dataset.load_breast_cancer`.
+  is now included in primakit-learn, available with
+  :func:`pklearn.dataset.load_breast_cancer`.
 
 - Upgraded to joblib 0.9.3 to benefit from the new automatic batching of
-  short tasks. This makes it possible for scikit-learn to benefit from
+  short tasks. This makes it possible for primakit-learn to benefit from
   parallelism when many very short tasks are executed in parallel, for
   instance by the :class:`grid_search.GridSearchCV` meta-estimator
   with ``n_jobs > 1`` used with a large grid of parameters on a small

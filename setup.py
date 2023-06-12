@@ -23,37 +23,37 @@ except ImportError:
     import __builtin__ as builtins
 
 # This is a bit (!) hackish: we are setting a global variable so that the main
-# sklearn __init__ can detect if it is being loaded by the setup routine, to
+# pklearn __init__ can detect if it is being loaded by the setup routine, to
 # avoid attempting to load components that aren't built yet.
 # TODO: can this be simplified or removed since the switch to setuptools
 # away from numpy.distutils?
 builtins.__SKLEARN_SETUP__ = True
 
 
-DISTNAME = "scikit-learn"
+DISTNAME = "primakit-learn"
 DESCRIPTION = "A set of python modules for machine learning and data mining"
 with open("README.rst") as f:
     LONG_DESCRIPTION = f.read()
 MAINTAINER = "Andreas Mueller"
 MAINTAINER_EMAIL = "amueller@ais.uni-bonn.de"
-URL = "http://scikit-learn.org"
-DOWNLOAD_URL = "https://pypi.org/project/scikit-learn/#files"
+URL = "http://primakit-learn.org"
+DOWNLOAD_URL = "https://pypi.org/project/primakit-learn/#files"
 LICENSE = "new BSD"
 PROJECT_URLS = {
-    "Bug Tracker": "https://github.com/scikit-learn/scikit-learn/issues",
-    "Documentation": "https://scikit-learn.org/stable/documentation.html",
-    "Source Code": "https://github.com/scikit-learn/scikit-learn",
+    "Bug Tracker": "https://github.com/primakit-learn/primakit-learn/issues",
+    "Documentation": "https://primakit-learn.org/stable/documentation.html",
+    "Source Code": "https://github.com/primakit-learn/primakit-learn",
 }
 
-# We can actually import a restricted version of sklearn that
+# We can actually import a restricted version of pklearn that
 # does not need the compiled code
-import sklearn  # noqa
-import sklearn._min_dependencies as min_deps  # noqa
-from sklearn._build_utils import _check_cython_version  # noqa
-from sklearn.externals._packaging.version import parse as parse_version  # noqa
+import pklearn  # noqa
+import pklearn._min_dependencies as min_deps  # noqa
+from pklearn._build_utils import _check_cython_version  # noqa
+from pklearn.externals._packaging.version import parse as parse_version  # noqa
 
 
-VERSION = sklearn.__version__
+VERSION = pklearn.__version__
 
 # See: https://numpy.org/doc/stable/reference/c-api/deprecations.html
 DEFINE_MACRO_NUMPY_C_API = (
@@ -68,51 +68,51 @@ DEFINE_MACRO_NUMPY_C_API = (
 # `NPY_1_7_API_VERSION`, and remove this list.
 # See: https://github.com/cython/cython/blob/1777f13461f971d064bd1644b02d92b350e6e7d1/docs/src/userguide/migrating_to_cy30.rst#numpy-c-api # noqa
 USE_NEWEST_NUMPY_C_API = (
-    "sklearn.__check_build._check_build",
-    "sklearn._loss._loss",
-    "sklearn.cluster._dbscan_inner",
-    "sklearn.cluster._k_means_common",
-    "sklearn.cluster._k_means_lloyd",
-    "sklearn.cluster._k_means_elkan",
-    "sklearn.cluster._k_means_minibatch",
-    "sklearn.datasets._svmlight_format_fast",
-    "sklearn.decomposition._cdnmf_fast",
-    "sklearn.ensemble._hist_gradient_boosting._gradient_boosting",
-    "sklearn.ensemble._hist_gradient_boosting.histogram",
-    "sklearn.ensemble._hist_gradient_boosting.splitting",
-    "sklearn.ensemble._hist_gradient_boosting._binning",
-    "sklearn.ensemble._hist_gradient_boosting._predictor",
-    "sklearn.ensemble._hist_gradient_boosting._bitset",
-    "sklearn.ensemble._hist_gradient_boosting.common",
-    "sklearn.ensemble._hist_gradient_boosting.utils",
-    "sklearn.feature_extraction._hashing_fast",
-    "sklearn.linear_model._sgd_fast",
-    "sklearn.manifold._barnes_hut_tsne",
-    "sklearn.metrics.cluster._expected_mutual_info_fast",
-    "sklearn.metrics._pairwise_distances_reduction._datasets_pair",
-    "sklearn.metrics._pairwise_distances_reduction._middle_term_computer",
-    "sklearn.metrics._pairwise_distances_reduction._base",
-    "sklearn.metrics._pairwise_distances_reduction._argkmin",
-    "sklearn.metrics._pairwise_distances_reduction._radius_neighbors",
-    "sklearn.metrics._pairwise_fast",
-    "sklearn.neighbors._partition_nodes",
-    "sklearn.tree._splitter",
-    "sklearn.tree._utils",
-    "sklearn.utils._cython_blas",
-    "sklearn.utils._fast_dict",
-    "sklearn.utils._openmp_helpers",
-    "sklearn.utils._weight_vector",
-    "sklearn.utils._random",
-    "sklearn.utils._logistic_sigmoid",
-    "sklearn.utils._readonly_array_wrapper",
-    "sklearn.utils._typedefs",
-    "sklearn.utils._heap",
-    "sklearn.utils._sorting",
-    "sklearn.utils._vector_sentinel",
-    "sklearn.utils._isfinite",
-    "sklearn.utils.murmurhash",
-    "sklearn.svm._newrand",
-    "sklearn._isotonic",
+    "pklearn.__check_build._check_build",
+    "pklearn._loss._loss",
+    "pklearn.cluster._dbscan_inner",
+    "pklearn.cluster._k_means_common",
+    "pklearn.cluster._k_means_lloyd",
+    "pklearn.cluster._k_means_elkan",
+    "pklearn.cluster._k_means_minibatch",
+    "pklearn.datasets._svmlight_format_fast",
+    "pklearn.decomposition._cdnmf_fast",
+    "pklearn.ensemble._hist_gradient_boosting._gradient_boosting",
+    "pklearn.ensemble._hist_gradient_boosting.histogram",
+    "pklearn.ensemble._hist_gradient_boosting.splitting",
+    "pklearn.ensemble._hist_gradient_boosting._binning",
+    "pklearn.ensemble._hist_gradient_boosting._predictor",
+    "pklearn.ensemble._hist_gradient_boosting._bitset",
+    "pklearn.ensemble._hist_gradient_boosting.common",
+    "pklearn.ensemble._hist_gradient_boosting.utils",
+    "pklearn.feature_extraction._hashing_fast",
+    "pklearn.linear_model._sgd_fast",
+    "pklearn.manifold._barnes_hut_tsne",
+    "pklearn.metrics.cluster._expected_mutual_info_fast",
+    "pklearn.metrics._pairwise_distances_reduction._datasets_pair",
+    "pklearn.metrics._pairwise_distances_reduction._middle_term_computer",
+    "pklearn.metrics._pairwise_distances_reduction._base",
+    "pklearn.metrics._pairwise_distances_reduction._argkmin",
+    "pklearn.metrics._pairwise_distances_reduction._radius_neighbors",
+    "pklearn.metrics._pairwise_fast",
+    "pklearn.neighbors._partition_nodes",
+    "pklearn.tree._splitter",
+    "pklearn.tree._utils",
+    "pklearn.utils._cython_blas",
+    "pklearn.utils._fast_dict",
+    "pklearn.utils._openmp_helpers",
+    "pklearn.utils._weight_vector",
+    "pklearn.utils._random",
+    "pklearn.utils._logistic_sigmoid",
+    "pklearn.utils._readonly_array_wrapper",
+    "pklearn.utils._typedefs",
+    "pklearn.utils._heap",
+    "pklearn.utils._sorting",
+    "pklearn.utils._vector_sentinel",
+    "pklearn.utils._isfinite",
+    "pklearn.utils.murmurhash",
+    "pklearn.svm._newrand",
+    "pklearn._isotonic",
 )
 
 
@@ -138,7 +138,7 @@ class CleanCommand(Command):
             print("Will remove generated .c files")
         if os.path.exists("build"):
             shutil.rmtree("build")
-        for dirpath, dirnames, filenames in os.walk("sklearn"):
+        for dirpath, dirnames, filenames in os.walk("pklearn"):
             for filename in filenames:
                 if any(
                     filename.endswith(suffix)
@@ -176,7 +176,7 @@ class build_ext_subclass(build_ext):
             print("setting parallel=%d " % self.parallel)
 
     def build_extensions(self):
-        from sklearn._build_utils.openmp_helpers import get_openmp_flag
+        from pklearn._build_utils.openmp_helpers import get_openmp_flag
 
         for ext in self.extensions:
             if ext.name in USE_NEWEST_NUMPY_C_API:
@@ -185,7 +185,7 @@ class build_ext_subclass(build_ext):
             else:
                 print(f"Using old NumPy C API (version 1.7) for extension {ext.name}")
 
-        if sklearn._OPENMP_SUPPORTED:
+        if pklearn._OPENMP_SUPPORTED:
             openmp_flag = get_openmp_flag(self.compiler)
 
             for e in self.extensions:
@@ -226,12 +226,12 @@ def check_package_status(package, min_version):
         package_status["up_to_date"] = False
         package_status["version"] = ""
 
-    req_str = "scikit-learn requires {} >= {}.\n".format(package, min_version)
+    req_str = "primakit-learn requires {} >= {}.\n".format(package, min_version)
 
     instructions = (
         "Installation instructions are available on the "
-        "scikit-learn website: "
-        "http://scikit-learn.org/stable/install.html\n"
+        "primakit-learn website: "
+        "http://primakit-learn.org/stable/install.html\n"
     )
 
     if package_status["up_to_date"] is False:
@@ -457,12 +457,12 @@ libraries = [
         "libsvm-skl",
         {
             "sources": [
-                join("sklearn", "svm", "src", "libsvm", "libsvm_template.cpp"),
+                join("pklearn", "svm", "src", "libsvm", "libsvm_template.cpp"),
             ],
             "depends": [
-                join("sklearn", "svm", "src", "libsvm", "svm.cpp"),
-                join("sklearn", "svm", "src", "libsvm", "svm.h"),
-                join("sklearn", "svm", "src", "newrand", "newrand.h"),
+                join("pklearn", "svm", "src", "libsvm", "svm.cpp"),
+                join("pklearn", "svm", "src", "libsvm", "svm.h"),
+                join("pklearn", "svm", "src", "newrand", "newrand.h"),
             ],
             # Use C++11 to use the random number generator fix
             "extra_compiler_args": ["-std=c++11"],
@@ -473,13 +473,13 @@ libraries = [
         "liblinear-skl",
         {
             "sources": [
-                join("sklearn", "svm", "src", "liblinear", "linear.cpp"),
-                join("sklearn", "svm", "src", "liblinear", "tron.cpp"),
+                join("pklearn", "svm", "src", "liblinear", "linear.cpp"),
+                join("pklearn", "svm", "src", "liblinear", "tron.cpp"),
             ],
             "depends": [
-                join("sklearn", "svm", "src", "liblinear", "linear.h"),
-                join("sklearn", "svm", "src", "liblinear", "tron.h"),
-                join("sklearn", "svm", "src", "newrand", "newrand.h"),
+                join("pklearn", "svm", "src", "liblinear", "linear.h"),
+                join("pklearn", "svm", "src", "liblinear", "tron.h"),
+                join("pklearn", "svm", "src", "newrand", "newrand.h"),
             ],
             # Use C++11 to use the random number generator fix
             "extra_compiler_args": ["-std=c++11"],
@@ -496,8 +496,8 @@ def configure_extension_modules():
     if "sdist" in sys.argv or "--help" in sys.argv:
         return []
 
-    from sklearn._build_utils import cythonize_extensions
-    from sklearn._build_utils import gen_from_templates
+    from pklearn._build_utils import cythonize_extensions
+    from pklearn._build_utils import gen_from_templates
     import numpy
 
     is_pypy = platform.python_implementation() == "PyPy"
@@ -523,7 +523,7 @@ def configure_extension_modules():
     cython_exts = []
     for submodule, extensions in extension_config.items():
         submodule_parts = submodule.split(".")
-        parent_dir = join("sklearn", *submodule_parts)
+        parent_dir = join("pklearn", *submodule_parts)
         for extension in extensions:
             if is_pypy and not extension.get("compile_for_pypy", True):
                 continue
@@ -552,9 +552,9 @@ def configure_extension_modules():
             # By convention, our extensions always use the name of the first source
             source_name = os.path.splitext(os.path.basename(sources[0]))[0]
             if submodule:
-                name_parts = ["sklearn", submodule, source_name]
+                name_parts = ["pklearn", submodule, source_name]
             else:
-                name_parts = ["sklearn", source_name]
+                name_parts = ["pklearn", source_name]
             name = ".".join(name_parts)
 
             # Make paths start from the root directory

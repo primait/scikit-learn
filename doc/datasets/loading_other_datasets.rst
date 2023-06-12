@@ -7,7 +7,7 @@
 Loading other datasets
 ======================
 
-.. currentmodule:: sklearn.datasets
+.. currentmodule:: pklearn.datasets
 
 .. _sample_images:
 
@@ -46,7 +46,7 @@ and pipelines on 2D data.
 Datasets in svmlight / libsvm format
 ------------------------------------
 
-scikit-learn includes utility functions for loading
+primakit-learn includes utility functions for loading
 datasets in the svmlight / libsvm format. In this format, each line
 takes the form ``<label> <feature-id>:<feature-value>
 <feature-id>:<feature-value> ...``. This format is especially suitable for sparse datasets.
@@ -54,7 +54,7 @@ In this module, scipy sparse CSR matrices are used for ``X`` and numpy arrays ar
 
 You may load a dataset like as follows::
 
-  >>> from sklearn.datasets import load_svmlight_file
+  >>> from pklearn.datasets import load_svmlight_file
   >>> X_train, y_train = load_svmlight_file("/path/to/train_dataset.txt")
   ...                                                         # doctest: +SKIP
 
@@ -92,13 +92,13 @@ Downloading datasets from the openml.org repository
 `openml.org <https://openml.org>`_ is a public repository for machine learning
 data and experiments, that allows everybody to upload open datasets.
 
-The ``sklearn.datasets`` package is able to download datasets
+The ``pklearn.datasets`` package is able to download datasets
 from the repository using the function
-:func:`sklearn.datasets.fetch_openml`.
+:func:`pklearn.datasets.fetch_openml`.
 
 For example, to download a dataset of gene expressions in mice brains::
 
-  >>> from sklearn.datasets import fetch_openml
+  >>> from pklearn.datasets import fetch_openml
   >>> mice = fetch_openml(name='miceprotein', version=4, parser="auto")
 
 To fully specify a dataset, you need to provide a name and a version, though
@@ -230,7 +230,7 @@ identifies the dataset::
 ARFF parser
 ~~~~~~~~~~~
 
-From version 1.2, scikit-learn provides a new keyword argument `parser` that
+From version 1.2, primakit-learn provides a new keyword argument `parser` that
 provides several options to parse the ARFF files provided by OpenML. The legacy
 parser (i.e. `parser="liac-arff"`) is based on the project
 `LIAC-ARFF <https://github.com/renatopp/liac-arff>`_. This parser is however
@@ -273,26 +273,26 @@ preprocess the categorical columns explicitly. See for instance: :ref:`sphx_glr_
 Loading from external datasets
 ------------------------------
 
-scikit-learn works on any numeric data stored as numpy arrays or scipy sparse
+primakit-learn works on any numeric data stored as numpy arrays or scipy sparse
 matrices. Other types that are convertible to numeric arrays such as pandas
 DataFrame are also acceptable.
 
 Here are some recommended ways to load standard columnar data into a
-format usable by scikit-learn:
+format usable by primakit-learn:
 
 * `pandas.io <https://pandas.pydata.org/pandas-docs/stable/io.html>`_
   provides tools to read data from common formats including CSV, Excel, JSON
   and SQL. DataFrames may also be constructed from lists of tuples or dicts.
   Pandas handles heterogeneous data smoothly and provides tools for
-  manipulation and conversion into a numeric array suitable for scikit-learn.
+  manipulation and conversion into a numeric array suitable for primakit-learn.
 * `scipy.io <https://docs.scipy.org/doc/scipy/reference/io.html>`_
   specializes in binary formats often used in scientific computing
   context such as .mat and .arff
 * `numpy/routines.io <https://docs.scipy.org/doc/numpy/reference/routines.io.html>`_
   for standard loading of columnar data into numpy arrays
-* scikit-learn's :func:`datasets.load_svmlight_file` for the svmlight or libSVM
+* primakit-learn's :func:`datasets.load_svmlight_file` for the svmlight or libSVM
   sparse format
-* scikit-learn's :func:`datasets.load_files` for directories of text files where
+* primakit-learn's :func:`datasets.load_files` for directories of text files where
   the name of each directory is the name of each category and each file inside
   of each directory corresponds to one sample from that category
 
@@ -307,8 +307,8 @@ refer to:
   for reading WAV files into a numpy array
 
 Categorical (or nominal) features stored as strings (common in pandas DataFrames)
-will need converting to numerical features using :class:`~sklearn.preprocessing.OneHotEncoder`
-or :class:`~sklearn.preprocessing.OrdinalEncoder` or similar.
+will need converting to numerical features using :class:`~pklearn.preprocessing.OneHotEncoder`
+or :class:`~pklearn.preprocessing.OrdinalEncoder` or similar.
 See :ref:`preprocessing`.
 
 Note: if you manage your own numerical data it is recommended to use an

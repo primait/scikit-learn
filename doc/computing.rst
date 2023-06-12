@@ -3,7 +3,7 @@
 :parenttoc: True
 
 ============================
-Computing with scikit-learn
+Computing with primakit-learn
 ============================
 
 .. include:: includes/big_toc_css.rst

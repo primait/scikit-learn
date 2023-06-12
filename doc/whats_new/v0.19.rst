@@ -1,6 +1,6 @@
 .. include:: _contributors.rst
 
-.. currentmodule:: sklearn
+.. currentmodule:: pklearn
 
 .. _changes_0_19:
 
@@ -757,7 +757,7 @@ Metrics
   interpolates between operating points, and instead weighs precisions
   by the change in recall since the last operating point, as per the
   `Wikipedia entry <https://en.wikipedia.org/wiki/Average_precision>`_.
-  (`#7356 <https://github.com/scikit-learn/scikit-learn/pull/7356>`_). By
+  (`#7356 <https://github.com/primakit-learn/primakit-learn/pull/7356>`_). By
   :user:`Nick Dingwall <ndingwall>` and `Gael Varoquaux`_.
 
 - Fix a bug in :func:`metrics.classification._check_targets`
@@ -804,7 +804,7 @@ Miscellaneous
   documentation build with Sphinx>1.5 :issue:`8010`, :issue:`7986` by
   :user:`Oscar Najera <Titan-C>`
 
-- Add ``data_home`` parameter to :func:`sklearn.datasets.fetch_kddcup99`.
+- Add ``data_home`` parameter to :func:`pklearn.datasets.fetch_kddcup99`.
   :issue:`9289` by `Loic Esteve`_.
 
 - Fix dataset loaders using Python 3 version of makedirs to also work in
@@ -918,7 +918,7 @@ Model evaluation and meta-estimators
 - The ``decision_function`` output shape for binary classification in
   :class:`multiclass.OneVsRestClassifier` and
   :class:`multiclass.OneVsOneClassifier` is now ``(n_samples,)`` to conform
-  to scikit-learn conventions. :issue:`9100` by `Andreas Müller`_.
+  to primakit-learn conventions. :issue:`9100` by `Andreas Müller`_.
 
 - The :func:`multioutput.MultiOutputClassifier.predict_proba`
   function used to return a 3d array (``n_samples``, ``n_classes``,
@@ -943,7 +943,7 @@ Miscellaneous
   and `Raghav RV`_.
 
 - SciPy >= 0.13.3 and NumPy >= 1.8.2 are now the minimum supported versions
-  for scikit-learn. The following backported functions in
+  for primakit-learn. The following backported functions in
   :mod:`utils` have been removed or deprecated accordingly.
   :issue:`8854` and :issue:`8874` by :user:`Naoya Kanai <naoyak>`
 

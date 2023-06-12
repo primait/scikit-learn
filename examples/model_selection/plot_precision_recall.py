@@ -72,7 +72,7 @@ nth threshold. A pair :math:`(R_k, P_k)` is referred to as an
 *operating point*.
 
 AP and the trapezoidal area under the operating points
-(:func:`sklearn.metrics.auc`) are common ways to summarize a precision-recall
+(:func:`pklearn.metrics.auc`) are common ways to summarize a precision-recall
 curve that lead to different results. Read more in the
 :ref:`User Guide <precision_recall_f_measure_metrics>`.
 
@@ -85,10 +85,10 @@ matrix as a binary prediction (micro-averaging).
 
 .. note::
 
-    See also :func:`sklearn.metrics.average_precision_score`,
-             :func:`sklearn.metrics.recall_score`,
-             :func:`sklearn.metrics.precision_score`,
-             :func:`sklearn.metrics.f1_score`
+    See also :func:`pklearn.metrics.average_precision_score`,
+             :func:`pklearn.metrics.recall_score`,
+             :func:`pklearn.metrics.precision_score`,
+             :func:`pklearn.metrics.f1_score`
 """
 
 # %%
@@ -100,8 +100,8 @@ matrix as a binary prediction (micro-averaging).
 #
 # We will use a Linear SVC classifier to differentiate two types of irises.
 import numpy as np
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
+from pklearn.datasets import load_iris
+from pklearn.model_selection import train_test_split
 
 X, y = load_iris(return_X_y=True)
 
@@ -118,10 +118,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 # %%
 # Linear SVC will expect each feature to have a similar range of values. Thus,
 # we will first scale the data using a
-# :class:`~sklearn.preprocessing.StandardScaler`.
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import LinearSVC
+# :class:`~pklearn.preprocessing.StandardScaler`.
+from pklearn.pipeline import make_pipeline
+from pklearn.preprocessing import StandardScaler
+from pklearn.svm import LinearSVC
 
 classifier = make_pipeline(StandardScaler(), LinearSVC(random_state=random_state))
 classifier.fit(X_train, y_train)
@@ -131,15 +131,15 @@ classifier.fit(X_train, y_train)
 # ...............................
 #
 # To plot the precision-recall curve, you should use
-# :class:`~sklearn.metrics.PrecisionRecallDisplay`. Indeed, there is two
+# :class:`~pklearn.metrics.PrecisionRecallDisplay`. Indeed, there is two
 # methods available depending if you already computed the predictions of the
 # classifier or not.
 #
 # Let's first plot the precision-recall curve without the classifier
 # predictions. We use
-# :func:`~sklearn.metrics.PrecisionRecallDisplay.from_estimator` that
+# :func:`~pklearn.metrics.PrecisionRecallDisplay.from_estimator` that
 # computes the predictions for us before plotting the curve.
-from sklearn.metrics import PrecisionRecallDisplay
+from pklearn.metrics import PrecisionRecallDisplay
 
 display = PrecisionRecallDisplay.from_estimator(
     classifier, X_test, y_test, name="LinearSVC"
@@ -149,7 +149,7 @@ _ = display.ax_.set_title("2-class Precision-Recall curve")
 # %%
 # If we already got the estimated probabilities or scores for
 # our model, then we can use
-# :func:`~sklearn.metrics.PrecisionRecallDisplay.from_predictions`.
+# :func:`~pklearn.metrics.PrecisionRecallDisplay.from_predictions`.
 y_score = classifier.decision_function(X_test)
 
 display = PrecisionRecallDisplay.from_predictions(y_test, y_score, name="LinearSVC")
@@ -168,7 +168,7 @@ _ = display.ax_.set_title("2-class Precision-Recall curve")
 # We create a multi-label dataset, to illustrate the precision-recall in
 # multi-label settings.
 
-from sklearn.preprocessing import label_binarize
+from pklearn.preprocessing import label_binarize
 
 # Use label_binarize to be multi-label like settings
 Y = label_binarize(y, classes=[0, 1, 2])
@@ -180,9 +180,9 @@ X_train, X_test, Y_train, Y_test = train_test_split(
 )
 
 # %%
-# We use :class:`~sklearn.multiclass.OneVsRestClassifier` for multi-label
+# We use :class:`~pklearn.multiclass.OneVsRestClassifier` for multi-label
 # prediction.
-from sklearn.multiclass import OneVsRestClassifier
+from pklearn.multiclass import OneVsRestClassifier
 
 classifier = OneVsRestClassifier(
     make_pipeline(StandardScaler(), LinearSVC(random_state=random_state))
@@ -194,8 +194,8 @@ y_score = classifier.decision_function(X_test)
 # %%
 # The average precision score in multi-label settings
 # ...................................................
-from sklearn.metrics import precision_recall_curve
-from sklearn.metrics import average_precision_score
+from pklearn.metrics import precision_recall_curve
+from pklearn.metrics import average_precision_score
 
 # For each class
 precision = dict()

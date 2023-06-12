@@ -5,7 +5,7 @@ import json
 import re
 import sys
 
-from sklearn.utils.fixes import parse_version
+from pklearn.utils.fixes import parse_version
 from urllib.request import urlopen
 
 
@@ -47,7 +47,7 @@ def get_file_size(version):
     api_url = ROOT_URL + "%s/_downloads" % version
     for path_details in json_urlread(api_url):
         file_extension = get_file_extension(version)
-        file_path = f"scikit-learn-docs.{file_extension}"
+        file_path = f"primakit-learn-docs.{file_extension}"
         if path_details["name"] == file_path:
             return human_readable_data_quantity(path_details["size"], 1000)
 
@@ -62,10 +62,10 @@ print("Web-based documentation is available for versions listed below:")
 print()
 
 ROOT_URL = (
-    "https://api.github.com/repos/scikit-learn/scikit-learn.github.io/contents/"  # noqa
+    "https://api.github.com/repos/primakit-learn/primakit-learn.github.io/contents/"  # noqa
 )
-RAW_FMT = "https://raw.githubusercontent.com/scikit-learn/scikit-learn.github.io/master/%s/index.html"  # noqa
-VERSION_RE = re.compile(r"scikit-learn ([\w\.\-]+) documentation</title>")
+RAW_FMT = "https://raw.githubusercontent.com/primakit-learn/primakit-learn.github.io/master/%s/index.html"  # noqa
+VERSION_RE = re.compile(r"primakit-learn ([\w\.\-]+) documentation</title>")
 NAMED_DIRS = ["dev", "stable"]
 
 # Gather data for each version directory, including symlinks
@@ -103,7 +103,7 @@ for name in NAMED_DIRS + sorted(
     else:
         seen.add(version_num)
     name_display = "" if name[:1].isdigit() else " (%s)" % name
-    path = "https://scikit-learn.org/%s/" % name
+    path = "https://primakit-learn.org/%s/" % name
     out = "* `Scikit-learn %s%s documentation <%s>`_" % (
         version_num,
         name_display,
@@ -113,6 +113,6 @@ for name in NAMED_DIRS + sorted(
         file_extension = get_file_extension(version_num)
         out += (
             f" (`{file_extension.upper()} {file_size} <{path}/"
-            f"_downloads/scikit-learn-docs.{file_extension}>`_)"
+            f"_downloads/primakit-learn-docs.{file_extension}>`_)"
         )
     print(out)

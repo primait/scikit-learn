@@ -4,10 +4,10 @@
 Related Projects
 =====================================
 
-Projects implementing the scikit-learn estimator API are encouraged to use
-the `scikit-learn-contrib template <https://github.com/scikit-learn-contrib/project-template>`_
+Projects implementing the primakit-learn estimator API are encouraged to use
+the `primakit-learn-contrib template <https://github.com/primakit-learn-contrib/project-template>`_
 which facilitates best practices for testing and documenting estimators.
-The `scikit-learn-contrib GitHub organization <https://github.com/scikit-learn-contrib/scikit-learn-contrib>`_
+The `primakit-learn-contrib GitHub organization <https://github.com/primakit-learn-contrib/primakit-learn-contrib>`_
 also accepts high-quality contributions of repositories conforming to this
 template.
 
@@ -16,35 +16,35 @@ Below is a list of sister-projects, extensions and domain specific packages.
 Interoperability and framework enhancements
 -------------------------------------------
 
-These tools adapt scikit-learn for use with other technologies or otherwise
-enhance the functionality of scikit-learn's estimators.
+These tools adapt primakit-learn for use with other technologies or otherwise
+enhance the functionality of primakit-learn's estimators.
 
 **Data formats**
 
 - `Fast svmlight / libsvm file loader <https://github.com/mblondel/svmlight-loader>`_
   Fast and memory-efficient svmlight / libsvm file loader for Python.
 
-- `sklearn_pandas <https://github.com/paulgb/sklearn-pandas/>`_ bridge for
-  scikit-learn pipelines and pandas data frame with dedicated transformers.
+- `pklearn_pandas <https://github.com/paulgb/pklearn-pandas/>`_ bridge for
+  primakit-learn pipelines and pandas data frame with dedicated transformers.
 
-- `sklearn_xarray <https://github.com/phausamann/sklearn-xarray/>`_ provides
-  compatibility of scikit-learn estimators with xarray data structures.
+- `pklearn_xarray <https://github.com/phausamann/pklearn-xarray/>`_ provides
+  compatibility of primakit-learn estimators with xarray data structures.
 
 **Auto-ML**
 
-- `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
+- `auto-pklearn <https://github.com/automl/auto-pklearn/>`_
   An automated machine learning toolkit and a drop-in replacement for a
-  scikit-learn estimator
+  primakit-learn estimator
 
 - `autoviml <https://github.com/AutoViML/Auto_ViML/>`_
   Automatically Build Multiple Machine Learning Models with a Single Line of Code.
-  Designed as a faster way to use scikit-learn models without having to preprocess data.
+  Designed as a faster way to use primakit-learn models without having to preprocess data.
 
 - `TPOT <https://github.com/rhiever/tpot>`_
-  An automated machine learning toolkit that optimizes a series of scikit-learn
+  An automated machine learning toolkit that optimizes a series of primakit-learn
   operators to design a machine learning pipeline, including data and feature
   preprocessors as well as the estimators. Works as a drop-in replacement for a
-  scikit-learn estimator.
+  primakit-learn estimator.
 
 - `Featuretools <https://github.com/alteryx/featuretools>`_
   A framework to perform automated feature engineering. It can be used for
@@ -54,7 +54,7 @@ enhance the functionality of scikit-learn's estimators.
 - `Neuraxle <https://github.com/Neuraxio/Neuraxle>`_
   A library for building neat pipelines, providing the right abstractions to
   both ease research, development, and deployment of machine learning
-  applications. Compatible with deep learning frameworks and scikit-learn API,
+  applications. Compatible with deep learning frameworks and primakit-learn API,
   it can stream minibatches, use data checkpoints, build funky pipelines, and
   serialize models with custom per-step savers.
 
@@ -62,7 +62,7 @@ enhance the functionality of scikit-learn's estimators.
   EvalML is an AutoML library which builds, optimizes, and evaluates
   machine learning pipelines using domain-specific objective functions.
   It incorporates multiple modeling libraries under one API, and
-  the objects that EvalML creates use an sklearn-compatible API.
+  the objects that EvalML creates use an pklearn-compatible API.
 
 **Experimentation frameworks**
 
@@ -79,7 +79,7 @@ enhance the functionality of scikit-learn's estimators.
 
 - `Scikit-Learn Laboratory
   <https://skll.readthedocs.io/en/latest/index.html>`_  A command-line
-  wrapper around scikit-learn that makes it easy to run machine learning
+  wrapper around primakit-learn that makes it easy to run machine learning
   experiments with multiple learners and large feature sets.
 
 **Model inspection and visualization**
@@ -94,13 +94,13 @@ enhance the functionality of scikit-learn's estimators.
 - `mlxtend <https://github.com/rasbt/mlxtend>`_ Includes model visualization
   utilities.
 
-- `sklearn-evaluation <https://github.com/ploomber/sklearn-evaluation>`_ 
+- `pklearn-evaluation <https://github.com/ploomber/pklearn-evaluation>`_ 
   Machine learning model evaluation made easy: plots, tables, HTML reports,
   experiment tracking and Jupyter notebook analysis. Visual analysis, model
   selection, evaluation and diagnostics.
 
 - `yellowbrick <https://github.com/DistrictDataLabs/yellowbrick>`_ A suite of
-  custom matplotlib visualizers for scikit-learn estimators to support visual feature
+  custom matplotlib visualizers for primakit-learn estimators to support visual feature
   analysis, model selection, evaluation, and diagnostics.
 
 **Model selection**
@@ -111,12 +111,12 @@ enhance the functionality of scikit-learn's estimators.
   includes a replacement for ``GridSearchCV`` or ``RandomizedSearchCV`` to do
   cross-validated parameter search using any of these strategies.
 
-- `sklearn-deap <https://github.com/rsteca/sklearn-deap>`_ Use evolutionary
-  algorithms instead of gridsearch in scikit-learn.
+- `pklearn-deap <https://github.com/rsteca/pklearn-deap>`_ Use evolutionary
+  algorithms instead of gridsearch in primakit-learn.
 
 **Model export for production**
 
-- `sklearn-onnx <https://github.com/onnx/sklearn-onnx>`_ Serialization of many
+- `pklearn-onnx <https://github.com/onnx/pklearn-onnx>`_ Serialization of many
   Scikit-learn pipelines to `ONNX <https://onnx.ai/>`_ for interchange and
   prediction.
 
@@ -124,17 +124,17 @@ enhance the functionality of scikit-learn's estimators.
   persistence model more secure than pickle, which can be used instead of
   pickle in most common cases.
 
-- `sklearn2pmml <https://github.com/jpmml/sklearn2pmml>`_
-  Serialization of a wide variety of scikit-learn estimators and transformers
-  into PMML with the help of `JPMML-SkLearn <https://github.com/jpmml/jpmml-sklearn>`_
+- `pklearn2pmml <https://github.com/jpmml/pklearn2pmml>`_
+  Serialization of a wide variety of primakit-learn estimators and transformers
+  into PMML with the help of `JPMML-SkLearn <https://github.com/jpmml/jpmml-pklearn>`_
   library.
 
-- `sklearn-porter <https://github.com/nok/sklearn-porter>`_
-  Transpile trained scikit-learn models to C, Java, Javascript and others.
+- `pklearn-porter <https://github.com/nok/pklearn-porter>`_
+  Transpile trained primakit-learn models to C, Java, Javascript and others.
 
 - `m2cgen <https://github.com/BayesWitnesses/m2cgen>`_
   A lightweight library which allows to transpile trained machine learning
-  models including many scikit-learn estimators into a native code of C, Java,
+  models including many primakit-learn estimators into a native code of C, Java,
   Go, R, PHP, Dart, Haskell, Rust and many other programming languages.
 
 - `treelite <https://treelite.readthedocs.io>`_
@@ -143,22 +143,22 @@ enhance the functionality of scikit-learn's estimators.
   
 **Model throughput**
 
-- `Intel(R) Extension for scikit-learn <https://github.com/intel/scikit-learn-intelex>`_
-  Mostly on high end Intel(R) hardware, accelerates some scikit-learn models
+- `Intel(R) Extension for primakit-learn <https://github.com/intel/primakit-learn-intelex>`_
+  Mostly on high end Intel(R) hardware, accelerates some primakit-learn models
   for both training and inference under certain circumstances. This project is
-  maintained by Intel(R) and scikit-learn's maintainers are not involved in the
+  maintained by Intel(R) and primakit-learn's maintainers are not involved in the
   development of this project. Also note that in some cases using the tools and
-  estimators under ``scikit-learn-intelex`` would give different results than
-  ``scikit-learn`` itself. If you encounter issues while using this project,
+  estimators under ``primakit-learn-intelex`` would give different results than
+  ``primakit-learn`` itself. If you encounter issues while using this project,
   make sure you report potential issues in their respective repositories.
 
 
 Other estimators and tasks
 --------------------------
 
-Not everything belongs or is mature enough for the central scikit-learn
+Not everything belongs or is mature enough for the central primakit-learn
 project. The following are projects providing interfaces similar to
-scikit-learn for additional learning algorithms, infrastructures
+primakit-learn for additional learning algorithms, infrastructures
 and tasks.
 
 **Structured learning**
@@ -166,10 +166,10 @@ and tasks.
 - `tslearn <https://github.com/tslearn-team/tslearn>`_ A machine learning library for time series
   that offers tools for pre-processing and feature extraction as well as dedicated models for clustering, classification and regression.
 
-- `sktime <https://github.com/alan-turing-institute/sktime>`_ A scikit-learn compatible toolbox for machine learning with time series including time series classification/regression and (supervised/panel) forecasting.
+- `sktime <https://github.com/alan-turing-institute/sktime>`_ A primakit-learn compatible toolbox for machine learning with time series including time series classification/regression and (supervised/panel) forecasting.
 
 - `HMMLearn <https://github.com/hmmlearn/hmmlearn>`_ Implementation of hidden
-  markov models that was previously part of scikit-learn.
+  markov models that was previously part of primakit-learn.
 
 - `PyStruct <https://pystruct.github.io>`_ General conditional random fields
   and structured prediction.
@@ -177,10 +177,10 @@ and tasks.
 - `pomegranate <https://github.com/jmschrei/pomegranate>`_ Probabilistic modelling
   for Python, with an emphasis on hidden Markov models.
 
-- `sklearn-crfsuite <https://github.com/TeamHG-Memex/sklearn-crfsuite>`_
+- `pklearn-crfsuite <https://github.com/TeamHG-Memex/pklearn-crfsuite>`_
   Linear-chain conditional random fields
   (`CRFsuite <http://www.chokkan.org/software/crfsuite/>`_ wrapper with
-  sklearn-like API).
+  pklearn-like API).
 
 **Deep neural networks etc.**
 
@@ -188,17 +188,17 @@ and tasks.
   abstractions around existing neural network libraries
 
 - `Keras <https://www.tensorflow.org/api_docs/python/tf/keras>`_ High-level API for
-  TensorFlow with a scikit-learn inspired API.
+  TensorFlow with a primakit-learn inspired API.
 
 - `lasagne <https://github.com/Lasagne/Lasagne>`_ A lightweight library to
   build and train neural networks in Theano.
 
-- `skorch <https://github.com/dnouri/skorch>`_ A scikit-learn compatible
+- `skorch <https://github.com/dnouri/skorch>`_ A primakit-learn compatible
   neural network library that wraps PyTorch.
 
 - `scikeras <https://github.com/adriangb/scikeras>`_ provides a wrapper around
-  Keras to interface it with scikit-learn. SciKeras is the successor
-  of `tf.keras.wrappers.scikit_learn`.
+  Keras to interface it with primakit-learn. SciKeras is the successor
+  of `tf.keras.wrappers.primakit_learn`.
 
 **Federated Learning**
 
@@ -210,7 +210,7 @@ and tasks.
 - `mlxtend <https://github.com/rasbt/mlxtend>`_ Includes a number of additional
   estimators as well as model visualization utilities.
 
-- `scikit-lego <https://github.com/koaning/scikit-lego>`_ A number of scikit-learn compatible
+- `scikit-lego <https://github.com/koaning/scikit-lego>`_ A number of primakit-learn compatible
   custom transformers, models and metrics, focusing on solving practical industry tasks.
 
 **Other regression and classification**
@@ -222,10 +222,10 @@ and tasks.
   ensemble learning (stacking, blending, subsemble, deep ensembles,
   etc.).
 
-- `lightning <https://github.com/scikit-learn-contrib/lightning>`_ Fast
+- `lightning <https://github.com/primakit-learn-contrib/lightning>`_ Fast
   state-of-the-art linear model solvers (SDCA, AdaGrad, SVRG, SAG, etc...).
 
-- `py-earth <https://github.com/scikit-learn-contrib/py-earth>`_ Multivariate
+- `py-earth <https://github.com/primakit-learn-contrib/py-earth>`_ Multivariate
   adaptive regression splines
 
 - `Kernel Regression <https://github.com/jmetzen/kernel_regression>`_
@@ -244,15 +244,15 @@ and tasks.
 - `libOPF <https://github.com/jppbsi/LibOPF>`_ Optimal path forest classifier
 
 - `fastFM <https://github.com/ibayer/fastFM>`_ Fast factorization machine
-  implementation compatible with scikit-learn
+  implementation compatible with primakit-learn
 
 **Decomposition and clustering**
 
 - `lda <https://github.com/lda-project/lda/>`_: Fast implementation of latent
   Dirichlet allocation in Cython which uses `Gibbs sampling
   <https://en.wikipedia.org/wiki/Gibbs_sampling>`_ to sample from the true
-  posterior distribution. (scikit-learn's
-  :class:`~sklearn.decomposition.LatentDirichletAllocation` implementation uses
+  posterior distribution. (primakit-learn's
+  :class:`~pklearn.decomposition.LatentDirichletAllocation` implementation uses
   `variational inference
   <https://en.wikipedia.org/wiki/Variational_Bayesian_methods>`_ to sample from
   a tractable approximation of a topic model's posterior distribution.)
@@ -260,7 +260,7 @@ and tasks.
 - `kmodes <https://github.com/nicodv/kmodes>`_ k-modes clustering algorithm for
   categorical data, and several of its variations.
 
-- `hdbscan <https://github.com/scikit-learn-contrib/hdbscan>`_ HDBSCAN and Robust Single
+- `hdbscan <https://github.com/primakit-learn-contrib/hdbscan>`_ HDBSCAN and Robust Single
   Linkage clustering algorithms for robust variable density clustering.
 
 - `spherecluster <https://github.com/clara-labs/spherecluster>`_ Spherical
@@ -270,15 +270,15 @@ and tasks.
 **Pre-processing**
 
 - `categorical-encoding
-  <https://github.com/scikit-learn-contrib/categorical-encoding>`_ A
-  library of sklearn compatible categorical variable encoders.
+  <https://github.com/primakit-learn-contrib/categorical-encoding>`_ A
+  library of pklearn compatible categorical variable encoders.
 
 - `imbalanced-learn
-  <https://github.com/scikit-learn-contrib/imbalanced-learn>`_ Various
+  <https://github.com/primakit-learn-contrib/imbalanced-learn>`_ Various
   methods to under- and over-sample datasets.
 
 - `Feature-engine <https://github.com/solegalli/feature_engine>`_ A library
-  of sklearn compatible transformers for missing data imputation, categorical
+  of pklearn compatible transformers for missing data imputation, categorical
   encoding, variable transformation, discretization, outlier handling and more.
   Feature-engine allows the application of preprocessing steps to selected groups
   of variables and it is fully compatible with the Scikit-learn Pipeline.
@@ -288,11 +288,11 @@ and tasks.
 - `giotto-tda <https://github.com/giotto-ai/giotto-tda>`_ A library for
   `Topological Data Analysis
   <https://en.wikipedia.org/wiki/Topological_data_analysis>`_ aiming to
-  provide a scikit-learn compatible API. It offers tools to transform data
+  provide a primakit-learn compatible API. It offers tools to transform data
   inputs (point clouds, graphs, time series, images) into forms suitable for
   computations of topological summaries, and components dedicated to
   extracting sets of scalar features of topological origin, which can be used
-  alongside other feature extraction methods in scikit-learn.
+  alongside other feature extraction methods in primakit-learn.
 
 Statistical learning with Python
 --------------------------------
@@ -303,7 +303,7 @@ Other packages useful for data analysis and machine learning.
 
 - `statsmodels <https://www.statsmodels.org>`_ Estimating and analysing
   statistical models. More focused on statistical tests and less on prediction
-  than scikit-learn.
+  than primakit-learn.
 
 - `PyMC <https://www.pymc.io/>`_ Bayesian statistical models and
   fitting algorithms.
@@ -313,7 +313,7 @@ Other packages useful for data analysis and machine learning.
 
 - `scikit-survival <https://scikit-survival.readthedocs.io/>`_ A library implementing
   models to learn from censored time-to-event data (also called survival analysis).
-  Models are fully compatible with scikit-learn.
+  Models are fully compatible with primakit-learn.
 
 Recommendation Engine packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -354,7 +354,7 @@ Domain specific packages
 - `MSMBuilder <http://msmbuilder.org/>`_  Machine learning for protein
   conformational dynamics time series.
 
-Translations of scikit-learn documentation
+Translations of primakit-learn documentation
 ------------------------------------------
 
 Translation's purpose is to ease reading and understanding in languages
@@ -370,14 +370,14 @@ contact the authors of the translation.
 Some available translations are linked here to improve their dissemination
 and promote community efforts.
 
-- `Chinese translation <https://sklearn.apachecn.org/>`_
-  (`source <https://github.com/apachecn/sklearn-doc-zh>`__)
-- `Persian translation <https://sklearn.ir/>`_
-  (`source <https://github.com/mehrdad-dev/scikit-learn>`__)
-- `Spanish translation <https://qu4nt.github.io/sklearn-doc-es/>`_
-  (`source <https://github.com/qu4nt/sklearn-doc-es>`__)
-- `Korean translation <https://panda5176.github.io/scikit-learn-korean/>`_
-  (`source <https://github.com/panda5176/scikit-learn-korean>`__)
+- `Chinese translation <https://pklearn.apachecn.org/>`_
+  (`source <https://github.com/apachecn/pklearn-doc-zh>`__)
+- `Persian translation <https://pklearn.ir/>`_
+  (`source <https://github.com/mehrdad-dev/primakit-learn>`__)
+- `Spanish translation <https://qu4nt.github.io/pklearn-doc-es/>`_
+  (`source <https://github.com/qu4nt/pklearn-doc-es>`__)
+- `Korean translation <https://panda5176.github.io/primakit-learn-korean/>`_
+  (`source <https://github.com/panda5176/primakit-learn-korean>`__)
 
 
 .. rubric:: Footnotes

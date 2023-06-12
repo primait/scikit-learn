@@ -2,17 +2,17 @@ from time import time
 import argparse
 import numpy as np
 
-from sklearn.dummy import DummyClassifier
+from pklearn.dummy import DummyClassifier
 
-from sklearn.datasets import fetch_20newsgroups_vectorized
-from sklearn.metrics import accuracy_score
-from sklearn.utils.validation import check_array
+from pklearn.datasets import fetch_20newsgroups_vectorized
+from pklearn.metrics import accuracy_score
+from pklearn.utils.validation import check_array
 
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import ExtraTreesClassifier
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.naive_bayes import MultinomialNB
+from pklearn.ensemble import RandomForestClassifier
+from pklearn.ensemble import ExtraTreesClassifier
+from pklearn.ensemble import AdaBoostClassifier
+from pklearn.linear_model import LogisticRegression
+from pklearn.naive_bayes import MultinomialNB
 
 ESTIMATORS = {
     "dummy": DummyClassifier(),

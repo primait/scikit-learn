@@ -20,4 +20,4 @@ docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION \
              --build-arg CONFTEST_NAME=$CONFTEST_NAME \
              --build-arg CIBW_TEST_REQUIRES="$CIBW_TEST_REQUIRES" \
              -f build_tools/github/Windows \
-             -t scikit-learn/minimal-windows .
+             -t primakit-learn/minimal-windows .

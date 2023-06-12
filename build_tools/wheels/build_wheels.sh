@@ -7,13 +7,13 @@ set -x
 if [[ $(uname) == "Darwin" ]]; then
     # Make sure to use a libomp version binary compatible with the oldest
     # supported version of the macos SDK as libomp will be vendored into the
-    # scikit-learn wheels for macos.
+    # primakit-learn wheels for macos.
 
     if [[ "$CIBW_BUILD" == *-macosx_arm64 ]]; then
         if [[ $(uname -m) == "x86_64" ]]; then
             # arm64 builds must cross compile because the CI instance is x86
             # This turns off the computation of the test program in
-            # sklearn/_build_utils/pre_build_helpers.py
+            # pklearn/_build_utils/pre_build_helpers.py
             export PYTHON_CROSSENV=1
         fi
         # SciPy requires 12.0 on arm to prevent kernel panics

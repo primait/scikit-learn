@@ -3,27 +3,27 @@ Successive Halving Iterations
 =============================
 
 This example illustrates how a successive halving search
-(:class:`~sklearn.model_selection.HalvingGridSearchCV` and
-:class:`~sklearn.model_selection.HalvingRandomSearchCV`)
+(:class:`~pklearn.model_selection.HalvingGridSearchCV` and
+:class:`~pklearn.model_selection.HalvingRandomSearchCV`)
 iteratively chooses the best parameter combination out of
 multiple candidates.
 
 """
 
 import pandas as pd
-from sklearn import datasets
+from pklearn import datasets
 import matplotlib.pyplot as plt
 from scipy.stats import randint
 import numpy as np
 
-from sklearn.experimental import enable_halving_search_cv  # noqa
-from sklearn.model_selection import HalvingRandomSearchCV
-from sklearn.ensemble import RandomForestClassifier
+from pklearn.experimental import enable_halving_search_cv  # noqa
+from pklearn.model_selection import HalvingRandomSearchCV
+from pklearn.ensemble import RandomForestClassifier
 
 
 # %%
 # We first define the parameter space and train a
-# :class:`~sklearn.model_selection.HalvingRandomSearchCV` instance.
+# :class:`~pklearn.model_selection.HalvingRandomSearchCV` instance.
 
 rng = np.random.RandomState(0)
 

@@ -4,10 +4,10 @@
 .. include:: ../min_dependency_substitutions.rst
 
 ==================================================
-Installing the development version of scikit-learn
+Installing the development version of primakit-learn
 ==================================================
 
-This section introduces how to install the **main branch** of scikit-learn.
+This section introduces how to install the **main branch** of primakit-learn.
 This can be done by either installing a nightly build or building from source.
 
 .. _install_nightly_builds:
@@ -15,7 +15,7 @@ This can be done by either installing a nightly build or building from source.
 Installing nightly builds
 =========================
 
-The continuous integration servers of the scikit-learn project build, test
+The continuous integration servers of the primakit-learn project build, test
 and upload wheel packages for the most recent Python version on a nightly
 basis.
 
@@ -26,15 +26,15 @@ Installing a nightly build is the quickest way to:
 
 - check whether a bug you encountered has been fixed since the last release.
 
-You can install the nightly build of scikit-learn using the `scipy-wheels-nightly`
+You can install the nightly build of primakit-learn using the `scipy-wheels-nightly`
 index from the PyPI registry of `anaconda.org`:
 
 .. prompt:: bash $
 
-  pip install --pre --extra-index https://pypi.anaconda.org/scipy-wheels-nightly/simple scikit-learn
+  pip install --pre --extra-index https://pypi.anaconda.org/scipy-wheels-nightly/simple primakit-learn
 
-Note that first uninstalling scikit-learn might be required to be able to
-install nightly builds of scikit-learn.
+Note that first uninstalling primakit-learn might be required to be able to
+install nightly builds of primakit-learn.
 
 .. _install_bleeding_edge:
 
@@ -47,13 +47,13 @@ feature, code or documentation improvement).
 .. _git_repo:
 
 #. Use `Git <https://git-scm.com/>`_ to check out the latest source from the
-   `scikit-learn repository <https://github.com/scikit-learn/scikit-learn>`_ on
+   `primakit-learn repository <https://github.com/primakit-learn/primakit-learn>`_ on
    Github.:
 
    .. prompt:: bash $
 
-     git clone git://github.com/scikit-learn/scikit-learn.git  # add --depth 1 if your connection is slow
-     cd scikit-learn
+     git clone git://github.com/primakit-learn/primakit-learn.git  # add --depth 1 if your connection is slow
+     cd primakit-learn
 
    If you plan on submitting a pull-request, you should clone from your fork
    instead.
@@ -63,23 +63,23 @@ feature, code or documentation improvement).
    of Python and the most popular scientific libraries.
 
    If you installed Python with conda, we recommend to create a dedicated
-   `conda environment`_ with all the build dependencies of scikit-learn
+   `conda environment`_ with all the build dependencies of primakit-learn
    (namely NumPy_, SciPy_, and Cython_):
 
    .. prompt:: bash $
 
-     conda create -n sklearn-env -c conda-forge python=3.9 numpy scipy cython
-     conda activate sklearn-env
+     conda create -n pklearn-env -c conda-forge python=3.9 numpy scipy cython
+     conda activate pklearn-env
 
 #. **Alternative to conda:** If you run Linux or similar, you can instead use
    your system's Python provided it is recent enough (3.8 or higher
    at the time of writing). In this case, we recommend to create a dedicated
-   virtualenv_ and install the scikit-learn build dependencies with pip:
+   virtualenv_ and install the primakit-learn build dependencies with pip:
 
    .. prompt:: bash $
 
-     python3 -m venv sklearn-env
-     source sklearn-env/bin/activate
+     python3 -m venv pklearn-env
+     source pklearn-env/bin/activate
      pip install wheel numpy scipy cython
 
 #. Install a compiler with OpenMP_ support for your platform. See instructions
@@ -92,12 +92,12 @@ feature, code or documentation improvement).
 
      pip install --verbose --no-build-isolation --editable .
 
-#. Check that the installed scikit-learn has a version number ending with
+#. Check that the installed primakit-learn has a version number ending with
    `.dev0`:
 
    .. prompt:: bash $
 
-     python -c "import sklearn; sklearn.show_versions()"
+     python -c "import pklearn; pklearn.show_versions()"
 
 #. Please refer to the :ref:`developers_guide` and :ref:`pytest_tips` to run
    the tests on the module of your choice.
@@ -133,7 +133,7 @@ Building Scikit-learn also requires:
 ..
     # The following places need to be in sync with regard to Cython version:
     # - .circleci config file
-    # - sklearn/_build_utils/__init__.py
+    # - pklearn/_build_utils/__init__.py
     # - advanced installation guide
 
 - Cython >= |CythonMinVersion|
@@ -150,7 +150,7 @@ Building Scikit-learn also requires:
    (before cythonization) will force the build to fail if OpenMP is not
    supported.
 
-Since version 0.21, scikit-learn automatically detects and uses the linear
+Since version 0.21, primakit-learn automatically detects and uses the linear
 algebra library used by SciPy **at runtime**. Scikit-learn has therefore no
 build dependency on BLAS/LAPACK implementations such as OpenBlas, Atlas, Blis
 or MKL.
@@ -198,7 +198,7 @@ Platform-specific instructions
 ==============================
 
 Here are instructions to install a working C/C++ compiler with OpenMP support
-to build scikit-learn Cython extensions for each supported platform.
+to build primakit-learn Cython extensions for each supported platform.
 
 .. _compiler_windows:
 
@@ -237,7 +237,7 @@ Please be aware that the path above might be different from user to user. The
 aim is to point to the "vcvarsall.bat" file that will set the necessary
 environment variables in the current command prompt.
 
-Finally, build scikit-learn from this command prompt:
+Finally, build primakit-learn from this command prompt:
 
 .. prompt:: bash $
 
@@ -275,13 +275,13 @@ First install the macOS command line tools:
     xcode-select --install
 
 It is recommended to use a dedicated `conda environment`_ to build
-scikit-learn from source:
+primakit-learn from source:
 
 .. prompt:: bash $
 
-    conda create -n sklearn-dev -c conda-forge python numpy scipy cython \
+    conda create -n pklearn-dev -c conda-forge python numpy scipy cython \
         joblib threadpoolctl pytest compilers llvm-openmp
-    conda activate sklearn-dev
+    conda activate pklearn-dev
     make clean
     pip install --verbose --no-build-isolation --editable .
 
@@ -318,9 +318,9 @@ variables:
     echo $CXXFLAGS
     echo $LDFLAGS
 
-They point to files and folders from your ``sklearn-dev`` conda environment
+They point to files and folders from your ``pklearn-dev`` conda environment
 (in particular in the bin/, include/ and lib/ subfolders). For instance
-``-L/path/to/conda/envs/sklearn-dev/lib`` should appear in ``LDFLAGS``.
+``-L/path/to/conda/envs/pklearn-dev/lib`` should appear in ``LDFLAGS``.
 
 In the log, you should see the compiled extension being built with the clang
 and clang++ compilers installed by conda with the ``-fopenmp`` command line
@@ -357,7 +357,7 @@ Set the following environment variables:
     export CXXFLAGS="$CXXFLAGS -I/usr/local/opt/libomp/include"
     export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/local/opt/libomp/lib -L/usr/local/opt/libomp/lib -lomp"
 
-Finally, build scikit-learn in verbose mode (to check for the presence of the
+Finally, build primakit-learn in verbose mode (to check for the presence of the
 ``-fopenmp`` flag in the compiler commands):
 
 .. prompt:: bash $
@@ -373,8 +373,8 @@ Linux
 Linux compilers from the system
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Installing scikit-learn from source without using conda requires you to have
-installed the scikit-learn Python development headers and a working C/C++
+Installing primakit-learn from source without using conda requires you to have
+installed the primakit-learn Python development headers and a working C/C++
 compiler with OpenMP support (typically the GCC toolchain).
 
 Install build dependencies for Debian-based operating systems, e.g.
@@ -420,9 +420,9 @@ in the user folder using conda:
 
 .. prompt:: bash $
 
-    conda create -n sklearn-dev -c conda-forge python numpy scipy cython \
+    conda create -n pklearn-dev -c conda-forge python numpy scipy cython \
         joblib threadpoolctl pytest compilers
-    conda activate sklearn-dev
+    conda activate pklearn-dev
     pip install --verbose --no-build-isolation --editable .
 
 .. _compiler_freebsd:
@@ -469,13 +469,13 @@ the base system and these steps will not be necessary.
 Alternative compilers
 =====================
 
-The following command will build scikit-learn using your default C/C++ compiler.
+The following command will build primakit-learn using your default C/C++ compiler.
 
 .. prompt:: bash $
 
     pip install --verbose --editable .
 
-If you want to build scikit-learn with another compiler handled by ``setuptools``,
+If you want to build primakit-learn with another compiler handled by ``setuptools``,
 use the following command:
 
 .. prompt:: bash $
@@ -508,7 +508,7 @@ flag of your compiler into the ``CFLAGS`` and ``CPPFLAGS`` environment variables
 Parallel builds
 ===============
 
-It is possible to build scikit-learn compiled extensions in parallel by setting
+It is possible to build primakit-learn compiled extensions in parallel by setting
 and environment variable as follows before calling the ``pip install`` or
 ``python setup.py build_ext`` commands::
 

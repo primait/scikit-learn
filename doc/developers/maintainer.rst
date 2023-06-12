@@ -48,14 +48,14 @@ Before a release
 
 **Permissions**
 
-The release manager must be a *maintainer* of the ``scikit-learn/scikit-learn``
+The release manager must be a *maintainer* of the ``primakit-learn/primakit-learn``
 repository to be able to publish on ``pypi.org`` and ``test.pypi.org``
 (via a manual trigger of a dedicated Github Actions workflow).
 
 The release manager does not need extra permissions on ``pypi.org`` to publish a
 release in particular.
 
-The release manager must be a *maintainer* of the ``conda-forge/scikit-learn-feedstock``
+The release manager must be a *maintainer* of the ``conda-forge/primakit-learn-feedstock``
 repository. This can be changed by editing the ``recipe/meta.yaml`` file in the
 first release pull-request.
 
@@ -70,7 +70,7 @@ Major version release
 Prior to branching please do not forget to prepare a Release Highlights page as
 a runnable example and check that its HTML rendering looks correct. These
 release highlights should be linked from the ``doc/whats_new/v0.99.rst`` file
-for the new version of scikit-learn.
+for the new version of primakit-learn.
 
 Releasing the first RC of e.g. version `0.99.0` involves creating the release
 branch `0.99.X` directly on the main repo, where `X` really is the letter X,
@@ -83,7 +83,7 @@ branch:
 
    .. prompt:: bash $
 
-     # Assuming upstream is an alias for the main scikit-learn repo:
+     # Assuming upstream is an alias for the main primakit-learn repo:
      git fetch upstream main
      git checkout upstream/main
      git checkout -b 0.99.X
@@ -99,14 +99,14 @@ or feature should be excluded.
 
 Then you can prepare a local branch for the release itself, for instance:
 ``release-0.99.0rc1``, push it to your github fork and open a PR **to the**
-`scikit-learn/0.99.X` **branch**. Copy the :ref:`release_checklist` templates
+`primakit-learn/0.99.X` **branch**. Copy the :ref:`release_checklist` templates
 in the description of the Pull Request to track progress.
 
 This PR will be used to push commits related to the release as explained in
 :ref:`making_a_release`.
 
 You can also create a second PR from main and targeting main to increment
-the ``__version__`` variable in `sklearn/__init__.py` to increment the dev
+the ``__version__`` variable in `pklearn/__init__.py` to increment the dev
 version. This means while we're in the release candidate period, the latest
 stable is two versions behind the main branch, instead of one. In this PR
 targeting main you should also include a new file for the matching version
@@ -211,7 +211,7 @@ Making a release
      front page (with the release month as well).
 
 2. On the branch for releasing, update the version number in
-   ``sklearn/__init__.py``, the ``__version__``.
+   ``pklearn/__init__.py``, the ``__version__``.
 
    For major releases, please add a 0 at the end: `0.99.0` instead of `0.99`.
 
@@ -226,7 +226,7 @@ Making a release
     git commit --allow-empty -m "Trigger wheel builder workflow: [cd build]"
 
    The wheel building workflow is managed by GitHub Actions and the results be browsed at:
-   https://github.com/scikit-learn/scikit-learn/actions?query=workflow%3A%22Wheel+builder%22
+   https://github.com/primakit-learn/primakit-learn/actions?query=workflow%3A%22Wheel+builder%22
 
 .. note::
 
@@ -245,7 +245,7 @@ Making a release
   `Continuous Integration
   <https://en.wikipedia.org/wiki/Continuous_integration>`_. The CD workflow on
   GitHub Actions is also used to automatically create nightly builds and
-  publish packages for the development branch of scikit-learn. See
+  publish packages for the development branch of primakit-learn. See
   :ref:`install_nightly_builds`.
 
 4. Once all the CD jobs have completed successfully in the PR, merge it,
@@ -256,7 +256,7 @@ Making a release
    files) to https://test.pypi.org using the "Run workflow" form for the
    following GitHub Actions workflow:
 
-   https://github.com/scikit-learn/scikit-learn/actions?query=workflow%3A%22Publish+to+Pypi%22
+   https://github.com/primakit-learn/primakit-learn/actions?query=workflow%3A%22Publish+to+Pypi%22
 
 5. If this went fine, you can proceed with tagging. Proceed with caution.
    Ideally, tags should be created when you're almost certain that the release
@@ -269,10 +269,10 @@ Making a release
    .. prompt:: bash $
 
      git tag -a 0.99.0  # in the 0.99.X branch
-     git push git@github.com:scikit-learn/scikit-learn.git 0.99.0
+     git push git@github.com:primakit-learn/primakit-learn.git 0.99.0
 
 6. Confirm that the bot has detected the tag on the conda-forge feedstock repo:
-   https://github.com/conda-forge/scikit-learn-feedstock. If not, submit a PR for the
+   https://github.com/conda-forge/primakit-learn-feedstock. If not, submit a PR for the
    release. If you want to publish an RC release on conda-forge, the PR should target
    the `rc` branch as opposed to the `main` branch. The two branches need to be kept
    sync together otherwise.
@@ -283,7 +283,7 @@ Making a release
 
 8. **Alternative to step 7**: it's possible to collect locally the generated binary
    wheel packages and source tarball and upload them all to PyPI by running the
-   following commands in the scikit-learn source folder (checked out at the
+   following commands in the primakit-learn source folder (checked out at the
    release tag):
 
    .. prompt:: bash $
@@ -293,19 +293,19 @@ Making a release
        python -m wheelhouse_uploader fetch \
          --version 0.99.0 \
          --local-folder dist \
-         scikit-learn \
-         https://pypi.anaconda.org/scikit-learn-wheels-staging/simple/scikit-learn/
+         primakit-learn \
+         https://pypi.anaconda.org/primakit-learn-wheels-staging/simple/primakit-learn/
 
    This command will download all the binary packages accumulated in the
    `staging area on the anaconda.org hosting service
-   <https://anaconda.org/scikit-learn-wheels-staging/scikit-learn/files>`_ and
+   <https://anaconda.org/primakit-learn-wheels-staging/primakit-learn/files>`_ and
    put them in your local `./dist` folder.
 
    Check the content of the `./dist` folder: it should contain all the wheels
-   along with the source tarball ("scikit-learn-RRR.tar.gz").
+   along with the source tarball ("primakit-learn-RRR.tar.gz").
 
    Make sure that you do not have developer versions or older versions of
-   the scikit-learn package in that folder.
+   the primakit-learn package in that folder.
 
    Before uploading to pypi, you can test upload to test.pypi.org:
 
@@ -321,13 +321,13 @@ Making a release
 
 9. For major/minor (not bug-fix release or release candidates), update the symlink for
    ``stable`` and the ``latestStable`` variable in
-   https://github.com/scikit-learn/scikit-learn.github.io:
+   https://github.com/primakit-learn/primakit-learn.github.io:
 
    .. prompt:: bash $
 
        cd /tmp
-       git clone --depth 1 --no-checkout git@github.com:scikit-learn/scikit-learn.github.io.git
-       cd scikit-learn.github.io
+       git clone --depth 1 --no-checkout git@github.com:primakit-learn/primakit-learn.github.io.git
+       cd primakit-learn.github.io
        echo stable > .git/info/sparse-checkout
        git checkout main
        rm stable
@@ -347,18 +347,18 @@ Release checklist
 The following GitHub checklist might be helpful in a release PR::
 
     * [ ] update news and what's new date in release branch
-    * [ ] update news and what's new date and sklearn dev0 version in main branch
+    * [ ] update news and what's new date and pklearn dev0 version in main branch
     * [ ] check that the wheels for the release can be built successfully
     * [ ] merge the PR with `[cd build]` commit message to upload wheels to the staging repo
     * [ ] upload the wheels and source tarball to https://test.pypi.org
     * [ ] create tag on the main github repo
     * [ ] confirm bot detected at
-      https://github.com/conda-forge/scikit-learn-feedstock and wait for merge
+      https://github.com/conda-forge/primakit-learn-feedstock and wait for merge
     * [ ] upload the wheels and source tarball to PyPI
-    * [ ] https://github.com/scikit-learn/scikit-learn/releases publish (except for RC)
+    * [ ] https://github.com/primakit-learn/primakit-learn/releases publish (except for RC)
     * [ ] announce on mailing list and on Twitter, and LinkedIn
     * [ ] update symlink for stable in
-      https://github.com/scikit-learn/scikit-learn.github.io (only major/minor)
+      https://github.com/primakit-learn/primakit-learn.github.io (only major/minor)
     * [ ] update SECURITY.md in main branch (except for RC)
 
 Merging Pull Requests
@@ -379,12 +379,12 @@ Before merging,
   left to the maintainer's discretion, same as for the "what's new" entry.
 
 
-The scikit-learn.org web site
+The primakit-learn.org web site
 -----------------------------
 
-The scikit-learn web site (https://scikit-learn.org) is hosted at GitHub,
+The primakit-learn web site (https://primakit-learn.org) is hosted at GitHub,
 but should rarely be updated manually by pushing to the
-https://github.com/scikit-learn/scikit-learn.github.io repository. Most
+https://github.com/primakit-learn/primakit-learn.github.io repository. Most
 updates can be made by pushing to master (for /dev) or a release branch
 like 0.99.X, from which Circle CI builds and uploads the documentation
 automatically.
@@ -392,16 +392,16 @@ automatically.
 Experimental features
 ---------------------
 
-The :mod:`sklearn.experimental` module was introduced in 0.21 and contains
+The :mod:`pklearn.experimental` module was introduced in 0.21 and contains
 experimental features / estimators that are subject to change without
 deprecation cycle.
 
 To create an experimental module, you can just copy and modify the content of
 `enable_hist_gradient_boosting.py
-<https://github.com/scikit-learn/scikit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/sklearn/experimental/enable_hist_gradient_boosting.py>`__,
+<https://github.com/primakit-learn/primakit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/experimental/enable_hist_gradient_boosting.py>`__,
 or
 `enable_iterative_imputer.py
-<https://github.com/scikit-learn/scikit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/sklearn/experimental/enable_iterative_imputer.py>`_.
+<https://github.com/primakit-learn/primakit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/experimental/enable_iterative_imputer.py>`_.
 
 .. note::
 
@@ -411,48 +411,48 @@ or
   to stable.
 
 Note that the public import path must be to a public subpackage (like
-``sklearn/ensemble`` or ``sklearn/impute``), not just a ``.py`` module.
+``pklearn/ensemble`` or ``pklearn/impute``), not just a ``.py`` module.
 Also, the (private) experimental features that are imported must be in a
 submodule/subpackage of the public subpackage, e.g.
-``sklearn/ensemble/_hist_gradient_boosting/`` or
-``sklearn/impute/_iterative.py``. This is needed so that pickles still work
+``pklearn/ensemble/_hist_gradient_boosting/`` or
+``pklearn/impute/_iterative.py``. This is needed so that pickles still work
 in the future when the features aren't experimental anymore.
 
 To avoid type checker (e.g. mypy) errors a direct import of experimental
 estimators should be done in the parent module, protected by the
-``if typing.TYPE_CHECKING`` check. See `sklearn/ensemble/__init__.py
-<https://github.com/scikit-learn/scikit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/sklearn/ensemble/__init__.py>`_,
-or `sklearn/impute/__init__.py
-<https://github.com/scikit-learn/scikit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/sklearn/impute/__init__.py>`_
+``if typing.TYPE_CHECKING`` check. See `pklearn/ensemble/__init__.py
+<https://github.com/primakit-learn/primakit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/ensemble/__init__.py>`_,
+or `pklearn/impute/__init__.py
+<https://github.com/primakit-learn/primakit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/impute/__init__.py>`_
 for an example.
 
 Please also write basic tests following those in
 `test_enable_hist_gradient_boosting.py
-<https://github.com/scikit-learn/scikit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/sklearn/experimental/tests/test_enable_hist_gradient_boosting.py>`__.
+<https://github.com/primakit-learn/primakit-learn/blob/c9c89cfc85dd8dfefd7921c16c87327d03140a06/pklearn/experimental/tests/test_enable_hist_gradient_boosting.py>`__.
 
 
 Make sure every user-facing code you write explicitly mentions that the feature
 is experimental, and add a ``# noqa`` comment to avoid pep8-related warnings::
 
     # To use this experimental feature, we need to explicitly ask for it:
-    from sklearn.experimental import enable_hist_gradient_boosting  # noqa
-    from sklearn.ensemble import HistGradientBoostingRegressor
+    from pklearn.experimental import enable_hist_gradient_boosting  # noqa
+    from pklearn.ensemble import HistGradientBoostingRegressor
 
 For the docs to render properly, please also import
 ``enable_my_experimental_feature`` in ``doc/conf.py``, else sphinx won't be
 able to import the corresponding modules. Note that using ``from
-sklearn.experimental import *`` **does not work**.
+pklearn.experimental import *`` **does not work**.
 
 Note that some experimental classes / functions are not included in the
-:mod:`sklearn.experimental` module: ``sklearn.datasets.fetch_openml``.
+:mod:`pklearn.experimental` module: ``pklearn.datasets.fetch_openml``.
 
 Once the feature become stable, remove all `enable_my_experimental_feature`
-in the scikit-learn code (even feature highlights etc.) and make the
+in the primakit-learn code (even feature highlights etc.) and make the
 `enable_my_experimental_feature` a no-op that just raises a warning:
 `enable_hist_gradient_boosting.py
-<https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/experimental/enable_hist_gradient_boosting.py>`__.
+<https://github.com/primakit-learn/primakit-learn/blob/main/pklearn/experimental/enable_hist_gradient_boosting.py>`__.
 The file should stay there indefinitely as we don't want to break users code:
 we just incentivize them to remove that import with the warning.
 
 Also update the tests accordingly: `test_enable_hist_gradient_boosting.py
-<https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/experimental/tests/test_enable_hist_gradient_boosting.py>`__.
+<https://github.com/primakit-learn/primakit-learn/blob/main/pklearn/experimental/tests/test_enable_hist_gradient_boosting.py>`__.

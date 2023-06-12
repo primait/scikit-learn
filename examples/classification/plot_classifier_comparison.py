@@ -4,7 +4,7 @@
 Classifier comparison
 =====================
 
-A comparison of a several classifiers in scikit-learn on synthetic datasets.
+A comparison of a several classifiers in primakit-learn on synthetic datasets.
 The point of this example is to illustrate the nature of decision boundaries
 of different classifiers.
 This should be taken with a grain of salt, as the intuition conveyed by
@@ -28,20 +28,20 @@ set.
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import make_pipeline
-from sklearn.datasets import make_moons, make_circles, make_classification
-from sklearn.neural_network import MLPClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.gaussian_process.kernels import RBF
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
-from sklearn.inspection import DecisionBoundaryDisplay
+from pklearn.model_selection import train_test_split
+from pklearn.preprocessing import StandardScaler
+from pklearn.pipeline import make_pipeline
+from pklearn.datasets import make_moons, make_circles, make_classification
+from pklearn.neural_network import MLPClassifier
+from pklearn.neighbors import KNeighborsClassifier
+from pklearn.svm import SVC
+from pklearn.gaussian_process import GaussianProcessClassifier
+from pklearn.gaussian_process.kernels import RBF
+from pklearn.tree import DecisionTreeClassifier
+from pklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+from pklearn.naive_bayes import GaussianNB
+from pklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+from pklearn.inspection import DecisionBoundaryDisplay
 
 names = [
     "Nearest Neighbors",

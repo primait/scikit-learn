@@ -5,7 +5,7 @@ Scikit-learn governance and decision-making
 ===========================================
 
 The purpose of this document is to formalize the governance process used by the
-scikit-learn project, to clarify how decisions are made and how the various
+primakit-learn project, to clarify how decisions are made and how the various
 elements of our community interact.
 This document establishes a decision-making structure that takes into account
 feedback from all members of the community and strives to find consensus, while
@@ -37,16 +37,16 @@ of the issue tracker.
 
 Similarly to what has been decided in the `python project
 <https://devguide.python.org/triage/triage-team/#becoming-a-member-of-the-python-triage-team>`_,
-any contributor may become a member of the scikit-learn contributor experience team,
-after showing some continuity in participating to scikit-learn
+any contributor may become a member of the primakit-learn contributor experience team,
+after showing some continuity in participating to primakit-learn
 development (with pull requests and reviews).
 Any core developer or member of the contributor experience team is welcome to propose a
-scikit-learn contributor to join the contributor experience team. Other core developers
+primakit-learn contributor to join the contributor experience team. Other core developers
 are then consulted: while it is expected that most acceptances will be
 unanimous, a two-thirds majority is enough.
 Every new member of the contributor experience team will be announced in the mailing
 list. Members of the team are welcome to participate in `monthly core developer meetings
-<https://github.com/scikit-learn/administrative/tree/master/meeting_notes>`_.
+<https://github.com/primakit-learn/administrative/tree/master/meeting_notes>`_.
 
 .. _communication_team:
 
@@ -54,26 +54,26 @@ Communication team
 -------------------
 
 Members of the communication team help with outreach and communication
-for scikit-learn. The goal of the team is to develop public awareness of
-scikit-learn, of its features and usage, as well as branding.
+for primakit-learn. The goal of the team is to develop public awareness of
+primakit-learn, of its features and usage, as well as branding.
 
-For this, they can operate the scikit-learn accounts on various social
+For this, they can operate the primakit-learn accounts on various social
 networks and produce materials.
 
 Every new communicator will be announced in the mailing list.
 Communicators are welcome to participate in `monthly core developer meetings
-<https://github.com/scikit-learn/administrative/tree/master/meeting_notes>`_.
+<https://github.com/primakit-learn/administrative/tree/master/meeting_notes>`_.
 
 Core developers
 ---------------
 
 Core developers are community members who have shown that they are dedicated to
 the continued development of the project through ongoing engagement with the
-community. They have shown they can be trusted to maintain scikit-learn with
+community. They have shown they can be trusted to maintain primakit-learn with
 care. Being a core developer allows contributors to more easily carry on
 with their project related activities by giving them direct access to the
 project's repository and is represented as being an organization member on the
-scikit-learn `GitHub organization <https://github.com/orgs/scikit-learn/people>`_.
+primakit-learn `GitHub organization <https://github.com/orgs/primakit-learn/people>`_.
 Core developers are expected to review code
 contributions, can merge approved pull requests, can cast votes for and against
 merging a pull-request, and can be involved in deciding major changes to the
@@ -90,7 +90,7 @@ Core developers that have not contributed to the project (commits or GitHub
 comments) in the past 12 months will be asked if they want to become emeritus
 core developers and recant their commit and voting rights until they become
 active again. The list of core developers, active and emeritus (with dates at
-which they became active) is public on the scikit-learn website.
+which they became active) is public on the primakit-learn website.
 
 Technical Committee
 -------------------
@@ -110,7 +110,7 @@ subject to a two-third majority of all cast votes as well as a simple majority
 approval of all the current TC members. TC members who do not actively engage
 with the TC duties are expected to resign.
 
-The Technical Committee of scikit-learn consists of :user:`Thomas Fan
+The Technical Committee of primakit-learn consists of :user:`Thomas Fan
 <thomasjpfan>`, :user:`Alexandre Gramfort <agramfort>`, :user:`Olivier Grisel
 <ogrisel>`, :user:`Adrin Jalali <adrinjalali>`, :user:`Andreas Müller
 <amueller>`, :user:`Joel Nothman <jnothman>` and :user:`Gaël Varoquaux
@@ -120,8 +120,8 @@ Decision Making Process
 =======================
 Decisions about the future of the project are made through discussion with all
 members of the community. All non-sensitive project management discussion takes
-place on the project contributors' `mailing list <mailto:scikit-learn@python.org>`_
-and the `issue tracker <https://github.com/scikit-learn/scikit-learn/issues>`_.
+place on the project contributors' `mailing list <mailto:primakit-learn@python.org>`_
+and the `issue tracker <https://github.com/primakit-learn/primakit-learn/issues>`_.
 Occasionally, sensitive discussion occurs on a private list.
 
 Scikit-learn uses a "consensus seeking" process for making decisions. The group
@@ -138,7 +138,7 @@ Decisions (in addition to adding core developers and TC membership as above)
 are made according to the following rules:
 
 * **Minor Documentation changes**, such as typo fixes, or addition / correction of a
-  sentence, but no change of the scikit-learn.org landing page or the “about”
+  sentence, but no change of the primakit-learn.org landing page or the “about”
   page: Requires +1 by a core developer, no -1 by a core developer (lazy
   consensus), happens on the issue or pull request page. Core developers are
   expected to give “reasonable time” to others to give their opinion on the pull
@@ -178,5 +178,5 @@ For all votes, a proposal must have been made public and discussed before the
 vote. Such proposal must be a consolidated document, in the form of a
 "Scikit-Learn Enhancement Proposal" (SLEP), rather than a long discussion on an
 issue. A SLEP must be submitted as a pull-request to
-`enhancement proposals <https://scikit-learn-enhancement-proposals.readthedocs.io>`_
-using the `SLEP template <https://scikit-learn-enhancement-proposals.readthedocs.io/en/latest/slep_template.html>`_.
+`enhancement proposals <https://primakit-learn-enhancement-proposals.readthedocs.io>`_
+using the `SLEP template <https://primakit-learn-enhancement-proposals.readthedocs.io/en/latest/slep_template.html>`_.

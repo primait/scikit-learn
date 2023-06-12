@@ -1,12 +1,12 @@
-.. currentmodule:: sklearn
+.. currentmodule:: pklearn
 .. include:: whats_new/_contributors.rst
 
 Release History
 ===============
 
-Release notes for all scikit-learn releases are linked in this page.
+Release notes for all primakit-learn releases are linked in this page.
 
-**Tip:** `Subscribe to scikit-learn releases <https://libraries.io/pypi/scikit-learn>`__
+**Tip:** `Subscribe to primakit-learn releases <https://libraries.io/pypi/primakit-learn>`__
 on libraries.io to be notified when new versions are released.
 
 .. toctree::

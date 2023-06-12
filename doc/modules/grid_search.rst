@@ -1,6 +1,6 @@
 
 
-.. currentmodule:: sklearn.model_selection
+.. currentmodule:: pklearn.model_selection
 
 .. _grid_search:
 
@@ -9,7 +9,7 @@ Tuning the hyper-parameters of an estimator
 ===========================================
 
 Hyper-parameters are parameters that are not directly learnt within estimators.
-In scikit-learn they are passed as arguments to the constructor of the
+In primakit-learn they are passed as arguments to the constructor of the
 estimator classes. Typical examples include ``C``, ``kernel`` and ``gamma``
 for Support Vector Classifier, ``alpha`` for Lasso, etc.
 
@@ -24,14 +24,14 @@ for a given estimator, use::
 
 A search consists of:
 
-- an estimator (regressor or classifier such as ``sklearn.svm.SVC()``);
+- an estimator (regressor or classifier such as ``pklearn.svm.SVC()``);
 - a parameter space;
 - a method for searching or sampling candidates;
 - a cross-validation scheme; and
 - a :ref:`score function <gridsearch_scoring>`.
 
 Two generic approaches to parameter search are provided in
-scikit-learn: for given values, :class:`GridSearchCV` exhaustively considers
+primakit-learn: for given values, :class:`GridSearchCV` exhaustively considers
 all parameter combinations, while :class:`RandomizedSearchCV` can sample a
 given number of candidates from a parameter space with a specified
 distribution. Both these tools have successive halving counterparts
@@ -70,7 +70,7 @@ The :class:`GridSearchCV` instance implements the usual estimator API: when
 "fitting" it on a dataset all the possible combinations of parameter values are
 evaluated and the best combination is retained.
 
-.. currentmodule:: sklearn.model_selection
+.. currentmodule:: pklearn.model_selection
 
 .. topic:: Examples:
 
@@ -140,8 +140,8 @@ consecutive calls.
         The distributions in ``scipy.stats`` prior to version scipy 0.16
         do not allow specifying a random state. Instead, they use the global
         numpy random state, that can be seeded via ``np.random.seed`` or set
-        using ``np.random.set_state``. However, beginning scikit-learn 0.18,
-        the :mod:`sklearn.model_selection` module sets the random state provided
+        using ``np.random.set_state``. However, beginning primakit-learn 0.18,
+        the :mod:`pklearn.model_selection` module sets the random state provided
         by the user if scipy >= 0.16 is also available.
 
 For continuous parameters, such as ``C`` above, it is important to specify
@@ -149,7 +149,7 @@ a continuous distribution to take full advantage of the randomization. This way,
 increasing ``n_iter`` will always lead to a finer search.
 
 A continuous log-uniform random variable is available through
-:class:`~sklearn.utils.fixes.loguniform`. This is a continuous version of
+:class:`~pklearn.utils.fixes.loguniform`. This is a continuous version of
 log-spaced parameters. For example to specify ``C`` above, ``loguniform(1,
 100)`` can be used instead of ``[1, 10, 100]`` or ``np.logspace(0, 2,
 num=1000)``. This is an alias to `scipy.stats.loguniform
@@ -158,7 +158,7 @@ num=1000)``. This is an alias to `scipy.stats.loguniform
 Mirroring the example above in grid search, we can specify a continuous random
 variable that is log-uniformly distributed between ``1e0`` and ``1e3``::
 
-  from sklearn.utils.fixes import loguniform
+  from pklearn.utils.fixes import loguniform
   {'C': loguniform(1e0, 1e3),
    'gamma': loguniform(1e-4, 1e-3),
    'kernel': ['rbf'],
@@ -220,10 +220,10 @@ and their API might change without any deprecation cycle. To use them, you
 need to explicitly import ``enable_halving_search_cv``::
 
   >>> # explicitly require this experimental feature
-  >>> from sklearn.experimental import enable_halving_search_cv  # noqa
+  >>> from pklearn.experimental import enable_halving_search_cv  # noqa
   >>> # now you can import normally from model_selection
-  >>> from sklearn.model_selection import HalvingGridSearchCV
-  >>> from sklearn.model_selection import HalvingRandomSearchCV
+  >>> from pklearn.model_selection import HalvingGridSearchCV
+  >>> from pklearn.model_selection import HalvingRandomSearchCV
 
 .. topic:: Examples:
 
@@ -365,10 +365,10 @@ however manually specify a parameter to use as the resource with the
 ``resource`` parameter. Here is an example where the resource is defined in
 terms of the number of estimators of a random forest::
 
-    >>> from sklearn.datasets import make_classification
-    >>> from sklearn.ensemble import RandomForestClassifier
-    >>> from sklearn.experimental import enable_halving_search_cv  # noqa
-    >>> from sklearn.model_selection import HalvingGridSearchCV
+    >>> from pklearn.datasets import make_classification
+    >>> from pklearn.ensemble import RandomForestClassifier
+    >>> from pklearn.experimental import enable_halving_search_cv  # noqa
+    >>> from pklearn.model_selection import HalvingGridSearchCV
     >>> import pandas as pd
     >>>
     >>> param_grid = {'max_depth': [3, 5, 10],
@@ -394,10 +394,10 @@ depends on the `min_resources` parameter.
 If you have a lot of resources available but start with a low number of
 resources, some of them might be wasted (i.e. not used)::
 
-    >>> from sklearn.datasets import make_classification
-    >>> from sklearn.svm import SVC
-    >>> from sklearn.experimental import enable_halving_search_cv  # noqa
-    >>> from sklearn.model_selection import HalvingGridSearchCV
+    >>> from pklearn.datasets import make_classification
+    >>> from pklearn.svm import SVC
+    >>> from pklearn.experimental import enable_halving_search_cv  # noqa
+    >>> from pklearn.model_selection import HalvingGridSearchCV
     >>> import pandas as pd
     >>> param_grid= {'kernel': ('linear', 'rbf'),
     ...              'C': [1, 10, 100]}
@@ -451,10 +451,10 @@ pick the best one. When the number of available resources is small with
 respect to the number of candidates, the last iteration may have to evaluate
 more than ``factor`` candidates::
 
-    >>> from sklearn.datasets import make_classification
-    >>> from sklearn.svm import SVC
-    >>> from sklearn.experimental import enable_halving_search_cv  # noqa
-    >>> from sklearn.model_selection import HalvingGridSearchCV
+    >>> from pklearn.datasets import make_classification
+    >>> from pklearn.svm import SVC
+    >>> from pklearn.experimental import enable_halving_search_cv  # noqa
+    >>> from pklearn.model_selection import HalvingGridSearchCV
     >>> import pandas as pd
     >>>
     >>>
@@ -553,8 +553,8 @@ Specifying an objective metric
 
 By default, parameter search uses the ``score`` function of the estimator
 to evaluate a parameter setting. These are the
-:func:`sklearn.metrics.accuracy_score` for classification and
-:func:`sklearn.metrics.r2_score` for regression.  For some applications,
+:func:`pklearn.metrics.accuracy_score` for classification and
+:func:`pklearn.metrics.r2_score` for regression.  For some applications,
 other scoring functions are better suited (for example in unbalanced
 classification, the accuracy score is often uninformative). An alternative
 scoring function can be specified via the ``scoring`` parameter of most
@@ -590,16 +590,16 @@ Composite estimators and parameter spaces
 -----------------------------------------
 :class:`GridSearchCV` and :class:`RandomizedSearchCV` allow searching over
 parameters of composite or nested estimators such as
-:class:`~sklearn.pipeline.Pipeline`,
-:class:`~sklearn.compose.ColumnTransformer`,
-:class:`~sklearn.ensemble.VotingClassifier` or
-:class:`~sklearn.calibration.CalibratedClassifierCV` using a dedicated
+:class:`~pklearn.pipeline.Pipeline`,
+:class:`~pklearn.compose.ColumnTransformer`,
+:class:`~pklearn.ensemble.VotingClassifier` or
+:class:`~pklearn.calibration.CalibratedClassifierCV` using a dedicated
 ``<estimator>__<parameter>`` syntax::
 
-  >>> from sklearn.model_selection import GridSearchCV
-  >>> from sklearn.calibration import CalibratedClassifierCV
-  >>> from sklearn.ensemble import RandomForestClassifier
-  >>> from sklearn.datasets import make_moons
+  >>> from pklearn.model_selection import GridSearchCV
+  >>> from pklearn.calibration import CalibratedClassifierCV
+  >>> from pklearn.ensemble import RandomForestClassifier
+  >>> from pklearn.datasets import make_moons
   >>> X, y = make_moons()
   >>> calibrated_forest = CalibratedClassifierCV(
   ...    estimator=RandomForestClassifier(n_estimators=10))
@@ -618,8 +618,8 @@ If the meta-estimator is constructed as a collection of estimators as in
 see :ref:`pipeline_nested_parameters`.  In practice, there can be several
 levels of nesting::
 
-  >>> from sklearn.pipeline import Pipeline
-  >>> from sklearn.feature_selection import SelectKBest
+  >>> from pklearn.pipeline import Pipeline
+  >>> from pklearn.feature_selection import SelectKBest
   >>> pipe = Pipeline([
   ...    ('select', SelectKBest()),
   ...    ('model', calibrated_forest)])
@@ -684,7 +684,7 @@ compute the **regularization path** of the estimator.
 
 Here is the list of such models:
 
-.. currentmodule:: sklearn
+.. currentmodule:: pklearn
 
 .. autosummary::
 

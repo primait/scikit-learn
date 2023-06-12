@@ -1,13 +1,13 @@
 """Script to update CI environment files and associated lock files.
 
-To run it you need to be in the root folder of the scikit-learn repo:
+To run it you need to be in the root folder of the primakit-learn repo:
 python build_tools/update_environments_and_lock_files.py
 
 Two scenarios where this script can be useful:
 - make sure that the latest versions of all the dependencies are used in the CI.
   We can run this script regularly and open a PR with the changes to the lock
   files. This workflow will eventually be automated with a bot in the future.
-- bump minimum dependencies in sklearn/_min_dependencies.py. Running this
+- bump minimum dependencies in pklearn/_min_dependencies.py. Running this
   script will update both the CI environment files and associated lock files.
   You can then open a PR with the changes.
 - pin some packages to an older version by adding them to the
@@ -24,7 +24,7 @@ with pip.
 
 To run this script you need:
 - conda-lock. The version should match the one used in the CI in
-  sklearn/_min_dependencies.py
+  pklearn/_min_dependencies.py
 - pip-tools
 
 """
@@ -117,7 +117,7 @@ conda_build_metadata_list = [
             # should be compatible but actually are not. This pin can be
             # removed when scipy 1.8 is available in conda defaults channel.
             # For more details, see
-            # https://github.com/scikit-learn/scikit-learn/pull/24363#issuecomment-1236927660
+            # https://github.com/primakit-learn/primakit-learn/pull/24363#issuecomment-1236927660
             # and https://github.com/scipy/scipy/issues/16964
             "numpy": "1.22",
             # XXX: coverage is temporary pinned to 6.2 because 6.3 is not
@@ -384,7 +384,7 @@ def get_package_with_constraint(package_name, build_metadata, uses_pip=False):
     comment = ""
     if constraint == "min":
         constraint = execute_command(
-            [sys.executable, "sklearn/_min_dependencies.py", package_name]
+            [sys.executable, "pklearn/_min_dependencies.py", package_name]
         ).strip()
         comment = "  # min"
 
@@ -535,7 +535,7 @@ def write_all_pip_lock_files(build_metadata_list):
 def check_conda_lock_version():
     # Check that the installed conda-lock version is consistent with _min_dependencies.
     expected_conda_lock_version = execute_command(
-        [sys.executable, "sklearn/_min_dependencies.py", "conda-lock"]
+        [sys.executable, "pklearn/_min_dependencies.py", "conda-lock"]
     ).strip()
 
     installed_conda_lock_version = version("conda-lock")

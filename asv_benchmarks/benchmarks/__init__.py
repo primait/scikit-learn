@@ -1,1 +1,1 @@
-"""Benchmark suite for scikit-learn using ASV"""
+"""Benchmark suite for primakit-learn using ASV"""

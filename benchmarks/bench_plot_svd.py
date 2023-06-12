@@ -8,8 +8,8 @@ import numpy as np
 from collections import defaultdict
 
 from scipy.linalg import svd
-from sklearn.utils.extmath import randomized_svd
-from sklearn.datasets import make_low_rank_matrix
+from pklearn.utils.extmath import randomized_svd
+from pklearn.datasets import make_low_rank_matrix
 
 
 def compute_bench(samples_range, features_range, n_iter=3, rank=50):
@@ -36,16 +36,16 @@ def compute_bench(samples_range, features_range, n_iter=3, rank=50):
             results["scipy svd"].append(time() - tstart)
 
             gc.collect()
-            print("benchmarking scikit-learn randomized_svd: n_iter=0")
+            print("benchmarking primakit-learn randomized_svd: n_iter=0")
             tstart = time()
             randomized_svd(X, rank, n_iter=0)
-            results["scikit-learn randomized_svd (n_iter=0)"].append(time() - tstart)
+            results["primakit-learn randomized_svd (n_iter=0)"].append(time() - tstart)
 
             gc.collect()
-            print("benchmarking scikit-learn randomized_svd: n_iter=%d " % n_iter)
+            print("benchmarking primakit-learn randomized_svd: n_iter=%d " % n_iter)
             tstart = time()
             randomized_svd(X, rank, n_iter=n_iter)
-            results["scikit-learn randomized_svd (n_iter=%d)" % n_iter].append(
+            results["primakit-learn randomized_svd (n_iter=%d)" % n_iter].append(
                 time() - tstart
             )
 
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     features_range = np.linspace(2, 1000, 4).astype(int)
     results = compute_bench(samples_range, features_range)
 
-    label = "scikit-learn singular value decomposition benchmark results"
+    label = "primakit-learn singular value decomposition benchmark results"
     fig = plt.figure(label)
     ax = fig.gca(projection="3d")
     for c, (label, timings) in zip("rbg", sorted(results.items())):

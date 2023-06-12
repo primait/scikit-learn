@@ -46,13 +46,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 
-from sklearn.datasets import load_iris
-from sklearn.ensemble import (
+from pklearn.datasets import load_iris
+from pklearn.ensemble import (
     RandomForestClassifier,
     ExtraTreesClassifier,
     AdaBoostClassifier,
 )
-from sklearn.tree import DecisionTreeClassifier
+from pklearn.tree import DecisionTreeClassifier
 
 # Parameters
 n_classes = 3

@@ -15,7 +15,7 @@ import gc
 from time import time
 import numpy as np
 
-from sklearn.datasets import make_regression
+from pklearn.datasets import make_regression
 
 
 def compute_bench(alpha, n_samples, n_features, precompute):
@@ -59,7 +59,7 @@ def compute_bench(alpha, n_samples, n_features, precompute):
 
 
 if __name__ == "__main__":
-    from sklearn.linear_model import Lasso, LassoLars
+    from pklearn.linear_model import Lasso, LassoLars
     import matplotlib.pyplot as plt
 
     alpha = 0.01  # regularization parameter
@@ -70,7 +70,7 @@ if __name__ == "__main__":
         alpha, list_n_samples, [n_features], precompute=True
     )
 
-    plt.figure("scikit-learn LASSO benchmark results")
+    plt.figure("primakit-learn LASSO benchmark results")
     plt.subplot(211)
     plt.plot(list_n_samples, lasso_results, "b-", label="Lasso")
     plt.plot(list_n_samples, lars_lasso_results, "r-", label="LassoLars")

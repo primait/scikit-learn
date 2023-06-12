@@ -2,7 +2,7 @@
 
 To run this benchmark, you will need,
 
- * scikit-learn
+ * primakit-learn
  * pandas
  * memory_profiler
  * psutil (optional, but recommended)
@@ -15,8 +15,8 @@ import numpy as np
 import pandas as pd
 from memory_profiler import memory_usage
 
-from sklearn.datasets import fetch_20newsgroups
-from sklearn.feature_extraction.text import (
+from pklearn.datasets import fetch_20newsgroups
+from pklearn.feature_extraction.text import (
     CountVectorizer,
     TfidfVectorizer,
     HashingVectorizer,

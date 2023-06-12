@@ -9,8 +9,8 @@ from time import time
 
 import numpy as np
 
-from sklearn.linear_model import lars_path, lars_path_gram, orthogonal_mp
-from sklearn.datasets import make_sparse_coded_signal
+from pklearn.linear_model import lars_path, lars_path_gram, orthogonal_mp
+from pklearn.datasets import make_sparse_coded_signal
 
 
 def compute_bench(samples_range, features_range):
@@ -104,7 +104,7 @@ if __name__ == "__main__":
 
     import matplotlib.pyplot as plt
 
-    fig = plt.figure("scikit-learn OMP vs. LARS benchmark results")
+    fig = plt.figure("primakit-learn OMP vs. LARS benchmark results")
     for i, (label, timings) in enumerate(sorted(results.items())):
         ax = fig.add_subplot(1, 2, i + 1)
         vmax = max(1 - timings.min(), -1 + timings.max())

@@ -19,16 +19,16 @@ show how to retrieve:
 import numpy as np
 from matplotlib import pyplot as plt
 
-from sklearn.model_selection import train_test_split
-from sklearn.datasets import load_iris
-from sklearn.tree import DecisionTreeClassifier
-from sklearn import tree
+from pklearn.model_selection import train_test_split
+from pklearn.datasets import load_iris
+from pklearn.tree import DecisionTreeClassifier
+from pklearn import tree
 
 ##############################################################################
 # Train tree classifier
 # ---------------------
-# First, we fit a :class:`~sklearn.tree.DecisionTreeClassifier` using the
-# :func:`~sklearn.datasets.load_iris` dataset.
+# First, we fit a :class:`~pklearn.tree.DecisionTreeClassifier` using the
+# :func:`~pklearn.datasets.load_iris` dataset.
 
 iris = load_iris()
 X = iris.data

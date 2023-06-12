@@ -1,19 +1,19 @@
 .. _installation-instructions:
 
 =======================
-Installing scikit-learn
+Installing primakit-learn
 =======================
 
-There are different ways to install scikit-learn:
+There are different ways to install primakit-learn:
 
   * :ref:`Install the latest official release <install_official_release>`. This
     is the best approach for most users. It will provide a stable version
     and pre-built packages are available for most platforms.
 
-  * Install the version of scikit-learn provided by your
+  * Install the version of primakit-learn provided by your
     :ref:`operating system or Python distribution <install_by_distribution>`.
     This is a quick option for those who have operating systems or Python
-    distributions that distribute scikit-learn.
+    distributions that distribute primakit-learn.
     It might not provide the latest release version.
 
   * :ref:`Building the package from source
@@ -70,18 +70,18 @@ Then run:
 .. raw:: html
 
        <div class="highlight"><pre><code
-        ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="">python3 -m venv sklearn-venv</span
-        ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="">python -m venv sklearn-venv</span
-        ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="">python -m venv sklearn-venv</span
-        ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="">source sklearn-venv/bin/activate</span
-        ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="">source sklearn-venv/bin/activate</span
-        ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="">sklearn-venv\Scripts\activate</span
-        ><span class="sk-expandable" data-packager="pip" data-venv="">pip install -U scikit-learn</span
-        ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="no">pip install -U scikit-learn</span
-        ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="no">pip install -U scikit-learn</span
-        ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="no">pip3 install -U scikit-learn</span
-        ><span class="sk-expandable" data-packager="conda">conda create -n sklearn-env -c conda-forge scikit-learn</span
-        ><span class="sk-expandable" data-packager="conda">conda activate sklearn-env</span
+        ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="">python3 -m venv pklearn-venv</span
+        ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="">python -m venv pklearn-venv</span
+        ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="">python -m venv pklearn-venv</span
+        ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="">source pklearn-venv/bin/activate</span
+        ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="">source pklearn-venv/bin/activate</span
+        ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="">pklearn-venv\Scripts\activate</span
+        ><span class="sk-expandable" data-packager="pip" data-venv="">pip install -U primakit-learn</span
+        ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="no">pip install -U primakit-learn</span
+        ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="no">pip install -U primakit-learn</span
+        ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="no">pip3 install -U primakit-learn</span
+        ><span class="sk-expandable" data-packager="conda">conda create -n pklearn-env -c conda-forge primakit-learn</span
+        ><span class="sk-expandable" data-packager="conda">conda activate pklearn-env</span
        ></code></pre></div>
 
 In order to check your installation you can use
@@ -89,21 +89,21 @@ In order to check your installation you can use
 .. raw:: html
 
    <div class="highlight"><pre><code
-      ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="no">python3 -m pip show scikit-learn  # to see which version and where scikit-learn is installed</span
+      ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="no">python3 -m pip show primakit-learn  # to see which version and where primakit-learn is installed</span
       ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="no">python3 -m pip freeze  # to see all packages installed in the active virtualenv</span
-      ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="no">python3 -c "import sklearn; sklearn.show_versions()"</span
-      ><span class="sk-expandable" data-packager="pip" data-venv="">python -m pip show scikit-learn  # to see which version and where scikit-learn is installed</span
+      ><span class="sk-expandable" data-packager="pip" data-os="linux" data-venv="no">python3 -c "import pklearn; pklearn.show_versions()"</span
+      ><span class="sk-expandable" data-packager="pip" data-venv="">python -m pip show primakit-learn  # to see which version and where primakit-learn is installed</span
       ><span class="sk-expandable" data-packager="pip" data-venv="">python -m pip freeze  # to see all packages installed in the active virtualenv</span
-      ><span class="sk-expandable" data-packager="pip" data-venv="">python -c "import sklearn; sklearn.show_versions()"</span
-      ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="no">python -m pip show scikit-learn  # to see which version and where scikit-learn is installed</span
+      ><span class="sk-expandable" data-packager="pip" data-venv="">python -c "import pklearn; pklearn.show_versions()"</span
+      ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="no">python -m pip show primakit-learn  # to see which version and where primakit-learn is installed</span
       ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="no">python -m pip freeze  # to see all packages installed in the active virtualenv</span
-      ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="no">python -c "import sklearn; sklearn.show_versions()"</span
-      ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="no">python -m pip show scikit-learn  # to see which version and where scikit-learn is installed</span
+      ><span class="sk-expandable" data-packager="pip" data-os="windows" data-venv="no">python -c "import pklearn; pklearn.show_versions()"</span
+      ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="no">python -m pip show primakit-learn  # to see which version and where primakit-learn is installed</span
       ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="no">python -m pip freeze  # to see all packages installed in the active virtualenv</span
-      ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="no">python -c "import sklearn; sklearn.show_versions()"</span
-      ><span class="sk-expandable" data-packager="conda">conda list scikit-learn  # to see which scikit-learn version is installed</span
+      ><span class="sk-expandable" data-packager="pip" data-os="mac" data-venv="no">python -c "import pklearn; pklearn.show_versions()"</span
+      ><span class="sk-expandable" data-packager="conda">conda list primakit-learn  # to see which primakit-learn version is installed</span
       ><span class="sk-expandable" data-packager="conda">conda list  # to see all packages installed in the active conda environment</span
-      ><span class="sk-expandable" data-packager="conda">python -c "import sklearn; sklearn.show_versions()"</span
+      ><span class="sk-expandable" data-packager="conda">python -c "import pklearn; pklearn.show_versions()"</span
       ></code></pre></div>
   </div>
 
@@ -113,7 +113,7 @@ strongly recommended to use a `virtual environment (venv)
 <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_.
 
 Using such an isolated environment makes it possible to install a specific
-version of scikit-learn with pip or conda and its dependencies independently of
+version of primakit-learn with pip or conda and its dependencies independently of
 any previously installed Python packages. In particular under Linux is it
 discouraged to install pip packages alongside the packages managed by the
 package manager of the distribution (apt, dnf, pacman...).
@@ -161,93 +161,93 @@ The recently introduced `macos/arm64` platform (sometimes also known as
 configuration and automation to properly support it.
 
 At the time of writing (January 2021), the only way to get a working
-installation of scikit-learn on this hardware is to install scikit-learn and its
+installation of primakit-learn on this hardware is to install primakit-learn and its
 dependencies from the conda-forge distribution, for instance using the miniforge
 installers:
 
 https://github.com/conda-forge/miniforge
 
 The following issue tracks progress on making it possible to install
-scikit-learn from PyPI with pip:
+primakit-learn from PyPI with pip:
 
-https://github.com/scikit-learn/scikit-learn/issues/19137
+https://github.com/primakit-learn/primakit-learn/issues/19137
 
 
 .. _install_by_distribution:
 
-Third party distributions of scikit-learn
+Third party distributions of primakit-learn
 =========================================
 
 Some third-party distributions provide versions of
-scikit-learn integrated with their package-management systems.
+primakit-learn integrated with their package-management systems.
 
 These can make installation and upgrading much easier for users since
 the integration includes the ability to automatically install
-dependencies (numpy, scipy) that scikit-learn requires.
+dependencies (numpy, scipy) that primakit-learn requires.
 
 The following is an incomplete list of OS and python distributions
-that provide their own version of scikit-learn.
+that provide their own version of primakit-learn.
 
 Alpine Linux
 ------------
 
 Alpine Linux's package is provided through the `official repositories
-<https://pkgs.alpinelinux.org/packages?name=py3-scikit-learn>`__ as
-``py3-scikit-learn`` for Python.
+<https://pkgs.alpinelinux.org/packages?name=py3-primakit-learn>`__ as
+``py3-primakit-learn`` for Python.
 It can be installed by typing the following command:
 
 .. prompt:: bash $
 
-  sudo apk add py3-scikit-learn
+  sudo apk add py3-primakit-learn
 
 
 Arch Linux
 ----------
 
 Arch Linux's package is provided through the `official repositories
-<https://www.archlinux.org/packages/?q=scikit-learn>`_ as
-``python-scikit-learn`` for Python.
+<https://www.archlinux.org/packages/?q=primakit-learn>`_ as
+``python-primakit-learn`` for Python.
 It can be installed by typing the following command:
 
 .. prompt:: bash $
 
-  sudo pacman -S python-scikit-learn
+  sudo pacman -S python-primakit-learn
 
 
 Debian/Ubuntu
 -------------
 
 The Debian/Ubuntu package is split in three different packages called
-``python3-sklearn`` (python modules), ``python3-sklearn-lib`` (low-level
-implementations and bindings), ``python3-sklearn-doc`` (documentation).
+``python3-pklearn`` (python modules), ``python3-pklearn-lib`` (low-level
+implementations and bindings), ``python3-pklearn-doc`` (documentation).
 Only the Python 3 version is available in the Debian Buster (the more recent
 Debian distribution).
 Packages can be installed using ``apt-get``:
 
 .. prompt:: bash $
 
-  sudo apt-get install python3-sklearn python3-sklearn-lib python3-sklearn-doc
+  sudo apt-get install python3-pklearn python3-pklearn-lib python3-pklearn-doc
 
 
 Fedora
 ------
 
-The Fedora package is called ``python3-scikit-learn`` for the python 3 version,
+The Fedora package is called ``python3-primakit-learn`` for the python 3 version,
 the only one available in Fedora30.
 It can be installed using ``dnf``:
 
 .. prompt:: bash $
 
-  sudo dnf install python3-scikit-learn
+  sudo dnf install python3-primakit-learn
 
 
 NetBSD
 ------
 
-scikit-learn is available via `pkgsrc-wip
+primakit-learn is available via `pkgsrc-wip
 <http://pkgsrc-wip.sourceforge.net/>`_:
 
-    https://pkgsrc.se/math/py-scikit-learn
+    https://pkgsrc.se/math/py-primakit-learn
 
 
 MacPorts for Mac OSX
@@ -260,7 +260,7 @@ command:
 
 .. prompt:: bash $
 
-  sudo port install py39-scikit-learn
+  sudo port install py39-primakit-learn
 
 
 Anaconda and Enthought Deployment Manager for all supported platforms
@@ -268,31 +268,31 @@ Anaconda and Enthought Deployment Manager for all supported platforms
 
 `Anaconda <https://www.anaconda.com/download>`_ and
 `Enthought Deployment Manager <https://assets.enthought.com/downloads/>`_
-both ship with scikit-learn in addition to a large set of scientific
+both ship with primakit-learn in addition to a large set of scientific
 python library for Windows, Mac OSX and Linux.
 
-Anaconda offers scikit-learn as part of its free distribution.
+Anaconda offers primakit-learn as part of its free distribution.
 
 
 Intel conda channel
 -------------------
 
-Intel maintains a dedicated conda channel that ships scikit-learn:
+Intel maintains a dedicated conda channel that ships primakit-learn:
 
 .. prompt:: bash $
 
-  conda install -c intel scikit-learn
+  conda install -c intel primakit-learn
 
-This version of scikit-learn comes with alternative solvers for some common
+This version of primakit-learn comes with alternative solvers for some common
 estimators. Those solvers come from the DAAL C++ library and are optimized for
 multi-core Intel CPUs.
 
 Note that those solvers are not enabled by default, please refer to the
-`daal4py <https://intelpython.github.io/daal4py/sklearn.html>`_ documentation
+`daal4py <https://intelpython.github.io/daal4py/pklearn.html>`_ documentation
 for more details.
 
-Compatibility with the standard scikit-learn solvers is checked by running the
-full scikit-learn test suite via automated continuous integration as reported
+Compatibility with the standard primakit-learn solvers is checked by running the
+full primakit-learn test suite via automated continuous integration as reported
 on https://github.com/IntelPython/daal4py.
 
 
@@ -300,7 +300,7 @@ WinPython for Windows
 -----------------------
 
 The `WinPython <https://winpython.github.io/>`_ project distributes
-scikit-learn as an additional plugin.
+primakit-learn as an additional plugin.
 
 
 Troubleshooting
@@ -315,11 +315,11 @@ It can happen that pip fails to install packages when reaching the default path
 size limit of Windows if Python is installed in a nested location such as the
 `AppData` folder structure under the user home directory, for instance::
 
-    C:\Users\username>C:\Users\username\AppData\Local\Microsoft\WindowsApps\python.exe -m pip install scikit-learn
-    Collecting scikit-learn
+    C:\Users\username>C:\Users\username\AppData\Local\Microsoft\WindowsApps\python.exe -m pip install primakit-learn
+    Collecting primakit-learn
     ...
-    Installing collected packages: scikit-learn
-    ERROR: Could not install packages due to an EnvironmentError: [Errno 2] No such file or directory: 'C:\\Users\\username\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.7_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python37\\site-packages\\sklearn\\datasets\\tests\\data\\openml\\292\\api-v1-json-data-list-data_name-australian-limit-2-data_version-1-status-deactivated.json.gz'
+    Installing collected packages: primakit-learn
+    ERROR: Could not install packages due to an EnvironmentError: [Errno 2] No such file or directory: 'C:\\Users\\username\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.7_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python37\\site-packages\\pklearn\\datasets\\tests\\data\\openml\\292\\api-v1-json-data-list-data_name-australian-limit-2-data_version-1-status-deactivated.json.gz'
 
 In this case it is possible to lift that limit in the Windows registry by
 using the ``regedit`` tool:
@@ -333,8 +333,8 @@ using the ``regedit`` tool:
 #. Edit the value of the ``LongPathsEnabled`` property of that key and set
    it to 1.
 
-#. Reinstall scikit-learn (ignoring the previous broken installation):
+#. Reinstall primakit-learn (ignoring the previous broken installation):
 
 .. prompt:: python $
 
-    pip install --exists-action=i scikit-learn
+    pip install --exists-action=i primakit-learn

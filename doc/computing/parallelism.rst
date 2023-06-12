@@ -10,7 +10,7 @@ Parallelism, resource management, and configuration
 Parallelism
 -----------
 
-Some scikit-learn estimators and utilities parallelize costly operations
+Some primakit-learn estimators and utilities parallelize costly operations
 using multiple CPU cores.
 
 Depending on the type of estimator and sometimes the values of the
@@ -23,8 +23,8 @@ constructor parameters, this is either done:
 
 The `n_jobs` parameters of estimators always controls the amount of parallelism
 managed by joblib (processes or threads depending on the joblib backend).
-The thread-level parallelism managed by OpenMP in scikit-learn's own Cython code
-or by BLAS & LAPACK libraries used by NumPy and SciPy operations used in scikit-learn
+The thread-level parallelism managed by OpenMP in primakit-learn's own Cython code
+or by BLAS & LAPACK libraries used by NumPy and SciPy operations used in primakit-learn
 is always controlled by environment variables or `threadpoolctl` as explained below.
 Note that some estimators can leverage all three kinds of parallelism at different
 points of their training and prediction methods.
@@ -43,13 +43,13 @@ When the underlying implementation uses joblib, the number of workers
     Where (and how) parallelization happens in the estimators using joblib by
     specifying `n_jobs` is currently poorly documented.
     Please help us by improving our docs and tackle `issue 14228
-    <https://github.com/scikit-learn/scikit-learn/issues/14228>`_!
+    <https://github.com/primakit-learn/primakit-learn/issues/14228>`_!
 
 Joblib is able to support both multi-processing and multi-threading. Whether
 joblib chooses to spawn a thread or a process depends on the **backend**
 that it's using.
 
-scikit-learn generally relies on the ``loky`` backend, which is joblib's
+primakit-learn generally relies on the ``loky`` backend, which is joblib's
 default backend. Loky is a multi-processing backend. When doing
 multi-processing, in order to avoid duplicating the memory in each process
 (which isn't reasonable with big datasets), joblib will create a `memmap
@@ -57,16 +57,16 @@ multi-processing, in order to avoid duplicating the memory in each process
 that all processes can share, when the data is bigger than 1MB.
 
 In some specific cases (when the code that is run in parallel releases the
-GIL), scikit-learn will indicate to ``joblib`` that a multi-threading
+GIL), primakit-learn will indicate to ``joblib`` that a multi-threading
 backend is preferable.
 
 As a user, you may control the backend that joblib will use (regardless of
-what scikit-learn recommends) by using a context manager::
+what primakit-learn recommends) by using a context manager::
 
     from joblib import parallel_backend
 
     with parallel_backend('threading', n_jobs=2):
-        # Your scikit-learn code here
+        # Your primakit-learn code here
 
 Please refer to the `joblib's docs
 <https://joblib.readthedocs.io/en/latest/parallel.html#thread-based-parallelism-vs-process-based-parallelism>`_
@@ -100,7 +100,7 @@ You can control the exact number of threads that are used either:
 Parallel NumPy and SciPy routines from numerical libraries
 ..........................................................
 
-scikit-learn relies heavily on NumPy and SciPy, which internally call
+primakit-learn relies heavily on NumPy and SciPy, which internally call
 multi-threaded linear algebra routines (BLAS & LAPACK) implemented in libraries
 such as MKL, OpenBLAS or BLIS.
 
@@ -139,11 +139,11 @@ threads than the number of CPUs on a machine. Over-subscription happens when
 a program is running too many threads at the same time.
 
 Suppose you have a machine with 8 CPUs. Consider a case where you're running
-a :class:`~sklearn.model_selection.GridSearchCV` (parallelized with joblib)
+a :class:`~pklearn.model_selection.GridSearchCV` (parallelized with joblib)
 with ``n_jobs=8`` over a
-:class:`~sklearn.ensemble.HistGradientBoostingClassifier` (parallelized with
+:class:`~pklearn.ensemble.HistGradientBoostingClassifier` (parallelized with
 OpenMP). Each instance of
-:class:`~sklearn.ensemble.HistGradientBoostingClassifier` will spawn 8 threads
+:class:`~pklearn.ensemble.HistGradientBoostingClassifier` will spawn 8 threads
 (since you have 8 CPUs). That's a total of ``8 * 8 = 64`` threads, which
 leads to oversubscription of threads for physical CPU resources and thus
 to scheduling overhead.
@@ -157,7 +157,7 @@ number of threads they can use, so as to avoid oversubscription. In practice
 the heuristic that joblib uses is to tell the processes to use ``max_threads
 = n_cpus // n_jobs``, via their corresponding environment variable. Back to
 our example from above, since the joblib backend of
-:class:`~sklearn.model_selection.GridSearchCV` is ``loky``, each process will
+:class:`~pklearn.model_selection.GridSearchCV` is ``loky``, each process will
 only be able to use 1 thread instead of 8, thus mitigating the
 oversubscription issue.
 
@@ -174,7 +174,7 @@ Note that:
 - When joblib is configured to use the ``threading`` backend, there is no
   mechanism to avoid oversubscriptions when calling into parallel native
   libraries in the joblib-managed threads.
-- All scikit-learn estimators that explicitly rely on OpenMP in their Cython code
+- All primakit-learn estimators that explicitly rely on OpenMP in their Cython code
   always use `threadpoolctl` internally to automatically adapt the numbers of
   threads used by OpenMP and potentially nested BLAS calls so as to avoid
   oversubscription.
@@ -192,7 +192,7 @@ Configuration switches
 Python API
 ..........
 
-:func:`sklearn.set_config` and :func:`sklearn.config_context` can be used to change
+:func:`pklearn.set_config` and :func:`pklearn.config_context` can be used to change
 parameters of the configuration which control aspect of parallelism.
 
 .. _environment_variable:
@@ -200,19 +200,19 @@ parameters of the configuration which control aspect of parallelism.
 Environment variables
 .....................
 
-These environment variables should be set before importing scikit-learn.
+These environment variables should be set before importing primakit-learn.
 
 `SKLEARN_ASSUME_FINITE`
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the default value for the `assume_finite` argument of
-:func:`sklearn.set_config`.
+:func:`pklearn.set_config`.
 
 `SKLEARN_WORKING_MEMORY`
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sets the default value for the `working_memory` argument of
-:func:`sklearn.set_config`.
+:func:`pklearn.set_config`.
 
 `SKLEARN_SEED`
 ~~~~~~~~~~~~~~
@@ -220,7 +220,7 @@ Sets the default value for the `working_memory` argument of
 Sets the seed of the global random generator when running the tests, for
 reproducibility.
 
-Note that scikit-learn tests are expected to run deterministically with
+Note that primakit-learn tests are expected to run deterministically with
 explicit seeding of their own independent RNG instances instead of relying on
 the numpy or Python standard library RNG singletons to make sure that test
 results are independent of the test execution order. However some tests might
@@ -261,12 +261,12 @@ Valid values for `SKLEARN_TESTS_GLOBAL_RANDOM_SEED`:
   tests, not the full test suite!
 
 If the variable is not set, then 42 is used as the global seed in a
-deterministic manner. This ensures that, by default, the scikit-learn test
+deterministic manner. This ensures that, by default, the primakit-learn test
 suite is as deterministic as possible to avoid disrupting our friendly
 third-party package maintainers. Similarly, this variable should not be set in
 the CI config of pull-requests to make sure that our friendly contributors are
 not the first people to encounter a seed-sensitivity regression in a test
-unrelated to the changes of their own PR. Only the scikit-learn maintainers who
+unrelated to the changes of their own PR. Only the primakit-learn maintainers who
 watch the results of the nightly builds are expected to be annoyed by this.
 
 When writing a new test function that uses this fixture, please use the

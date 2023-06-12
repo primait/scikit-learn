@@ -8,12 +8,12 @@
 Array API support (experimental)
 ================================
 
-.. currentmodule:: sklearn
+.. currentmodule:: pklearn
 
 The `Array API <https://data-apis.org/array-api/latest/>`_ specification defines
 a standard API for all array manipulation libraries with a NumPy-like API.
 
-Some scikit-learn estimators that primarily rely on NumPy (as opposed to using
+Some primakit-learn estimators that primarily rely on NumPy (as opposed to using
 Cython) to implement the algorithmic logic of their `fit`, `predict` or
 `transform` methods can be configured to accept any Array API compatible input
 datastructures and automatically dispatch operations to the underlying namespace
@@ -24,7 +24,7 @@ explicitly as explained in the following.
 
 .. note::
     Currently, only `cupy.array_api` and `numpy.array_api` are known to work
-    with scikit-learn's estimators.
+    with primakit-learn's estimators.
 
 Example usage
 =============
@@ -33,9 +33,9 @@ Here is an example code snippet to demonstrate how to use `CuPy
 <https://cupy.dev/>`_ to run
 :class:`~discriminant_analysis.LinearDiscriminantAnalysis` on a GPU::
 
-    >>> from sklearn.datasets import make_classification
-    >>> from sklearn import config_context
-    >>> from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+    >>> from pklearn.datasets import make_classification
+    >>> from pklearn import config_context
+    >>> from pklearn.discriminant_analysis import LinearDiscriminantAnalysis
     >>> import cupy.array_api as xp
 
     >>> X_np, y_np = make_classification(random_state=0)
@@ -56,7 +56,7 @@ Array API namespace was used for training, then fitted attributes will be on the
 GPU. We provide a experimental `_estimator_with_converted_arrays` utility that
 transfers an estimator attributes from Array API to a ndarray::
 
-    >>> from sklearn.utils._array_api import _estimator_with_converted_arrays
+    >>> from pklearn.utils._array_api import _estimator_with_converted_arrays
     >>> cupy_to_ndarray = lambda array : array._array.get()
     >>> lda_np = _estimator_with_converted_arrays(lda, cupy_to_ndarray)
     >>> X_trans = lda_np.transform(X_np)
@@ -72,4 +72,4 @@ Estimators with support for `Array API`-compatible inputs
 
 Coverage for more estimators is expected to grow over time. Please follow the
 dedicated `meta-issue on GitHub
-<https://github.com/scikit-learn/scikit-learn/issues/22352>`_ to track progress.
+<https://github.com/primakit-learn/primakit-learn/issues/22352>`_ to track progress.

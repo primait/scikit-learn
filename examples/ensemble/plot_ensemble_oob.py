@@ -29,8 +29,8 @@ error stabilizes.
 import matplotlib.pyplot as plt
 
 from collections import OrderedDict
-from sklearn.datasets import make_classification
-from sklearn.ensemble import RandomForestClassifier
+from pklearn.datasets import make_classification
+from pklearn.ensemble import RandomForestClassifier
 
 RANDOM_STATE = 123
 

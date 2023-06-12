@@ -1,4 +1,4 @@
-Machine Learning Cheat Sheet (for scikit-learn)
+Machine Learning Cheat Sheet (for primakit-learn)
 ===============================================
 
 This document is intended to explain how to edit

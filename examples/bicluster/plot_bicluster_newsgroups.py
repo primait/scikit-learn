@@ -29,11 +29,11 @@ from time import time
 
 import numpy as np
 
-from sklearn.cluster import SpectralCoclustering
-from sklearn.cluster import MiniBatchKMeans
-from sklearn.datasets import fetch_20newsgroups
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.cluster import v_measure_score
+from pklearn.cluster import SpectralCoclustering
+from pklearn.cluster import MiniBatchKMeans
+from pklearn.datasets import fetch_20newsgroups
+from pklearn.feature_extraction.text import TfidfVectorizer
+from pklearn.metrics.cluster import v_measure_score
 
 
 def number_normalizer(tokens):

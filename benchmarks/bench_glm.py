@@ -6,7 +6,7 @@ Data comes from a random square matrix.
 """
 from datetime import datetime
 import numpy as np
-from sklearn import linear_model
+from pklearn import linear_model
 
 
 if __name__ == "__main__":
@@ -45,7 +45,7 @@ if __name__ == "__main__":
         lasso.fit(X, Y)
         time_lasso[i] = (datetime.now() - start).total_seconds()
 
-    plt.figure("scikit-learn GLM benchmark results")
+    plt.figure("primakit-learn GLM benchmark results")
     plt.xlabel("Dimensions")
     plt.ylabel("Time (s)")
     plt.plot(dimensions, time_ridge, color="r")

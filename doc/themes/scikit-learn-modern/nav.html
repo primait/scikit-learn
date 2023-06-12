@@ -8,7 +8,7 @@
 
 {% if theme_link_to_live_contributing_page|tobool %}
 {# Link to development page for live builds #}
-  {%- set development_link = "https://scikit-learn.org/dev/developers/index.html" %}
+  {%- set development_link = "https://primakit-learn.org/dev/developers/index.html" %}
 {# Open on a new development page in new window/tab for live builds #}
   {%- set development_attrs = 'target="_blank" rel="noopener noreferrer"' %}
 {%- else %}
@@ -29,8 +29,8 @@
   ('Roadmap', pathto('roadmap'), ''),
   ('Governance', pathto('governance'), ''),
   ('About us', pathto('about'), ''),
-  ('GitHub', 'https://github.com/scikit-learn/scikit-learn', ''),
-  ('Other Versions and Download', 'https://scikit-learn.org/dev/versions.html', '')]
+  ('GitHub', 'https://github.com/primakit-learn/primakit-learn', ''),
+  ('Other Versions and Download', 'https://primakit-learn.org/dev/versions.html', '')]
 -%}
 
 <nav id="navbar" class="{{ nav_bar_class }} navbar navbar-expand-md navbar-light bg-light py-0">
@@ -71,7 +71,7 @@
           <a class="sk-nav-link nav-link" href="{{ pathto('auto_examples/index') }}">Examples</a>
         </li>
         <li class="nav-item">
-          <a class="sk-nav-link nav-link" target="_blank" rel="noopener noreferrer" href="https://blog.scikit-learn.org/">Community</a>
+          <a class="sk-nav-link nav-link" target="_blank" rel="noopener noreferrer" href="https://blog.primakit-learn.org/">Community</a>
         </li>
         {%- for title, link, link_attrs in drop_down_navigation %}
         <li class="nav-item">

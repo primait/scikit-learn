@@ -19,7 +19,7 @@
   {% block htmltitle %}
   <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
   {% endblock %}
-  <link rel="canonical" href="http://scikit-learn.org/stable/{{pagename}}.html" />
+  <link rel="canonical" href="http://primakit-learn.org/stable/{{pagename}}.html" />
 
   {% if favicon_url %}
   <link rel="shortcut icon" href="{{ favicon_url|e }}"/>
@@ -66,14 +66,14 @@
         {%- if pagename != "install" %}
         <div class="alert alert-danger p-1 mb-2" role="alert">
           <p class="text-center mb-0">
-          <strong>scikit-learn {{ release }}</strong><br/>
-          <a href="http://scikit-learn.org/dev/versions.html">Other versions</a>
+          <strong>primakit-learn {{ release }}</strong><br/>
+          <a href="http://primakit-learn.org/dev/versions.html">Other versions</a>
           </p>
         </div>
         {%- endif %}
         <div class="alert alert-warning p-1 mb-2" role="alert">
           <p class="text-center mb-0">
-            Please <a class="font-weight-bold" href="{{ pathto('about').replace('#', '') }}#citing-scikit-learn"><string>cite us</string></a> if you use the software.
+            Please <a class="font-weight-bold" href="{{ pathto('about').replace('#', '') }}#citing-primakit-learn"><string>cite us</string></a> if you use the software.
           </p>
         </div>
             {%- if meta and meta['parenttoc']|tobool %}

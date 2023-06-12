@@ -1,4 +1,4 @@
-.. currentmodule:: sklearn
+.. currentmodule:: pklearn
 
 .. _glossary:
 
@@ -69,7 +69,7 @@ General Concepts
         * an iterator
         * a generator
 
-        Note that *output* from scikit-learn estimators and functions (e.g.
+        Note that *output* from primakit-learn estimators and functions (e.g.
         predictions) should generally be arrays or sparse matrices, or lists
         thereof (as in multi-output :class:`tree.DecisionTreeClassifier`'s
         ``predict_proba``). An estimator where ``predict()`` returns a list or
@@ -135,7 +135,7 @@ General Concepts
         Serialization
             We make no assurances that pickling an estimator in one version
             will allow it to be unpickled to an equivalent model in the
-            subsequent version.  (For estimators in the sklearn package, we
+            subsequent version.  (For estimators in the pklearn package, we
             issue a warning when this unpickling is attempted, even if it may
             happen to work.)  See :ref:`persistence_limitations`.
         :func:`utils.estimator_checks.check_estimator`
@@ -158,27 +158,27 @@ General Concepts
         A categorical or nominal :term:`feature` is one that has a
         finite set of discrete values across the population of data.
         These are commonly represented as columns of integers or
-        strings. Strings will be rejected by most scikit-learn
+        strings. Strings will be rejected by most primakit-learn
         estimators, and integers will be treated as ordinal or
         count-valued. For the use with most estimators, categorical
         variables should be one-hot encoded. Notable exceptions include
         tree-based models such as random forests and gradient boosting
         models that often work better and faster with integer-coded
         categorical variables.
-        :class:`~sklearn.preprocessing.OrdinalEncoder` helps encoding
+        :class:`~pklearn.preprocessing.OrdinalEncoder` helps encoding
         string-valued categorical features as ordinal integers, and
-        :class:`~sklearn.preprocessing.OneHotEncoder` can be used to
+        :class:`~pklearn.preprocessing.OneHotEncoder` can be used to
         one-hot encode categorical features.
         See also :ref:`preprocessing_categorical_features` and the
         `categorical-encoding
-        <https://github.com/scikit-learn-contrib/category_encoders>`_
+        <https://github.com/primakit-learn-contrib/category_encoders>`_
         package for tools related to encoding categorical features.
 
     clone
     cloned
         To copy an :term:`estimator instance` and create a new one with
         identical :term:`parameters`, but without any fitted
-        :term:`attributes`, using :func:`~sklearn.base.clone`.
+        :term:`attributes`, using :func:`~pklearn.base.clone`.
 
         When ``fit`` is called, a :term:`meta-estimator` usually clones
         a wrapped estimator instance before fitting the cloned instance.
@@ -198,7 +198,7 @@ General Concepts
         Scikit-learn to check they comply with basic API conventions.  They are
         available for external use through
         :func:`utils.estimator_checks.check_estimator`, with most of the
-        implementation in ``sklearn/utils/estimator_checks.py``.
+        implementation in ``pklearn/utils/estimator_checks.py``.
 
         Note: Some exceptions to the common testing regime are currently
         hard-coded into the library, but we hope to replace this by marking
@@ -250,7 +250,7 @@ General Concepts
     data type
         NumPy arrays assume a homogeneous data type throughout, available in
         the ``.dtype`` attribute of an array (or sparse matrix). We generally
-        assume simple data types for scikit-learn data: float or integer.
+        assume simple data types for primakit-learn data: float or integer.
         We may support object or string data types for arrays before encoding
         or vectorizing.  Our estimators do not work with struct arrays, for
         instance.
@@ -281,8 +281,8 @@ General Concepts
           can only determine if ``clf`` is probabilistic after fitting it on
           some data::
 
-              >>> from sklearn.model_selection import GridSearchCV
-              >>> from sklearn.linear_model import SGDClassifier
+              >>> from pklearn.model_selection import GridSearchCV
+              >>> from pklearn.linear_model import SGDClassifier
               >>> clf = GridSearchCV(SGDClassifier(),
               ...                    param_grid={'loss': ['log_loss', 'hinge']})
 
@@ -324,7 +324,7 @@ General Concepts
         We try to give examples of basic usage for most functions and
         classes in the API:
 
-        * as doctests in their docstrings (i.e. within the ``sklearn/`` library
+        * as doctests in their docstrings (i.e. within the ``pklearn/`` library
           code itself).
         * as examples in the :ref:`example gallery <general_examples>`
           rendered (using `sphinx-gallery
@@ -398,7 +398,7 @@ General Concepts
         Elsewhere features are known as attributes, predictors, regressors, or
         independent variables.
 
-        Nearly all estimators in scikit-learn assume that features are numeric,
+        Nearly all estimators in primakit-learn assume that features are numeric,
         finite and not missing, even when they have semantically distinct
         domains and distributions (categorical, ordinal, count-valued,
         real-valued, interval). See also :term:`categorical feature` and
@@ -680,13 +680,13 @@ General Concepts
         sample properties and their routing in :term:`meta-estimators`, though
         a ``fit_params`` parameter is often used.
 
-    scikit-learn-contrib
+    primakit-learn-contrib
         A venue for publishing Scikit-learn-compatible libraries that are
         broadly authorized by the core developers and the contrib community,
         but not maintained by the core developer team.
-        See https://scikit-learn-contrib.github.io.
+        See https://primakit-learn-contrib.github.io.
 
-    scikit-learn enhancement proposals
+    primakit-learn enhancement proposals
     SLEP
     SLEPs
         Changes to the API principles and changes to dependencies or supported
@@ -696,8 +696,8 @@ General Concepts
         vote. Such a proposal must be a consolidated document, in the form of a
         "Scikit-Learn Enhancement Proposal" (SLEP), rather than a long discussion on an
         issue. A SLEP must be submitted as a pull-request to
-        `enhancement proposals <https://scikit-learn-enhancement-proposals.readthedocs.io>`_ using the
-        `SLEP template <https://scikit-learn-enhancement-proposals.readthedocs.io/en/latest/slep_template.html>`_.
+        `enhancement proposals <https://primakit-learn-enhancement-proposals.readthedocs.io>`_ using the
+        `SLEP template <https://primakit-learn-enhancement-proposals.readthedocs.io/en/latest/slep_template.html>`_.
 
     semi-supervised
     semi-supervised learning
@@ -809,7 +809,7 @@ Class APIs and Estimator Types
 
         A classifier supports modeling some of :term:`binary`,
         :term:`multiclass`, :term:`multilabel`, or :term:`multiclass
-        multioutput` targets.  Within scikit-learn, all classifiers support
+        multioutput` targets.  Within primakit-learn, all classifiers support
         multi-class classification, defaulting to using a one-vs-rest
         strategy over the binary classification problem.
 
@@ -1093,7 +1093,7 @@ Target Types
         For semi-supervised classification, :term:`unlabeled` samples should
         have the special label -1 in ``y``.
 
-        Within scikit-learn, all estimators supporting binary classification
+        Within primakit-learn, all estimators supporting binary classification
         also support multiclass classification, using One-vs-Rest by default.
 
         A :class:`preprocessing.LabelEncoder` helps to canonicalize multiclass
@@ -1576,7 +1576,7 @@ functions or non-estimator constructors.
         might be used in some configuration.
 
         For more details on the use of ``joblib`` and its interactions with
-        scikit-learn, please refer to our :ref:`parallelism notes
+        primakit-learn, please refer to our :ref:`parallelism notes
         <parallelism>`.
 
     ``pos_label``
@@ -1594,7 +1594,7 @@ functions or non-estimator constructors.
 
         The passed value will have an effect on the reproducibility of the
         results returned by the function (:term:`fit`, :term:`split`, or any
-        other function like :func:`~sklearn.cluster.k_means`). `random_state`'s
+        other function like :func:`~pklearn.cluster.k_means`). `random_state`'s
         value may be:
 
         None (default)
@@ -1622,7 +1622,7 @@ functions or non-estimator constructors.
         input ``random_state`` and return a :class:`~numpy.random.RandomState`
         instance.
 
-        For more details on how to control the randomness of scikit-learn
+        For more details on how to control the randomness of primakit-learn
         objects and avoid common pitfalls, you may refer to :ref:`randomness`.
 
     ``scoring``

@@ -12,8 +12,8 @@ import gc
 from time import time
 from collections import defaultdict
 import matplotlib.pyplot as plt
-from sklearn.datasets import fetch_lfw_people
-from sklearn.decomposition import IncrementalPCA, PCA
+from pklearn.datasets import fetch_lfw_people
+from pklearn.decomposition import IncrementalPCA, PCA
 
 
 def plot_results(X, y, label):

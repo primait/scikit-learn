@@ -5,7 +5,7 @@
 Decomposing signals in components (matrix factorization problems)
 =================================================================
 
-.. currentmodule:: sklearn.decomposition
+.. currentmodule:: pklearn.decomposition
 
 
 .. _PCA:
@@ -19,7 +19,7 @@ Exact PCA and probabilistic interpretation
 
 PCA is used to decompose a multivariate dataset in a set of successive
 orthogonal components that explain a maximum amount of the variance. In
-scikit-learn, :class:`PCA` is implemented as a *transformer* object
+primakit-learn, :class:`PCA` is implemented as a *transformer* object
 that learns :math:`n` components in its ``fit`` method, and can be used on new
 data to project it on these components.
 
@@ -376,8 +376,8 @@ Truncated singular value decomposition and latent semantic analysis
 where :math:`k` is a user-specified parameter.
 
 When truncated SVD is applied to term-document matrices
-(as returned by :class:`~sklearn.feature_extraction.text.CountVectorizer` or
-:class:`~sklearn.feature_extraction.text.TfidfVectorizer`),
+(as returned by :class:`~pklearn.feature_extraction.text.CountVectorizer` or
+:class:`~pklearn.feature_extraction.text.TfidfVectorizer`),
 this transformation is known as
 `latent semantic analysis <https://nlp.stanford.edu/IR-book/pdf/18lsi.pdf>`_
 (LSA), because it transforms such matrices
@@ -412,7 +412,7 @@ To also transform a test set :math:`X`, we multiply it with :math:`V_k`:
     and information retrieval (IR) literature
     swap the axes of the matrix :math:`X` so that it has shape
     ``n_features`` × ``n_samples``.
-    We present LSA in a different way that matches the scikit-learn API better,
+    We present LSA in a different way that matches the primakit-learn API better,
     but the singular values found are the same.
 
 :class:`TruncatedSVD` is very similar to :class:`PCA`, but differs
@@ -608,7 +608,7 @@ iterating only once over a mini-batch. This can be used for online learning
 when the data is not readily available from the start, or for when the data
 does not fit into the memory.
 
-.. currentmodule:: sklearn.cluster
+.. currentmodule:: pklearn.cluster
 
 .. image:: ../auto_examples/cluster/images/sphx_glr_plot_dict_face_patches_001.png
     :target: ../auto_examples/cluster/plot_dict_face_patches.html
@@ -625,7 +625,7 @@ does not fit into the memory.
 
     Example: :ref:`sphx_glr_auto_examples_cluster_plot_dict_face_patches.py`
 
-.. currentmodule:: sklearn.decomposition
+.. currentmodule:: pklearn.decomposition
 
 .. _FA:
 
@@ -731,7 +731,7 @@ Independent component analysis (ICA)
 
 Independent component analysis separates a multivariate signal into
 additive subcomponents that are maximally independent. It is
-implemented in scikit-learn using the :class:`Fast ICA <FastICA>`
+implemented in primakit-learn using the :class:`Fast ICA <FastICA>`
 algorithm. Typically, ICA is not used for reducing dimensionality but
 for separating superimposed signals. Since the ICA model does not include
 a noise term, for the model to be correct, whitening must be applied.
@@ -908,7 +908,7 @@ stored components::
 
     >>> import numpy as np
     >>> X = np.array([[1, 1], [2, 1], [3, 1.2], [4, 1], [5, 0.8], [6, 1]])
-    >>> from sklearn.decomposition import NMF
+    >>> from pklearn.decomposition import NMF
     >>> model = NMF(n_components=2, init='random', random_state=0)
     >>> W = model.fit_transform(X)
     >>> H = model.components_
@@ -927,7 +927,7 @@ Mini-batch Non Negative Matrix Factorization
 --------------------------------------------
 
 :class:`MiniBatchNMF` [7]_ implements a faster, but less accurate version of the
-non negative matrix factorization (i.e. :class:`~sklearn.decomposition.NMF`),
+non negative matrix factorization (i.e. :class:`~pklearn.decomposition.NMF`),
 better suited for large datasets.
 
 By default, :class:`MiniBatchNMF` divides the data into mini-batches and

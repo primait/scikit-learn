@@ -8,7 +8,7 @@ method which computes the local density deviation of a given data point with
 respect to its neighbors. It considers as outliers the samples that have a
 substantially lower density than their neighbors. This example shows how to
 use LOF for outlier detection which is the default use case of this estimator
-in scikit-learn. Note that when LOF is used for outlier detection it has no
+in primakit-learn. Note that when LOF is used for outlier detection it has no
 predict, decision_function and score_samples methods. See
 :ref:`User Guide <outlier_detection>`: for details on the difference between
 outlier detection and novelty detection and how to use LOF for novelty
@@ -26,7 +26,7 @@ n_neighbors=20 appears to work well in general.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.neighbors import LocalOutlierFactor
+from pklearn.neighbors import LocalOutlierFactor
 
 np.random.seed(42)
 

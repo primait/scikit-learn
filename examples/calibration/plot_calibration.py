@@ -34,8 +34,8 @@ Brier score.
 # --------------------------
 import numpy as np
 
-from sklearn.datasets import make_blobs
-from sklearn.model_selection import train_test_split
+from pklearn.datasets import make_blobs
+from pklearn.model_selection import train_test_split
 
 n_samples = 50000
 n_bins = 3  # use 3 bins for calibration_curve as we have 3 clusters here
@@ -58,9 +58,9 @@ X_train, X_test, y_train, y_test, sw_train, sw_test = train_test_split(
 # %%
 # Gaussian Naive-Bayes
 # --------------------
-from sklearn.calibration import CalibratedClassifierCV
-from sklearn.metrics import brier_score_loss
-from sklearn.naive_bayes import GaussianNB
+from pklearn.calibration import CalibratedClassifierCV
+from pklearn.metrics import brier_score_loss
+from pklearn.naive_bayes import GaussianNB
 
 # With no calibration
 clf = GaussianNB()

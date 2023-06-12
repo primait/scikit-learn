@@ -4,14 +4,14 @@
 Contributing
 ============
 
-.. currentmodule:: sklearn
+.. currentmodule:: pklearn
 
 This project is a community effort, and everyone is welcome to
 contribute.
 
-The project is hosted on https://github.com/scikit-learn/scikit-learn
+The project is hosted on https://github.com/primakit-learn/primakit-learn
 
-The decision making process and governance structure of scikit-learn is laid
+The decision making process and governance structure of primakit-learn is laid
 out in the governance document: :ref:`governance`.
 
 Scikit-learn is somewhat :ref:`selective <selectiveness>` when it comes to
@@ -26,7 +26,7 @@ See :ref:`new_contributors` to get started.
 
     We aspire to treat everybody equally, and value their contributions.  We
     are particularly seeking people from underrepresented backgrounds in Open
-    Source Software and scikit-learn in particular to participate and
+    Source Software and primakit-learn in particular to participate and
     contribute their expertise and experience.
 
     Decisions are made based on technical merit and consensus.
@@ -44,13 +44,13 @@ See :ref:`new_contributors` to get started.
 In case you experience issues using this package, do not hesitate to submit a
 ticket to the
 `GitHub issue tracker
-<https://github.com/scikit-learn/scikit-learn/issues>`_. You are also
+<https://github.com/primakit-learn/primakit-learn/issues>`_. You are also
 welcome to post feature requests or pull requests.
 
 Ways to contribute
 ==================
 
-There are many ways to contribute to scikit-learn, with the most common ones
+There are many ways to contribute to primakit-learn, with the most common ones
 being contribution of code or documentation to the project. Improving the
 documentation is no less important than improving the library itself.  If you
 find a typo in the documentation, or have made improvements, do not hesitate to
@@ -70,16 +70,16 @@ link to it from your website, or simply star to say "I use it":
 
 .. raw:: html
 
-   <a class="github-button" href="https://github.com/scikit-learn/scikit-learn"
+   <a class="github-button" href="https://github.com/primakit-learn/primakit-learn"
    data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star
-   scikit-learn/scikit-learn on GitHub">Star</a>
+   primakit-learn/primakit-learn on GitHub">Star</a>
    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 In case a contribution/issue involves changes to the API principles
 or changes to dependencies or supported versions, it must be backed by a
 :ref:`slep`, where a SLEP must be submitted as a pull-request to
-`enhancement proposals <https://scikit-learn-enhancement-proposals.readthedocs.io>`_
-using the `SLEP template <https://scikit-learn-enhancement-proposals.readthedocs.io/en/latest/slep_template.html>`_
+`enhancement proposals <https://primakit-learn-enhancement-proposals.readthedocs.io>`_
+using the `SLEP template <https://primakit-learn-enhancement-proposals.readthedocs.io/en/latest/slep_template.html>`_
 and follows the decision-making process outlined in :ref:`governance`.
 
 .. topic:: Contributing to related projects
@@ -87,7 +87,7 @@ and follows the decision-making process outlined in :ref:`governance`.
    Scikit-learn thrives in an ecosystem of several related projects, which also
    may have relevant issues to work on, including smaller projects such as:
 
-   * `scikit-learn-contrib <https://github.com/search?q=org%3Ascikit-learn-contrib+is%3Aissue+is%3Aopen+sort%3Aupdated-desc&type=Issues>`__
+   * `primakit-learn-contrib <https://github.com/search?q=org%3Aprimakit-learn-contrib+is%3Aissue+is%3Aopen+sort%3Aupdated-desc&type=Issues>`__
    * `joblib <https://github.com/joblib/joblib/issues>`__
    * `sphinx-gallery <https://github.com/sphinx-gallery/sphinx-gallery/issues>`__
    * `numpydoc <https://github.com/numpy/numpydoc/issues>`__
@@ -113,20 +113,20 @@ an issue if you have found a bug or wish to see a feature implemented.
 
 In case you experience issues using this package, do not hesitate to submit a
 ticket to the
-`Bug Tracker <https://github.com/scikit-learn/scikit-learn/issues>`_. You are
+`Bug Tracker <https://github.com/primakit-learn/primakit-learn/issues>`_. You are
 also welcome to post feature requests or pull requests.
 
 It is recommended to check that your issue complies with the
 following rules before submitting:
 
 -  Verify that your issue is not being currently addressed by other
-   `issues <https://github.com/scikit-learn/scikit-learn/issues?q=>`_
-   or `pull requests <https://github.com/scikit-learn/scikit-learn/pulls?q=>`_.
+   `issues <https://github.com/primakit-learn/primakit-learn/issues?q=>`_
+   or `pull requests <https://github.com/primakit-learn/primakit-learn/pulls?q=>`_.
 
 -  If you are submitting an algorithm or feature request, please verify that
    the algorithm fulfills our
    `new algorithm requirements
-   <https://scikit-learn.org/stable/faq.html#what-are-the-inclusion-criteria-for-new-algorithms>`_.
+   <https://primakit-learn.org/stable/faq.html#what-are-the-inclusion-criteria-for-new-algorithms>`_.
 
 -  If you are submitting a bug report, we strongly encourage you to follow the guidelines in
    :ref:`filing_bugs`.
@@ -137,7 +137,7 @@ How to make a good bug report
 -----------------------------
 
 When you submit an issue to `Github
-<https://github.com/scikit-learn/scikit-learn/issues>`__, please do your best to
+<https://github.com/primakit-learn/primakit-learn/issues>`__, please do your best to
 follow these guidelines! This will make it a lot easier to provide you with good
 feedback:
 
@@ -154,11 +154,11 @@ feedback:
 - If an exception is raised, please **provide the full traceback**.
 
 - Please include your **operating system type and version number**, as well as
-  your **Python, scikit-learn, numpy, and scipy versions**. This information
+  your **Python, primakit-learn, numpy, and scipy versions**. This information
   can be found by running the following code snippet::
 
-    >>> import sklearn
-    >>> sklearn.show_versions()  # doctest: +SKIP
+    >>> import pklearn
+    >>> pklearn.show_versions()  # doctest: +SKIP
 
 - Please ensure all **code snippets and error messages are formatted in
   appropriate code blocks**.  See `Creating and highlighting code blocks
@@ -174,11 +174,11 @@ Contributing code
 .. note::
 
   To avoid duplicating work, it is highly advised that you search through the
-  `issue tracker <https://github.com/scikit-learn/scikit-learn/issues>`_ and
-  the `PR list <https://github.com/scikit-learn/scikit-learn/pulls>`_.
+  `issue tracker <https://github.com/primakit-learn/primakit-learn/issues>`_ and
+  the `PR list <https://github.com/primakit-learn/primakit-learn/pulls>`_.
   If in doubt about duplicated work, or if you want to work on a non-trivial
   feature, it's recommended to first open an issue in
-  the `issue tracker <https://github.com/scikit-learn/scikit-learn/issues>`_
+  the `issue tracker <https://github.com/primakit-learn/primakit-learn/issues>`_
   to get some feedbacks from core developers.
 
   One easy way to find an issue to work on is by applying the "help wanted"
@@ -189,7 +189,7 @@ Contributing code
 Video resources
 ---------------
 These videos are step-by-step introductions on how to contribute to
-scikit-learn, and are a great companion to the following text guidelines.
+primakit-learn, and are a great companion to the following text guidelines.
 Please make sure to still check our guidelines below, since they describe our
 latest up-to-date workflow.
 
@@ -198,15 +198,15 @@ latest up-to-date workflow.
   `Transcript
   <https://github.com/data-umbrella/event-transcripts/blob/main/2020/05-andreas-mueller-contributing.md>`__
 
-- Example of Submitting a Pull Request to scikit-learn:
+- Example of Submitting a Pull Request to primakit-learn:
   `Video <https://youtu.be/PU1WyDPGePI>`__,
   `Transcript
-  <https://github.com/data-umbrella/event-transcripts/blob/main/2020/06-reshama-shaikh-sklearn-pr.md>`__
+  <https://github.com/data-umbrella/event-transcripts/blob/main/2020/06-reshama-shaikh-pklearn-pr.md>`__
 
 - Sprint-specific instructions and practical tips:
   `Video <https://youtu.be/p_2Uw2BxdhA>`__,
   `Transcript
-  <https://github.com/data-umbrella/data-umbrella-scikit-learn-sprint/blob/master/3_transcript_ACM_video_vol2.md>`__
+  <https://github.com/data-umbrella/data-umbrella-primakit-learn-sprint/blob/master/3_transcript_ACM_video_vol2.md>`__
 
 - 3 Components of Reviewing a Pull Request:
   `Video <https://youtu.be/dyxS9KKCNzA>`__,
@@ -215,7 +215,7 @@ latest up-to-date workflow.
 
 .. note::
   In January 2021, the default branch name changed from ``master`` to ``main``
-  for the scikit-learn GitHub repository to use more inclusive terms.
+  for the primakit-learn GitHub repository to use more inclusive terms.
   These videos were created prior to the renaming of the branch.
   For contributors who are viewing these videos to set up their
   working environment and submitting a PR, ``master`` should be replaced to ``main``.
@@ -223,31 +223,31 @@ latest up-to-date workflow.
 How to contribute
 -----------------
 
-The preferred way to contribute to scikit-learn is to fork the `main
-repository <https://github.com/scikit-learn/scikit-learn/>`__ on GitHub,
+The preferred way to contribute to primakit-learn is to fork the `main
+repository <https://github.com/primakit-learn/primakit-learn/>`__ on GitHub,
 then submit a "pull request" (PR).
 
-In the first few steps, we explain how to locally install scikit-learn, and
+In the first few steps, we explain how to locally install primakit-learn, and
 how to set up your git repository:
 
 1. `Create an account <https://github.com/join>`_ on
    GitHub if you do not already have one.
 
 2. Fork the `project repository
-   <https://github.com/scikit-learn/scikit-learn>`__: click on the 'Fork'
+   <https://github.com/primakit-learn/primakit-learn>`__: click on the 'Fork'
    button near the top of the page. This creates a copy of the code under your
    account on the GitHub user account. For more details on how to fork a
    repository see `this guide <https://help.github.com/articles/fork-a-repo/>`_.
 
-3. Clone your fork of the scikit-learn repo from your GitHub account to your
+3. Clone your fork of the primakit-learn repo from your GitHub account to your
    local disk:
 
    .. prompt:: bash $
 
-      git clone git@github.com:YourLogin/scikit-learn.git  # add --depth 1 if your connection is slow
-      cd scikit-learn
+      git clone git@github.com:YourLogin/primakit-learn.git  # add --depth 1 if your connection is slow
+      cd primakit-learn
 
-3. Follow steps 2-7 in :ref:`install_bleeding_edge` to build scikit-learn in
+3. Follow steps 2-7 in :ref:`install_bleeding_edge` to build primakit-learn in
    development mode and return to this document.
 
 4. Install the development dependencies:
@@ -259,22 +259,22 @@ how to set up your git repository:
 .. _upstream:
 
 5. Add the ``upstream`` remote. This saves a reference to the main
-   scikit-learn repository, which you can use to keep your repository
+   primakit-learn repository, which you can use to keep your repository
    synchronized with the latest changes:
 
    .. prompt:: bash $
 
-        git remote add upstream git@github.com:scikit-learn/scikit-learn.git
+        git remote add upstream git@github.com:primakit-learn/primakit-learn.git
 
 6. Check that the `upstream` and `origin` remote aliases are configured correctly
    by running `git remote -v` which should display::
 
-        origin	git@github.com:YourLogin/scikit-learn.git (fetch)
-        origin	git@github.com:YourLogin/scikit-learn.git (push)
-        upstream	git@github.com:scikit-learn/scikit-learn.git (fetch)
-        upstream	git@github.com:scikit-learn/scikit-learn.git (push)
+        origin	git@github.com:YourLogin/primakit-learn.git (fetch)
+        origin	git@github.com:YourLogin/primakit-learn.git (push)
+        upstream	git@github.com:primakit-learn/primakit-learn.git (fetch)
+        upstream	git@github.com:primakit-learn/primakit-learn.git (push)
 
-You should now have a working installation of scikit-learn, and your git
+You should now have a working installation of primakit-learn, and your git
 repository properly configured. The next steps now describe the process of
 modifying code and submitting a PR:
 
@@ -342,7 +342,7 @@ modifying code and submitting a PR:
     each time, only the files you have modified.
 
 It is often helpful to keep your local feature branch synchronized with the
-latest changes of the main scikit-learn repository:
+latest changes of the main primakit-learn repository:
 
 .. prompt:: bash $
 
@@ -391,18 +391,18 @@ complies with the following rules before marking a PR as ``[MRG]``. The
    with `pytest`, but it is usually not recommended since it takes a long
    time. It is often enough to only run the test related to your changes:
    for example, if you changed something in
-   `sklearn/linear_model/_logistic.py`, running the following commands will
+   `pklearn/linear_model/_logistic.py`, running the following commands will
    usually be enough:
 
-   - `pytest sklearn/linear_model/_logistic.py` to make sure the doctest
+   - `pytest pklearn/linear_model/_logistic.py` to make sure the doctest
      examples are correct
-   - `pytest sklearn/linear_model/tests/test_logistic.py` to run the tests
+   - `pytest pklearn/linear_model/tests/test_logistic.py` to run the tests
      specific to the file
-   - `pytest sklearn/linear_model` to test the whole
-     :mod:`~sklearn.linear_model` module
+   - `pytest pklearn/linear_model` to test the whole
+     :mod:`~pklearn.linear_model` module
    - `pytest doc/modules/linear_model.rst` to make sure the user guide
      examples are correct.
-   - `pytest sklearn/tests/test_common.py -k LogisticRegression` to run all our
+   - `pytest pklearn/tests/test_common.py -k LogisticRegression` to run all our
      estimator checks (specifically for `LogisticRegression`, if that's the
      estimator you changed).
 
@@ -445,7 +445,7 @@ complies with the following rules before marking a PR as ``[MRG]``. The
 
 
 8. When applicable, use the validation tools and scripts in the
-   ``sklearn.utils`` submodule.  A list of utility routines available
+   ``pklearn.utils`` submodule.  A list of utility routines available
    for developers can be found in the :ref:`developers-utils` page.
 
 9. Often pull requests resolve one or more other issues (or pull requests).
@@ -462,10 +462,10 @@ complies with the following rules before marking a PR as ``[MRG]``. The
     performance and efficiency (see :ref:`monitoring_performances`) or through
     examples of usage. Examples also illustrate the features and intricacies of
     the library to users. Have a look at other examples in the `examples/
-    <https://github.com/scikit-learn/scikit-learn/tree/main/examples>`_
+    <https://github.com/primakit-learn/primakit-learn/tree/main/examples>`_
     directory for reference. Examples should demonstrate why the new
     functionality is useful in practice and, if possible, compare it to other
-    methods available in scikit-learn.
+    methods available in primakit-learn.
 
 11. New features have some maintenance overhead. We expect PR authors
     to take part in the maintenance for the code they submit, at least
@@ -490,7 +490,7 @@ You can check for common programming errors with the following tools:
   .. prompt:: bash $
 
     pip install pytest pytest-cov
-    pytest --cov sklearn path/to/tests_for_package
+    pytest --cov pklearn path/to/tests_for_package
 
   see also :ref:`testing_coverage`
 
@@ -498,7 +498,7 @@ You can check for common programming errors with the following tools:
 
   .. prompt:: bash $
 
-      mypy sklearn
+      mypy pklearn
 
   must not produce new errors in your pull request. Using `# type: ignore`
   annotation can be a workaround for a few cases that are not supported by
@@ -515,7 +515,7 @@ profiling and Cython optimizations.
 
 .. note::
 
-  The current state of the scikit-learn code base is not compliant with
+  The current state of the primakit-learn code base is not compliant with
   all of those guidelines, but we expect that enforcing those constraints
   on all new contributions will get the overall code base quality in the
   right direction.
@@ -532,7 +532,7 @@ profiling and Cython optimizations.
 Continuous Integration (CI)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Azure pipelines are used for testing scikit-learn on Linux, Mac and Windows,
+* Azure pipelines are used for testing primakit-learn on Linux, Mac and Windows,
   with different dependencies and settings.
 * CircleCI is used to build the docs for viewing, for linting with flake8, and
   for testing with ARM64 / aarch64 on Linux
@@ -601,7 +601,7 @@ Stalled and Unclaimed Issues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Generally speaking, issues which are up for grabs will have a
-`"help wanted" <https://github.com/scikit-learn/scikit-learn/labels/help%20wanted>`_.
+`"help wanted" <https://github.com/primakit-learn/primakit-learn/labels/help%20wanted>`_.
 tag. However, not all issues which need contributors will have this tag,
 as the "help wanted" tag is not always up-to-date with the state
 of the issue. Contributors can find issues which are still up for grabs
@@ -639,18 +639,18 @@ underestimate how easy an issue is to solve!
 
 .. topic:: good first issue tag
 
-    A great way to start contributing to scikit-learn is to pick an item from
+    A great way to start contributing to primakit-learn is to pick an item from
     the list of `good first issues
-    <https://github.com/scikit-learn/scikit-learn/labels/good%20first%20issue>`_
+    <https://github.com/primakit-learn/primakit-learn/labels/good%20first%20issue>`_
     in the issue tracker. Resolving these issues allow you to start contributing
     to the project without much prior knowledge. If you have already contributed
-    to scikit-learn, you should look at Easy issues instead.
+    to primakit-learn, you should look at Easy issues instead.
 
 .. topic:: Easy tag
 
-    If you have already contributed to scikit-learn, another great way to contribute
-    to scikit-learn is to pick an item from the list of `Easy issues
-    <https://github.com/scikit-learn/scikit-learn/labels/Easy>`_ in the issue
+    If you have already contributed to primakit-learn, another great way to contribute
+    to primakit-learn is to pick an item from the list of `Easy issues
+    <https://github.com/primakit-learn/primakit-learn/labels/Easy>`_ in the issue
     tracker. Your assistance in this area will be greatly appreciated by the
     more experienced developers as it helps free up their time to concentrate on
     other issues.
@@ -661,7 +661,7 @@ underestimate how easy an issue is to solve!
     we use the help wanted tag to mark Pull Requests which have been abandoned
     by their original contributor and are available for someone to pick up where the original
     contributor left off. The list of issues with the help wanted tag can be found
-    `here <https://github.com/scikit-learn/scikit-learn/labels/help%20wanted>`_.
+    `here <https://github.com/primakit-learn/primakit-learn/labels/help%20wanted>`_.
 
     Note that not all issues which need contributors will have this tag.
 
@@ -675,22 +675,22 @@ We are glad to accept any sort of documentation:
 * **function/method/class docstrings** (also known as "API documentation") -
   these describe what the object does and details any parameters, attributes and
   methods. Docstrings live alongside the code in
-  `sklearn/ <https://github.com/scikit-learn/scikit-learn/tree/main/sklearn>`_.
+  `pklearn/ <https://github.com/primakit-learn/primakit-learn/tree/main/pklearn>`_.
 * **user guide** - these provide more detailed information about the algorithms
-  implemented in scikit-learn and generally live in the root
-  `doc/ <https://github.com/scikit-learn/scikit-learn/tree/main/doc>`_ directory
+  implemented in primakit-learn and generally live in the root
+  `doc/ <https://github.com/primakit-learn/primakit-learn/tree/main/doc>`_ directory
   and
-  `doc/modules/ <https://github.com/scikit-learn/scikit-learn/tree/main/doc/modules>`_.
+  `doc/modules/ <https://github.com/primakit-learn/primakit-learn/tree/main/doc/modules>`_.
 * **tutorials** - these introduce various statistical learning and machine learning
   concepts and are located in
-  `doc/tutorial <https://github.com/scikit-learn/scikit-learn/tree/main/doc/tutorial>`_.
+  `doc/tutorial <https://github.com/primakit-learn/primakit-learn/tree/main/doc/tutorial>`_.
 * **examples** - these provide full code examples that may demonstrate the use
-  of scikit-learn modules, compare different algorithms or discuss their
+  of primakit-learn modules, compare different algorithms or discuss their
   interpretation etc. Examples live in
-  `examples/ <https://github.com/scikit-learn/scikit-learn/tree/main/examples>`_
+  `examples/ <https://github.com/primakit-learn/primakit-learn/tree/main/examples>`_
 * **other reStructuredText documents** (like this one) - provide various other
   useful information (e.g., our guide to contributing) and live in
-  `doc/ <https://github.com/scikit-learn/scikit-learn/tree/main/doc>`_.
+  `doc/ <https://github.com/primakit-learn/primakit-learn/tree/main/doc>`_.
 
 You can edit the documentation using any text editor, and then generate the
 HTML output by following :ref:`building_documentation`. The resulting HTML files
@@ -762,7 +762,7 @@ To build the PDF manual, run:
    versions of Sphinx as possible, the different versions tend to
    behave slightly differently. To get the best results, you should
    use the same version as the one we used on CircleCI. Look at this
-   `github search <https://github.com/search?utf8=%E2%9C%93&q=sphinx+repo%3Ascikit-learn%2Fscikit-learn+extension%3Ash+path%3Abuild_tools%2Fcircle&type=Code>`_
+   `github search <https://github.com/search?utf8=%E2%9C%93&q=sphinx+repo%3Aprimakit-learn%2Fprimakit-learn+extension%3Ash+path%3Abuild_tools%2Fcircle&type=Code>`_
    to know the exact version.
 
 Guidelines for writing documentation
@@ -862,12 +862,12 @@ Finally, follow the formatting rules below to make it consistently good:
       use the sphinx directives `:arxiv:` or `:doi:`. For example, see references in
       :ref:`Spectral Clustering Graphs <spectral_clustering_graph>`.
     * For "References" in docstrings, see the Silhouette Coefficient
-      (:func:`sklearn.metrics.silhouette_score`).
+      (:func:`pklearn.metrics.silhouette_score`).
 
 * When editing reStructuredText (``.rst``) files, try to keep line length under
   80 characters when possible (exceptions include links and tables).
 
-* In scikit-learn reStructuredText files both single and double backticks
+* In primakit-learn reStructuredText files both single and double backticks
   surrounding text will render as inline literal (often used for code, e.g.,
   `list`). This is due to specific configurations we have set. Single
   backticks should be used nowadays.
@@ -878,7 +878,7 @@ Finally, follow the formatting rules below to make it consistently good:
 Cross-referencing
 -----------------
 
-It is often useful to cross-reference to other pages in the scikit-learn
+It is often useful to cross-reference to other pages in the primakit-learn
 documentation. This should be done with reStructuredText cross-referencing
 syntax:
 
@@ -900,7 +900,7 @@ syntax:
 
   You should not modify existing sphinx reference labels as this would break
   existing cross references and external links pointing to specific sections in
-  the scikit-learn documentation.
+  the primakit-learn documentation.
 
 * Glossary - linking to a term in the :ref:`glossary`:
 
@@ -913,7 +913,7 @@ syntax:
 
   .. code-block:: rst
 
-      :func:`~sklearn.model_selection.cross_val_score`
+      :func:`~pklearn.model_selection.cross_val_score`
 
   However, if there is a 'currentmodule' directive above you in the document,
   you will only need to use the path to the function succeeding the current
@@ -921,7 +921,7 @@ syntax:
 
   .. code-block:: rst
 
-      .. currentmodule:: sklearn.model_selection
+      .. currentmodule:: pklearn.model_selection
 
       :func:`cross_val_score`
 
@@ -931,7 +931,7 @@ syntax:
 
   .. code-block:: rst
 
-      :class:`~sklearn.preprocessing.StandardScaler`
+      :class:`~pklearn.preprocessing.StandardScaler`
 
 .. _generated_doc_CI:
 
@@ -952,7 +952,7 @@ Testing and improving test coverage
 ===================================
 
 High-quality `unit testing <https://en.wikipedia.org/wiki/Unit_testing>`_
-is a corner-stone of the scikit-learn development process. For this
+is a corner-stone of the primakit-learn development process. For this
 purpose, we use the `pytest <https://docs.pytest.org>`_
 package. The tests are functions appropriately named, located in `tests`
 subdirectories, that check the validity of the algorithms and the
@@ -969,7 +969,7 @@ Writing matplotlib related tests
 --------------------------------
 
 Test fixtures ensure that a set of tests will be executing with the appropriate
-initialization and cleanup. The scikit-learn test suite implements a fixture
+initialization and cleanup. The primakit-learn test suite implements a fixture
 which can be used with ``matplotlib``.
 
 ``pyplot``
@@ -1011,8 +1011,8 @@ When proposing changes to the existing code base, it's important to make sure
 that they don't introduce performance regressions. Scikit-learn uses
 `asv benchmarks <https://github.com/airspeed-velocity/asv>`_ to monitor the
 performance of a selection of common estimators and functions. You can view
-these benchmarks on the `scikit-learn benchmark page <https://scikit-learn.org/scikit-learn-benchmarks>`_.
-The corresponding benchmark suite can be found in the `scikit-learn/asv_benchmarks` directory.
+these benchmarks on the `primakit-learn benchmark page <https://primakit-learn.org/primakit-learn-benchmarks>`_.
+The corresponding benchmark suite can be found in the `primakit-learn/asv_benchmarks` directory.
 
 To use all features of asv, you will need either `conda` or `virtualenv`. For
 more details please check the `asv installation webpage
@@ -1031,14 +1031,14 @@ and change your directory to `asv_benchmarks/`:
   cd asv_benchmarks/
 
 The benchmark suite is configured to run against your local clone of
-scikit-learn. Make sure it is up to date:
+primakit-learn. Make sure it is up to date:
 
 .. prompt:: bash $
 
   git fetch upstream
 
 In the benchmark suite, the benchmarks are organized following the same
-structure as scikit-learn. For example, you can compare the performance of a
+structure as primakit-learn. For example, you can compare the performance of a
 specific estimator between ``upstream/main`` and the branch you are working on:
 
 .. prompt:: bash $
@@ -1078,14 +1078,14 @@ command:
 
   asv run -b linear_model HEAD^!
 
-You can also run the benchmark suite using the version of scikit-learn already
+You can also run the benchmark suite using the version of primakit-learn already
 installed in your current Python environment:
 
 .. prompt:: bash $
 
   asv run --python=same
 
-It's particularly useful when you installed scikit-learn in editable mode to
+It's particularly useful when you installed primakit-learn in editable mode to
 avoid creating a new environment each time you run the benchmarks. By default
 the results are not saved when using an existing installation. To save the
 results you must specify a commit hash:
@@ -1123,7 +1123,7 @@ Issue Tracker Tags
 ==================
 
 All issues and pull requests on the
-`GitHub issue tracker <https://github.com/scikit-learn/scikit-learn/issues>`_
+`GitHub issue tracker <https://github.com/primakit-learn/primakit-learn/issues>`_
 should have (at least) one of the following tags:
 
 :Bug / Crash:
@@ -1142,9 +1142,9 @@ should have (at least) one of the following tags:
 There are four other tags to help new contributors:
 
 :good first issue:
-    This issue is ideal for a first contribution to scikit-learn. Ask for help
+    This issue is ideal for a first contribution to primakit-learn. Ask for help
     if the formulation is unclear. If you have already contributed to
-    scikit-learn, look at Easy issues instead.
+    primakit-learn, look at Easy issues instead.
 
 :Easy:
     This issue can be tackled without much prior experience.
@@ -1174,7 +1174,7 @@ If any publicly accessible method, function, attribute or parameter
 is renamed, we still support the old one for two releases and issue
 a deprecation warning when it is called/passed/accessed.
 E.g., if the function ``zero_one`` is renamed to ``zero_one_loss``,
-we add the decorator ``deprecated`` (from ``sklearn.utils``)
+we add the decorator ``deprecated`` (from ``pklearn.utils``)
 to ``zero_one`` and call ``zero_one_loss`` from that function::
 
     from ..utils import deprecated
@@ -1304,14 +1304,14 @@ not in other cases. The warning should be caught in all other tests
 (using e.g., ``@pytest.mark.filterwarnings``), and there should be no warning
 in the examples.
 
-.. currentmodule:: sklearn
+.. currentmodule:: pklearn
 
 .. _code_review:
 
 Code Review Guidelines
 ======================
 Reviewing code contributed to the project as PRs is a crucial component of
-scikit-learn development. We encourage anyone to start reviewing code of other
+primakit-learn development. We encourage anyone to start reviewing code of other
 developers. The code review process is often highly educational for everybody
 involved. This is particularly appropriate if it is a feature you would like to
 use, and so can respond critically about whether the PR meets your needs. While
@@ -1331,15 +1331,15 @@ Here are a few important aspects that need to be covered in any code review,
 from high-level questions to a more detailed check-list.
 
 - Do we want this in the library? Is it likely to be used? Do you, as
-  a scikit-learn user, like the change and intend to use it? Is it in
-  the scope of scikit-learn? Will the cost of maintaining a new
+  a primakit-learn user, like the change and intend to use it? Is it in
+  the scope of primakit-learn? Will the cost of maintaining a new
   feature be worth its benefits?
 
-- Is the code consistent with the API of scikit-learn? Are public
+- Is the code consistent with the API of primakit-learn? Are public
   functions/classes/parameters well named and intuitively designed?
 
 - Are all public functions/classes and their parameters, return types, and
-  stored attributes named according to scikit-learn conventions and documented clearly?
+  stored attributes named according to primakit-learn conventions and documented clearly?
 
 - Is any new functionality described in the user-guide and illustrated with examples?
 
@@ -1424,7 +1424,7 @@ make this task easier and faster (in no particular order).
   is doing. It may also help to stop a minute and think *how would I do this
   myself if I had to?*
 - The trickiest thing is often to identify which portions of the code are
-  relevant, and which are not. In scikit-learn **a lot** of input checking
+  relevant, and which are not. In primakit-learn **a lot** of input checking
   is performed, especially at the beginning of the :term:`fit` methods.
   Sometimes, only a very small portion of the code is doing the actual job.
   For example looking at the ``fit()`` method of

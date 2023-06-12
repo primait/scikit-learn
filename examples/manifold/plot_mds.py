@@ -18,9 +18,9 @@ import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.collections import LineCollection
 
-from sklearn import manifold
-from sklearn.metrics import euclidean_distances
-from sklearn.decomposition import PCA
+from pklearn import manifold
+from pklearn.metrics import euclidean_distances
+from pklearn.decomposition import PCA
 
 EPSILON = np.finfo(np.float32).eps
 n_samples = 20

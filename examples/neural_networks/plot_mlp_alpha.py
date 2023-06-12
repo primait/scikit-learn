@@ -23,11 +23,11 @@ decision boundary.
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.colors import ListedColormap
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.datasets import make_moons, make_circles, make_classification
-from sklearn.neural_network import MLPClassifier
-from sklearn.pipeline import make_pipeline
+from pklearn.model_selection import train_test_split
+from pklearn.preprocessing import StandardScaler
+from pklearn.datasets import make_moons, make_circles, make_classification
+from pklearn.neural_network import MLPClassifier
+from pklearn.pipeline import make_pipeline
 
 h = 0.02  # step size in the mesh
 

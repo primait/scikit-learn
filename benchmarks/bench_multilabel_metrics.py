@@ -13,14 +13,14 @@ import matplotlib.pyplot as plt
 import scipy.sparse as sp
 import numpy as np
 
-from sklearn.datasets import make_multilabel_classification
-from sklearn.metrics import (
+from pklearn.datasets import make_multilabel_classification
+from pklearn.metrics import (
     f1_score,
     accuracy_score,
     hamming_loss,
     jaccard_similarity_score,
 )
-from sklearn.utils._testing import ignore_warnings
+from pklearn.utils._testing import ignore_warnings
 
 
 METRICS = {
@@ -131,7 +131,7 @@ def _plot(
     Plot the results by metric, format and some other variable given by
     x_label
     """
-    fig = plt.figure("scikit-learn multilabel metrics benchmarks")
+    fig = plt.figure("primakit-learn multilabel metrics benchmarks")
     plt.title(title)
     ax = fig.add_subplot(111)
     for i, metric in enumerate(metrics):

@@ -3,7 +3,7 @@
 Out-of-core classification of text documents
 ======================================================
 
-This is an example showing how scikit-learn can be used for classification
+This is an example showing how primakit-learn can be used for classification
 using an out-of-core approach: learning from data that doesn't fit into main
 memory. We make use of an online classifier, i.e., one that supports the
 partial_fit method, that will be fed with batches of examples. To guarantee
@@ -32,12 +32,12 @@ from matplotlib import rcParams
 
 from html.parser import HTMLParser
 from urllib.request import urlretrieve
-from sklearn.datasets import get_data_home
-from sklearn.feature_extraction.text import HashingVectorizer
-from sklearn.linear_model import SGDClassifier
-from sklearn.linear_model import PassiveAggressiveClassifier
-from sklearn.linear_model import Perceptron
-from sklearn.naive_bayes import MultinomialNB
+from pklearn.datasets import get_data_home
+from pklearn.feature_extraction.text import HashingVectorizer
+from pklearn.linear_model import SGDClassifier
+from pklearn.linear_model import PassiveAggressiveClassifier
+from pklearn.linear_model import Perceptron
+from pklearn.naive_bayes import MultinomialNB
 
 
 def _not_in_sphinx():

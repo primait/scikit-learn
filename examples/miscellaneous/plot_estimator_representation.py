@@ -7,11 +7,11 @@ This example illustrates different ways estimators and pipelines can be
 displayed.
 """
 
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.impute import SimpleImputer
-from sklearn.compose import make_column_transformer
-from sklearn.linear_model import LogisticRegression
+from pklearn.pipeline import make_pipeline
+from pklearn.preprocessing import OneHotEncoder, StandardScaler
+from pklearn.impute import SimpleImputer
+from pklearn.compose import make_column_transformer
+from pklearn.linear_model import LogisticRegression
 
 
 # %%

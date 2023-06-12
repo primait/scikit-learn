@@ -20,10 +20,10 @@ identical to training the SVC on 100% of the data.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn.svm import SVC
-from sklearn.semi_supervised import LabelSpreading
-from sklearn.semi_supervised import SelfTrainingClassifier
+from pklearn import datasets
+from pklearn.svm import SVC
+from pklearn.semi_supervised import LabelSpreading
+from pklearn.semi_supervised import SelfTrainingClassifier
 
 
 iris = datasets.load_iris()
