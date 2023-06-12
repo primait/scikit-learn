@@ -233,7 +233,7 @@ def test_bad_reachability():
 def test_nowarn_if_metric_bool_data_bool():
     # make sure no warning is raised if metric and data are both boolean
     # non-regression test for
-    # https://github.com/primakit-learn/primakit-learn/issues/18996
+    # https://github.com/scikit-learn/scikit-learn/issues/18996
 
     pairwise_metric = "rogerstanimoto"
     X = np.random.randint(2, size=(5, 2), dtype=bool)
@@ -248,7 +248,7 @@ def test_warn_if_metric_bool_data_no_bool():
     # make sure a *single* conversion warning is raised if metric is boolean
     # but data isn't
     # non-regression test for
-    # https://github.com/primakit-learn/primakit-learn/issues/18996
+    # https://github.com/scikit-learn/scikit-learn/issues/18996
 
     pairwise_metric = "rogerstanimoto"
     X = np.random.randint(2, size=(5, 2), dtype=np.int32)

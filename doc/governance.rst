@@ -121,7 +121,7 @@ Decision Making Process
 Decisions about the future of the project are made through discussion with all
 members of the community. All non-sensitive project management discussion takes
 place on the project contributors' `mailing list <mailto:primakit-learn@python.org>`_
-and the `issue tracker <https://github.com/primakit-learn/primakit-learn/issues>`_.
+and the `issue tracker <https://github.com/scikit-learn/scikit-learn/issues>`_.
 Occasionally, sensitive discussion occurs on a private list.
 
 Scikit-learn uses a "consensus seeking" process for making decisions. The group

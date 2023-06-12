@@ -47,12 +47,12 @@ feature, code or documentation improvement).
 .. _git_repo:
 
 #. Use `Git <https://git-scm.com/>`_ to check out the latest source from the
-   `primakit-learn repository <https://github.com/primakit-learn/primakit-learn>`_ on
+   `primakit-learn repository <https://github.com/scikit-learn/scikit-learn>`_ on
    Github.:
 
    .. prompt:: bash $
 
-     git clone git://github.com/primakit-learn/primakit-learn.git  # add --depth 1 if your connection is slow
+     git clone git://github.com/scikit-learn/scikit-learn.git  # add --depth 1 if your connection is slow
      cd primakit-learn
 
    If you plan on submitting a pull-request, you should clone from your fork

@@ -348,7 +348,7 @@ def test_recursion_decision_tree_vs_forest_and_gbdt(seed):
     except AssertionError:
         # For some reason the trees aren't exactly equal on 32bits, so the PDs
         # cannot be equal either. See
-        # https://github.com/primakit-learn/primakit-learn/issues/8853
+        # https://github.com/scikit-learn/scikit-learn/issues/8853
         assert _IS_32BIT, "this should only fail on 32 bit platforms"
         return
 

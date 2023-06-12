@@ -20,7 +20,7 @@ shortest possible code to reproduce it.
 
 The first step before submitting a bug report to primakit-learn is to read the
 `Issue template
-<https://github.com/primakit-learn/primakit-learn/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml>`_.
+<https://github.com/scikit-learn/scikit-learn/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml>`_.
 It is already quite informative about the information you will be asked to
 provide.
 
@@ -32,7 +32,7 @@ Good practices
 
 In this section we will focus on the **Steps/Code to Reproduce** section of the
 `Issue template
-<https://github.com/primakit-learn/primakit-learn/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml>`_.
+<https://github.com/scikit-learn/scikit-learn/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml>`_.
 We will start with a snippet of code that already provides a failing example but
 that has room for readability improvement. We then craft a MCVE from it.
 
@@ -82,7 +82,7 @@ Better make sure that all the necessary details to reproduce the problem are
 illustrated in the Python code snippet to avoid any ambiguity. Besides, by this
 point you already provided a concise description in the **Describe the bug**
 section of the `Issue template
-<https://github.com/primakit-learn/primakit-learn/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml>`_.
+<https://github.com/scikit-learn/scikit-learn/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml>`_.
 
 The following code, while **still not minimal**, is already **much better**
 because it can be copy-pasted in a Python terminal to reproduce the problem in
@@ -248,7 +248,7 @@ report. Remember other reviewers are going to copy-paste your code and having a
 single cell will make their task easier.
 
 In the section named **Actual results** of the `Issue template
-<https://github.com/primakit-learn/primakit-learn/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml>`_
+<https://github.com/scikit-learn/scikit-learn/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml>`_
 you are asked to provide the error message including the full traceback of the
 exception. In this case, use the `python-traceback` qualifier. For example::
 

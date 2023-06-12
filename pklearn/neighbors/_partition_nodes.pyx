@@ -14,8 +14,8 @@
 #
 # See for reference:
 #  - https://en.cppreference.com/w/cpp/algorithm/nth_element.
-#  - https://github.com/primakit-learn/primakit-learn/pull/11103
-#  - https://github.com/primakit-learn/primakit-learn/pull/19473
+#  - https://github.com/scikit-learn/scikit-learn/pull/11103
+#  - https://github.com/scikit-learn/scikit-learn/pull/19473
 
 cdef extern from *:
     """

@@ -551,7 +551,7 @@ def test_randomized_svd_sign_flip():
 def test_randomized_svd_sign_flip_with_transpose():
     # Check if the randomized_svd sign flipping is always done based on u
     # irrespective of transpose.
-    # See https://github.com/primakit-learn/primakit-learn/issues/5608
+    # See https://github.com/scikit-learn/scikit-learn/issues/5608
     # for more details.
     def max_loading_is_positive(u, v):
         """

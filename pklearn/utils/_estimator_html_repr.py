@@ -357,7 +357,7 @@ _STYLE = """
      but bootstrap.min.css set `[hidden] { display: none !important; }`
      so we also need the `!important` here to be able to override the
      default hidden behavior on the sphinx rendered primakit-learn.org.
-     See: https://github.com/primakit-learn/primakit-learn/issues/21755 */
+     See: https://github.com/scikit-learn/scikit-learn/issues/21755 */
   display: inline-block !important;
   position: relative;
 }

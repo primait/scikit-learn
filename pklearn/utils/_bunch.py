@@ -42,7 +42,7 @@ class Bunch(dict):
         # loading these pickles primakit-learn 0.17: reading bunch.key
         # uses __dict__ but assigning to bunch.key use __setattr__ and
         # only changes bunch['key']. More details can be found at:
-        # https://github.com/primakit-learn/primakit-learn/issues/6196.
+        # https://github.com/scikit-learn/scikit-learn/issues/6196.
         # Overriding __setstate__ to be a noop has the effect of
         # ignoring the pickled __dict__
         pass

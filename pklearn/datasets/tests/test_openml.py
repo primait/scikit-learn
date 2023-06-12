@@ -188,7 +188,7 @@ def _monkey_patch_webbased_functions(context, data_id, gzip_response):
 # Test the behaviour of `fetch_openml` depending of the input parameters.
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.parametrize(
     "data_id, dataset_params, n_samples, n_features, n_targets",
@@ -260,7 +260,7 @@ def test_fetch_openml_as_frame_true(
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.parametrize(
     "data_id, dataset_params, n_samples, n_features, n_targets",
@@ -325,7 +325,7 @@ def test_fetch_openml_as_frame_false(
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.parametrize("data_id", [61, 1119, 40945])
 def test_fetch_openml_consistency_parser(monkeypatch, data_id):
@@ -392,7 +392,7 @@ def test_fetch_openml_consistency_parser(monkeypatch, data_id):
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.parametrize("parser", ["liac-arff", "pandas"])
 def test_fetch_openml_equivalence_array_dataframe(monkeypatch, parser):
@@ -422,7 +422,7 @@ def test_fetch_openml_equivalence_array_dataframe(monkeypatch, parser):
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.parametrize("parser", ["liac-arff", "pandas"])
 def test_fetch_openml_iris_pandas(monkeypatch, parser):
@@ -473,7 +473,7 @@ def test_fetch_openml_iris_pandas(monkeypatch, parser):
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.parametrize("parser", ["liac-arff", "pandas"])
 @pytest.mark.parametrize("target_column", ["petalwidth", ["petalwidth", "petallength"]])
@@ -509,7 +509,7 @@ def test_fetch_openml_forcing_targets(monkeypatch, parser, target_column):
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.parametrize("data_id", [61, 2, 561, 40589, 1119])
 @pytest.mark.parametrize("parser", ["liac-arff", "pandas"])
@@ -541,7 +541,7 @@ def test_fetch_openml_equivalence_frame_return_X_y(monkeypatch, data_id, parser)
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.parametrize("data_id", [61, 561, 40589, 1119])
 @pytest.mark.parametrize("parser", ["liac-arff", "pandas"])
@@ -570,7 +570,7 @@ def test_fetch_openml_equivalence_array_return_X_y(monkeypatch, data_id, parser)
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 def test_fetch_openml_difference_parsers(monkeypatch):
     """Check the difference between liac-arff and pandas parser."""
@@ -896,7 +896,7 @@ def datasets_missing_values():
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.parametrize(
     "data_id, parser, expected_n_categories, expected_n_floats, expected_n_ints",
@@ -1067,7 +1067,7 @@ def test_fetch_openml_sparse_arff_error(monkeypatch, params, err_msg):
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.filterwarnings("ignore:Version 1 of dataset Australian is inactive")
 @pytest.mark.parametrize(
@@ -1088,7 +1088,7 @@ def test_fetch_openml_auto_mode(monkeypatch, data_id, data_type):
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 def test_convert_arff_data_dataframe_warning_low_memory_pandas(monkeypatch):
     """Check that we raise a warning regarding the working memory when using
@@ -1466,7 +1466,7 @@ def test_fetch_openml_cache(monkeypatch, gzip_response, tmpdir):
 
 
 # Known failure of PyPy for OpenML. See the following issue:
-# https://github.com/primakit-learn/primakit-learn/issues/18906
+# https://github.com/scikit-learn/scikit-learn/issues/18906
 @fails_if_pypy
 @pytest.mark.parametrize(
     "as_frame, parser",
@@ -1553,7 +1553,7 @@ def test_open_openml_url_retry_on_network_error(monkeypatch):
 def test_fetch_openml_with_ignored_feature(monkeypatch, gzip_response, parser):
     """Check that we can load the "zoo" dataset.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/14340
+    https://github.com/scikit-learn/scikit-learn/issues/14340
     """
     if parser == "pandas":
         pytest.importorskip("pandas")
@@ -1574,7 +1574,7 @@ def test_fetch_openml_strip_quotes(monkeypatch):
     """Check that we strip the single quotes when used as a string delimiter.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/23381
+    https://github.com/scikit-learn/scikit-learn/issues/23381
     """
     pd = pytest.importorskip("pandas")
     data_id = 40966
@@ -1603,7 +1603,7 @@ def test_fetch_openml_leading_whitespace(monkeypatch):
     """Check that we can strip leading whitespace in pandas parser.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/25311
+    https://github.com/scikit-learn/scikit-learn/issues/25311
     """
     pd = pytest.importorskip("pandas")
     data_id = 1590
@@ -1621,7 +1621,7 @@ def test_fetch_openml_quotechar_escapechar(monkeypatch):
     """Check that we can handle escapechar and single/double quotechar.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/25478
+    https://github.com/scikit-learn/scikit-learn/issues/25478
     """
     pd = pytest.importorskip("pandas")
     data_id = 42074

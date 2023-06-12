@@ -694,7 +694,7 @@ def test_memmap_on_contiguous_data(dtype):
     # now on memory mapped data
     # aligned=True so avoid https://github.com/joblib/joblib/issues/563
     # without alignment, this can produce segmentation faults, see
-    # https://github.com/primakit-learn/primakit-learn/pull/21654
+    # https://github.com/scikit-learn/scikit-learn/pull/21654
     x_mmap = create_memmap_backed_data(x, mmap_mode="r+", aligned=True)
     sum_mmap = _test_sum(x_mmap)
     assert sum_mmap == pytest.approx(sum_origin, rel=1e-11)

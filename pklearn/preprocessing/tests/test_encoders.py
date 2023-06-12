@@ -319,7 +319,7 @@ def test_one_hot_encoder_inverse_transform_raise_error_with_unknown(
     """Check that `inverse_transform` raise an error with unknown samples, no
     dropped feature, and `handle_unknow="error`.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/14934
+    https://github.com/scikit-learn/scikit-learn/issues/14934
     """
     enc = OneHotEncoder(sparse_output=sparse_).fit(X)
     msg = (
@@ -1352,9 +1352,9 @@ def test_one_hot_encoder_sparse_deprecated():
 def test_encoders_string_categories(input_dtype, category_dtype, array_type):
     """Check that encoding work with object, unicode, and byte string dtypes.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/15616
-    https://github.com/primakit-learn/primakit-learn/issues/15726
-    https://github.com/primakit-learn/primakit-learn/issues/19677
+    https://github.com/scikit-learn/scikit-learn/issues/15616
+    https://github.com/scikit-learn/scikit-learn/issues/15726
+    https://github.com/scikit-learn/scikit-learn/issues/19677
     """
 
     X = np.array([["b"], ["a"]], dtype=input_dtype)
@@ -1719,7 +1719,7 @@ def test_ordinal_encoder_handle_missing_and_unknown(X, expected_X_trans, X_test)
 def test_ordinal_encoder_sparse():
     """Check that we raise proper error with sparse input in OrdinalEncoder.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/19878
+    https://github.com/scikit-learn/scikit-learn/issues/19878
     """
     X = np.array([[3, 2, 1], [0, 1, 1]])
     X_sparse = sparse.csr_matrix(X)
@@ -1742,7 +1742,7 @@ def test_ordinal_encoder_fit_with_unseen_category():
     """Check OrdinalEncoder.fit works with unseen category when
     `handle_unknown="use_encoded_value"`.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/19872
+    https://github.com/scikit-learn/scikit-learn/issues/19872
     """
     X = np.array([0, 0, 1, 0, 2, 5])[:, np.newaxis]
     oe = OrdinalEncoder(
@@ -1774,7 +1774,7 @@ def test_ordinal_encoder_fit_with_unseen_category():
 def test_ordinal_encoder_handle_unknown_string_dtypes(X_train, X_test):
     """Checks that `OrdinalEncoder` transforms string dtypes.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/19872
+    https://github.com/scikit-learn/scikit-learn/issues/19872
     """
     enc = OrdinalEncoder(handle_unknown="use_encoded_value", unknown_value=-9)
     enc.fit(X_train)
@@ -1787,7 +1787,7 @@ def test_ordinal_encoder_python_integer():
     """Check that `OrdinalEncoder` accepts Python integers that are potentially
     larger than 64 bits.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/20721
+    https://github.com/scikit-learn/scikit-learn/issues/20721
     """
     X = np.array(
         [

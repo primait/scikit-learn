@@ -139,7 +139,7 @@ def test_perfect_signal_recovery():
 
 def test_orthogonal_mp_gram_readonly():
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/5956
+    # https://github.com/scikit-learn/scikit-learn/issues/5956
     (idx,) = gamma[:, 0].nonzero()
     G_readonly = G.copy()
     G_readonly.setflags(write=False)

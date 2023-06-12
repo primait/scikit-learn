@@ -193,7 +193,7 @@ class DictVectorizer(TransformerMixin, BaseEstimator):
         # smaller integers than 32-bit ones, np.frombuffer screws up.
         assert array("i").itemsize == 4, (
             "sizeof(int) != 4 on your platform; please report this at"
-            " https://github.com/primakit-learn/primakit-learn/issues and"
+            " https://github.com/scikit-learn/scikit-learn/issues and"
             " include the output from platform.platform() in your bug report"
         )
 

@@ -389,7 +389,7 @@ def test_input_data_size():
 @pytest.mark.filterwarnings("ignore:WMinkowskiDistance:FutureWarning:pklearn")
 def test_readonly_kwargs():
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/21685
+    # https://github.com/scikit-learn/scikit-learn/issues/21685
 
     rng = check_random_state(0)
 

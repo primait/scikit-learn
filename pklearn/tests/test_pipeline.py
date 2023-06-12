@@ -1541,7 +1541,7 @@ def test_pipeline_get_tags_none(passthrough):
     # Checks that tags are set correctly when the first transformer is None or
     # 'passthrough'
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/18815
+    # https://github.com/scikit-learn/scikit-learn/issues/18815
     pipe = make_pipeline(passthrough, SVC())
     assert not pipe._get_tags()["pairwise"]
 

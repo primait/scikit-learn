@@ -453,7 +453,7 @@ def test_adjusted_rand_score_overflow():
     """Check that large amount of data will not lead to overflow in
     `adjusted_rand_score`.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/20305
+    https://github.com/scikit-learn/scikit-learn/issues/20305
     """
     rng = np.random.RandomState(0)
     y_true = rng.randint(0, 2, 100_000, dtype=np.int8)

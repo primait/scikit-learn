@@ -40,7 +40,7 @@ cdef inline unsigned char in_bitset_2d_memoryview(const BITSET_INNER_DTYPE_C [:,
                                                   unsigned int row) nogil:
 
     # Same as above but works on 2d memory views to avoid the creation of 1d
-    # memory views. See https://github.com/primakit-learn/primakit-learn/issues/17299
+    # memory views. See https://github.com/scikit-learn/scikit-learn/issues/17299
     return (bitset[row, val // 32] >> (val % 32)) & 1
 
 

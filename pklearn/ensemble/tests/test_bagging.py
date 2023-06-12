@@ -791,7 +791,7 @@ def test_max_samples_consistency():
 
 def test_set_oob_score_label_encoding():
     # Make sure the oob_score doesn't change when the labels change
-    # See: https://github.com/primakit-learn/primakit-learn/issues/8933
+    # See: https://github.com/scikit-learn/scikit-learn/issues/8933
     random_state = 5
     X = [[-1], [0], [1]] * 5
     Y1 = ["A", "B", "C"] * 5
@@ -907,7 +907,7 @@ def test_bagging_small_max_features():
 def test_bagging_get_estimators_indices():
     # Check that Bagging estimator can generate sample indices properly
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/16436
+    # https://github.com/scikit-learn/scikit-learn/issues/16436
 
     rng = np.random.RandomState(0)
     X = rng.randn(13, 4)

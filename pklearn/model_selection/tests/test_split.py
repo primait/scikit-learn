@@ -528,7 +528,7 @@ def test_shuffle_stratifiedkfold():
 
     # Ensure that we shuffle each class's samples with different
     # random_state in StratifiedKFold
-    # See https://github.com/primakit-learn/primakit-learn/pull/13124
+    # See https://github.com/scikit-learn/scikit-learn/pull/13124
     X = np.arange(10)
     y = [0] * 5 + [1] * 5
     kf1 = StratifiedKFold(5, shuffle=True, random_state=0)
@@ -846,7 +846,7 @@ def test_stratified_shuffle_split_even():
 
 
 def test_stratified_shuffle_split_overlap_train_test_bug():
-    # See https://github.com/primakit-learn/primakit-learn/issues/6121 for
+    # See https://github.com/scikit-learn/scikit-learn/issues/6121 for
     # the original bug report
     y = [0, 1, 2, 3] * 3 + [4, 5] * 5
     X = np.ones_like(y)
@@ -1309,7 +1309,7 @@ def test_train_test_split_32bit_overflow():
     """Check for integer overflow on 32-bit platforms.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/20774
+    https://github.com/scikit-learn/scikit-learn/issues/20774
     """
 
     # A number 'n' big enough for expression 'n * n * train_size' to cause

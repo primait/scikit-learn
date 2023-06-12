@@ -106,7 +106,7 @@ class BaseDistancesReductionDispatcher:
                 X.nnz > 0
                 and
                 # TODO: support CSR matrices with int64 indices and indptr
-                # See: https://github.com/primakit-learn/primakit-learn/issues/23653
+                # See: https://github.com/scikit-learn/scikit-learn/issues/23653
                 X.indices.dtype == X.indptr.dtype == np.int32
             )
 
@@ -127,7 +127,7 @@ class BaseDistancesReductionDispatcher:
         #
         # calling efficient sparse-dense routines for matrix and vectors multiplication
         # implemented in SciPy we do not use yet here.
-        # See: https://github.com/primakit-learn/primakit-learn/pull/23585#issuecomment-1247996669  # noqa
+        # See: https://github.com/scikit-learn/scikit-learn/pull/23585#issuecomment-1247996669  # noqa
         # TODO: implement specialisation for (sq)euclidean on fused sparse-dense
         # using sparse-dense routines for matrix-vector multiplications.
         # Currently, only dense-dense and sparse-sparse are optimized for

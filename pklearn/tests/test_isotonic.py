@@ -206,7 +206,7 @@ def test_isotonic_regression_ties_secondary_():
 def test_isotonic_regression_with_ties_in_differently_sized_groups():
     """
     Non-regression test to handle issue 9432:
-    https://github.com/primakit-learn/primakit-learn/issues/9432
+    https://github.com/scikit-learn/scikit-learn/issues/9432
 
     Compare against output in R:
     > library("isotone")
@@ -397,7 +397,7 @@ def test_isotonic_duplicate_min_entry():
 
 def test_isotonic_ymin_ymax():
     # Test from @NelleV's issue:
-    # https://github.com/primakit-learn/primakit-learn/issues/6921
+    # https://github.com/scikit-learn/scikit-learn/issues/6921
     x = np.array(
         [
             1.263,
@@ -441,7 +441,7 @@ def test_isotonic_ymin_ymax():
 
 def test_isotonic_zero_weight_loop():
     # Test from @ogrisel's issue:
-    # https://github.com/primakit-learn/primakit-learn/issues/4297
+    # https://github.com/scikit-learn/scikit-learn/issues/4297
 
     # Get deterministic RNG with seed
     rng = np.random.RandomState(42)
@@ -464,7 +464,7 @@ def test_isotonic_zero_weight_loop():
 def test_fast_predict():
     # test that the faster prediction change doesn't
     # affect out-of-sample predictions:
-    # https://github.com/primakit-learn/primakit-learn/pull/6206
+    # https://github.com/scikit-learn/scikit-learn/pull/6206
     rng = np.random.RandomState(123)
     n_samples = 10**3
     # X values over the -10,10 range
@@ -499,7 +499,7 @@ def test_fast_predict():
 
 
 def test_isotonic_copy_before_fit():
-    # https://github.com/primakit-learn/primakit-learn/issues/6628
+    # https://github.com/scikit-learn/scikit-learn/issues/6628
     ir = IsotonicRegression()
     copy.copy(ir)
 
@@ -575,7 +575,7 @@ def test_isotonic_make_unique_tolerance():
 
 def test_isotonic_non_regression_inf_slope():
     # Non-regression test to ensure that inf values are not returned
-    # see: https://github.com/primakit-learn/primakit-learn/issues/10903
+    # see: https://github.com/scikit-learn/scikit-learn/issues/10903
     X = np.array([0.0, 4.1e-320, 4.4e-314, 1.0])
     y = np.array([0.42, 0.42, 0.44, 0.44])
     ireg = IsotonicRegression().fit(X, y)
@@ -654,7 +654,7 @@ def test_isotonic_regression_sample_weight_not_overwritten():
     """Check that calling fitting function of isotonic regression will not
     overwrite `sample_weight`.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/20508
+    https://github.com/scikit-learn/scikit-learn/issues/20508
     """
     X, y = make_regression(n_samples=10, n_features=1, random_state=41)
     sample_weight_original = np.ones_like(y)
@@ -690,7 +690,7 @@ def test_isotonic_regression_output_predict():
     when we set `transform_output` to `pandas`.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/25499
+    https://github.com/scikit-learn/scikit-learn/issues/25499
     """
     pd = pytest.importorskip("pandas")
     X, y = make_regression(n_samples=10, n_features=1, random_state=42)

@@ -223,7 +223,7 @@ def test_fetch_lfw_people_internal_cropping():
     """Check that we properly crop the images.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/24942
+    https://github.com/scikit-learn/scikit-learn/issues/24942
     """
     # If cropping was not done properly and we don't resize the images, the images would
     # have their original size (250x250) and the image would not fit in the NumPy array

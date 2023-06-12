@@ -385,7 +385,7 @@ def test_dbscan_core_samples_toy(algorithm):
 
 
 def test_dbscan_precomputed_metric_with_degenerate_input_arrays():
-    # see https://github.com/primakit-learn/primakit-learn/issues/4641 for
+    # see https://github.com/scikit-learn/scikit-learn/issues/4641 for
     # more details
     X = np.eye(10)
     labels = DBSCAN(eps=0.5, metric="precomputed").fit(X).labels_

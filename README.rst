@@ -2,20 +2,20 @@
 
 |Azure|_ |CirrusCI|_ |Codecov|_ |CircleCI|_ |Nightly wheels|_ |Black|_ |PythonVersion|_ |PyPi|_ |DOI|_ |Benchmark|_
 
-.. |Azure| image:: https://dev.azure.com/primakit-learn/primakit-learn/_apis/build/status/primakit-learn.primakit-learn?branchName=main
-.. _Azure: https://dev.azure.com/primakit-learn/primakit-learn/_build/latest?definitionId=1&branchName=main
+.. |Azure| image:: https://dev.azure.com/scikit-learn/scikit-learn/_apis/build/status/primakit-learn.primakit-learn?branchName=main
+.. _Azure: https://dev.azure.com/scikit-learn/scikit-learn/_build/latest?definitionId=1&branchName=main
 
-.. |CircleCI| image:: https://circleci.com/gh/primakit-learn/primakit-learn/tree/main.svg?style=shield&circle-token=:circle-token
-.. _CircleCI: https://circleci.com/gh/primakit-learn/primakit-learn
+.. |CircleCI| image:: https://circleci.com/gh/scikit-learn/scikit-learn/tree/main.svg?style=shield&circle-token=:circle-token
+.. _CircleCI: https://circleci.com/gh/scikit-learn/scikit-learn
 
-.. |CirrusCI| image:: https://img.shields.io/cirrus/github/primakit-learn/primakit-learn/main?label=Cirrus%20CI
-.. _CirrusCI: https://cirrus-ci.com/github/primakit-learn/primakit-learn/main
+.. |CirrusCI| image:: https://img.shields.io/cirrus/github/scikit-learn/scikit-learn/main?label=Cirrus%20CI
+.. _CirrusCI: https://cirrus-ci.com/github/scikit-learn/scikit-learn/main
 
-.. |Codecov| image:: https://codecov.io/gh/primakit-learn/primakit-learn/branch/main/graph/badge.svg?token=Pk8G9gg3y9
-.. _Codecov: https://codecov.io/gh/primakit-learn/primakit-learn
+.. |Codecov| image:: https://codecov.io/gh/scikit-learn/scikit-learn/branch/main/graph/badge.svg?token=Pk8G9gg3y9
+.. _Codecov: https://codecov.io/gh/scikit-learn/scikit-learn
 
-.. |Nightly wheels| image:: https://github.com/primakit-learn/primakit-learn/workflows/Wheel%20builder/badge.svg?event=schedule
-.. _`Nightly wheels`: https://github.com/primakit-learn/primakit-learn/actions?query=workflow%3A%22Wheel+builder%22+event%3Aschedule
+.. |Nightly wheels| image:: https://github.com/scikit-learn/scikit-learn/workflows/Wheel%20builder/badge.svg?event=schedule
+.. _`Nightly wheels`: https://github.com/scikit-learn/scikit-learn/actions?query=workflow%3A%22Wheel+builder%22+event%3Aschedule
 
 .. |PythonVersion| image:: https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10-blue
 .. _PythonVersion: https://pypi.org/project/primakit-learn/
@@ -26,8 +26,8 @@
 .. |Black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
 .. _Black: https://github.com/psf/black
 
-.. |DOI| image:: https://zenodo.org/badge/21369/primakit-learn/primakit-learn.svg
-.. _DOI: https://zenodo.org/badge/latestdoi/21369/primakit-learn/primakit-learn
+.. |DOI| image:: https://zenodo.org/badge/21369/scikit-learn/scikit-learn.svg
+.. _DOI: https://zenodo.org/badge/latestdoi/21369/scikit-learn/scikit-learn
 
 .. |Benchmark| image:: https://img.shields.io/badge/Benchmarked%20by-asv-blue
 .. _`Benchmark`: https://primakit-learn.org/primakit-learn-benchmarks/
@@ -44,7 +44,7 @@
 .. |PytestMinVersion| replace:: 5.3.1
 .. |PlotlyMinVersion| replace:: 5.10.0
 
-.. image:: https://raw.githubusercontent.com/primakit-learn/primakit-learn/main/doc/logos/primakit-learn-logo.png
+.. image:: https://raw.githubusercontent.com/scikit-learn/scikit-learn/main/doc/logos/primakit-learn-logo.png
   :target: https://primakit-learn.org/
 
 **primakit-learn** is a Python module for machine learning built on top of
@@ -119,16 +119,16 @@ more. We've included some basic information in this README.
 Important links
 ~~~~~~~~~~~~~~~
 
-- Official source code repo: https://github.com/primakit-learn/primakit-learn
+- Official source code repo: https://github.com/scikit-learn/scikit-learn
 - Download releases: https://pypi.org/project/primakit-learn/
-- Issue tracker: https://github.com/primakit-learn/primakit-learn/issues
+- Issue tracker: https://github.com/scikit-learn/scikit-learn/issues
 
 Source code
 ~~~~~~~~~~~
 
 You can check the latest sources with the command::
 
-    git clone https://github.com/primakit-learn/primakit-learn.git
+    git clone https://github.com/scikit-learn/scikit-learn.git
 
 Contributing
 ~~~~~~~~~~~~
@@ -184,14 +184,14 @@ Communication
 ~~~~~~~~~~~~~
 
 - Mailing list: https://mail.python.org/mailman/listinfo/primakit-learn
-- Gitter: https://gitter.im/primakit-learn/primakit-learn
-- Logos & Branding: https://github.com/primakit-learn/primakit-learn/tree/main/doc/logos
+- Gitter: https://gitter.im/scikit-learn/scikit-learn
+- Logos & Branding: https://github.com/scikit-learn/scikit-learn/tree/main/doc/logos
 - Blog: https://blog.primakit-learn.org
 - Calendar: https://blog.primakit-learn.org/calendar/
 - Twitter: https://twitter.com/primakit_learn
 - Twitter (commits): https://twitter.com/pklearn_commits
 - Stack Overflow: https://stackoverflow.com/questions/tagged/primakit-learn
-- Github Discussions: https://github.com/primakit-learn/primakit-learn/discussions
+- Github Discussions: https://github.com/scikit-learn/scikit-learn/discussions
 - Website: https://primakit-learn.org
 - LinkedIn: https://www.linkedin.com/company/primakit-learn
 - YouTube: https://www.youtube.com/channel/UCJosFjYm0ZYVUARxuOZqnnw/playlists

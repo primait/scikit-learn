@@ -1992,7 +1992,7 @@ def test_searchcv_raise_warning_with_non_finite_score(
     SearchCV, specialized_params, return_train_score
 ):
     # Non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/10529
+    # https://github.com/scikit-learn/scikit-learn/issues/10529
     # Check that we raise a UserWarning when a non-finite score is
     # computed in the SearchCV
     X, y = make_classification(n_classes=2, random_state=0)
@@ -2286,7 +2286,7 @@ def test_search_cv_pairwise_property_equivalence_of_precomputed():
 def test_scalar_fit_param(SearchCV, param_search):
     # unofficially sanctioned tolerance for scalar values in fit_params
     # non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/15805
+    # https://github.com/scikit-learn/scikit-learn/issues/15805
     class TestEstimator(ClassifierMixin, BaseEstimator):
         def __init__(self, a=None):
             self.a = a
@@ -2316,7 +2316,7 @@ def test_scalar_fit_param_compat(SearchCV, param_search):
     # not want to break without an explicit deprecation cycle and API
     # recommendations for implementing early stopping with a user provided
     # validation set. non-regression test for:
-    # https://github.com/primakit-learn/primakit-learn/issues/15805
+    # https://github.com/scikit-learn/scikit-learn/issues/15805
     X_train, X_valid, y_train, y_valid = train_test_split(
         *make_classification(random_state=42), random_state=42
     )

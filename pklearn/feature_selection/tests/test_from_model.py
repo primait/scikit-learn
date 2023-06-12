@@ -588,7 +588,7 @@ def test_select_from_model_pls(PLSEstimator):
     """Check the behaviour of SelectFromModel with PLS estimators.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/12410
+    https://github.com/scikit-learn/scikit-learn/issues/12410
     """
     X, y = make_friedman1(n_samples=50, n_features=10, random_state=0)
     estimator = PLSEstimator(n_components=1)

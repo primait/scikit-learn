@@ -916,7 +916,7 @@ Version 0.8
 
 primakit-learn 0.8 was released on May 2011, one month after the first
 "international" `primakit-learn coding sprint
-<https://github.com/primakit-learn/primakit-learn/wiki/Upcoming-events>`_ and is
+<https://github.com/scikit-learn/scikit-learn/wiki/Upcoming-events>`_ and is
 marked by the inclusion of important modules: :ref:`hierarchical_clustering`,
 :ref:`cross_decomposition`, :ref:`NMF`, initial support for Python 3 and by important
 enhancements and bug fixes.
@@ -1053,7 +1053,7 @@ Changelog
   algorithm for finding barycenter weights. Also added some
   developer documentation for this module, see
   `notes_neighbors
-  <https://github.com/primakit-learn/primakit-learn/wiki/Neighbors-working-notes>`_ for more information [`Fabian Pedregosa`_].
+  <https://github.com/scikit-learn/scikit-learn/wiki/Neighbors-working-notes>`_ for more information [`Fabian Pedregosa`_].
 
 - Documentation improvements: Added :class:`~pca.RandomizedPCA` and
   :class:`~linear_model.LogisticRegression` to the class

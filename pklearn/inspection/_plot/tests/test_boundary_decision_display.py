@@ -343,7 +343,7 @@ def test_dataframe_support(pyplot):
     raise warnings.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/23311
+    https://github.com/scikit-learn/scikit-learn/issues/23311
     """
     pd = pytest.importorskip("pandas")
     df = pd.DataFrame(X, columns=["col_x", "col_y"])

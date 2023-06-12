@@ -117,7 +117,7 @@ def check_openmp_support():
                 - If your compiler supports OpenMP but you still see this
                   message, please submit a bug report at:
 
-                    https://github.com/primakit-learn/primakit-learn/issues
+                    https://github.com/scikit-learn/scikit-learn/issues
 
                 - The build will continue with OpenMP-based parallelism
                   disabled. Note however that some estimators will run in

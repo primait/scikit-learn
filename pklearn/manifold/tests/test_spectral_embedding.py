@@ -233,7 +233,7 @@ def test_spectral_embedding_callable_affinity(X, seed=36):
 
 
 # TODO: Remove when pyamg does replaces sp.rand call with np.random.rand
-# https://github.com/primakit-learn/primakit-learn/issues/15913
+# https://github.com/scikit-learn/scikit-learn/issues/15913
 @pytest.mark.filterwarnings(
     "ignore:scipy.rand is deprecated:DeprecationWarning:pyamg.*"
 )
@@ -287,7 +287,7 @@ def test_spectral_embedding_amg_solver(dtype, seed=36):
 
 # TODO: Remove filterwarnings when pyamg does replaces sp.rand call with
 # np.random.rand:
-# https://github.com/primakit-learn/primakit-learn/issues/15913
+# https://github.com/scikit-learn/scikit-learn/issues/15913
 @pytest.mark.filterwarnings(
     "ignore:scipy.rand is deprecated:DeprecationWarning:pyamg.*"
 )

@@ -76,7 +76,7 @@ def test_sanity_check_pls_regression():
 
     # FIXME: one would expect y_trans == pls.y_scores_ but this is not
     # the case.
-    # xref: https://github.com/primakit-learn/primakit-learn/issues/22420
+    # xref: https://github.com/scikit-learn/scikit-learn/issues/22420
     assert_allclose(X_trans, pls.x_scores_)
 
     expected_x_weights = np.array(
@@ -561,7 +561,7 @@ def test_pls_coef_shape(PLSEstimator):
     """Check the shape of `coef_` attribute.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/12410
+    https://github.com/scikit-learn/scikit-learn/issues/12410
     """
     d = load_linnerud()
     X = d.data

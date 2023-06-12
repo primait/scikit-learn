@@ -503,7 +503,7 @@ def test_32_64_decomposition_shape():
     """Test that the decomposition is similar for 32 and 64 bits data
 
     Non regression test for
-    https://github.com/primakit-learn/primakit-learn/issues/18146
+    https://github.com/scikit-learn/scikit-learn/issues/18146
     """
     X, y = make_blobs(
         n_samples=30, centers=[[0, 0, 0], [1, 1, 1]], random_state=0, cluster_std=0.1

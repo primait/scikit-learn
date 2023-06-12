@@ -36,10 +36,10 @@ You may highlight or reference your work with primakit-learn by using one of the
 
 | | |
 | - | - |
-|  <img src="1280px-primakit-learn-logo.png" height="100px"> | __Logo 1__ <br> File type: PNG <br> File size: 49 KB (1280 x 689 px) <br> File name: [1280px-primakit-learn-logo.png](https://github.com/primakit-learn/primakit-learn/blob/main/doc/logos/1280px-primakit-learn-logo.png) | 
-|  <img src="favicon.ico" height="100px"> | __Logo 2__ <br> File type: ICO <br> File size:  2 KB (32 x 32 px) <br> File name: [favicon.ico](https://github.com/primakit-learn/primakit-learn/blob/main/doc/logos/favicon.ico) |
-|  <img src="primakit-learn-logo-without-subtitle.svg" height="100px"> | __Logo 3__ <br> File type: SVG <br> File size: 5 KB <br> File name: [primakit-learn-logo-without-subtitle.svg](https://github.com/primakit-learn/primakit-learn/blob/main/doc/logos/primakit-learn-logo-without-subtitle.svg) | 
-|  <img src="primakit-learn-logo.svg" height="200px"> | __Logo 4__ <br> File type: SVG <br> File size: 4.59 KB <br> File name: [primakit-learn-logo.svg](https://github.com/primakit-learn/primakit-learn/blob/main/doc/logos/primakit-learn-logo.svg) | 
+|  <img src="1280px-primakit-learn-logo.png" height="100px"> | __Logo 1__ <br> File type: PNG <br> File size: 49 KB (1280 x 689 px) <br> File name: [1280px-primakit-learn-logo.png](https://github.com/scikit-learn/scikit-learn/blob/main/doc/logos/1280px-primakit-learn-logo.png) | 
+|  <img src="favicon.ico" height="100px"> | __Logo 2__ <br> File type: ICO <br> File size:  2 KB (32 x 32 px) <br> File name: [favicon.ico](https://github.com/scikit-learn/scikit-learn/blob/main/doc/logos/favicon.ico) |
+|  <img src="primakit-learn-logo-without-subtitle.svg" height="100px"> | __Logo 3__ <br> File type: SVG <br> File size: 5 KB <br> File name: [primakit-learn-logo-without-subtitle.svg](https://github.com/scikit-learn/scikit-learn/blob/main/doc/logos/primakit-learn-logo-without-subtitle.svg) | 
+|  <img src="primakit-learn-logo.svg" height="200px"> | __Logo 4__ <br> File type: SVG <br> File size: 4.59 KB <br> File name: [primakit-learn-logo.svg](https://github.com/scikit-learn/scikit-learn/blob/main/doc/logos/primakit-learn-logo.svg) | 
 
 <br>
 

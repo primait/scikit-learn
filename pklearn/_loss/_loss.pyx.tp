@@ -188,7 +188,7 @@ WARNING: Do not edit `pklearn/_loss/_loss.pyx` file directly, as it is generated
 #------------------------------------------------------------------------------
 
 # Design:
-# See https://github.com/primakit-learn/primakit-learn/issues/15123 for reasons.
+# See https://github.com/scikit-learn/scikit-learn/issues/15123 for reasons.
 # a) Merge link functions into loss functions for speed and numerical
 #    stability, i.e. use raw_prediction instead of y_pred in signature.
 # b) Pure C functions (nogil) calculate single points (single sample)
@@ -259,7 +259,7 @@ cdef inline void sum_exp_minus_max(
     #   longer p, see https://github.com/cython/cython/issues/1863
     # - i needs to be passed (and stays constant) because otherwise Cython does
     #   not generate optimal code, see
-    #   https://github.com/primakit-learn/primakit-learn/issues/17299
+    #   https://github.com/scikit-learn/scikit-learn/issues/17299
     # - We do not normalize p by calculating p[k] = p[k] / sum_exps.
     #   This helps to save one loop over k.
     cdef:

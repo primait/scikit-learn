@@ -561,7 +561,7 @@ def test_constant_target(kernel):
     """Check that the std. dev. is affected to 1 when normalizing a constant
     feature.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/18318
+    https://github.com/scikit-learn/scikit-learn/issues/18318
     NaN where affected to the target when scaling due to null std. dev. with
     constant target.
     """
@@ -600,7 +600,7 @@ def test_constant_target(kernel):
 def test_gpr_consistency_std_cov_non_invertible_kernel():
     """Check the consistency between the returned std. dev. and the covariance.
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/19936
+    https://github.com/scikit-learn/scikit-learn/issues/19936
     Inconsistencies were observed when the kernel cannot be inverted (or
     numerically stable).
     """
@@ -693,9 +693,9 @@ def test_predict_shapes(normalize_y, n_targets):
     n_targets=1, where the pklearn convention is to squeeze the predictions.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/17394
-    https://github.com/primakit-learn/primakit-learn/issues/18065
-    https://github.com/primakit-learn/primakit-learn/issues/22174
+    https://github.com/scikit-learn/scikit-learn/issues/17394
+    https://github.com/scikit-learn/scikit-learn/issues/18065
+    https://github.com/scikit-learn/scikit-learn/issues/22174
     """
     rng = np.random.RandomState(1234)
 
@@ -733,7 +733,7 @@ def test_sample_y_shapes(normalize_y, n_targets):
     pklearn convention is to squeeze the predictions.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/22175
+    https://github.com/scikit-learn/scikit-learn/issues/22175
     """
     rng = np.random.RandomState(1234)
 
@@ -763,7 +763,7 @@ def test_sample_y_shapes(normalize_y, n_targets):
     # the number of targets and default to 1. This is inconsistent with the shape
     # provided after `fit`. This assert should be made once the following issue
     # is fixed:
-    # https://github.com/primakit-learn/primakit-learn/issues/22430
+    # https://github.com/scikit-learn/scikit-learn/issues/22430
     # y_samples = model.sample_y(X_test, n_samples=n_samples_y_test)
     # assert y_samples.shape == y_test_shape
 
@@ -790,7 +790,7 @@ def test_gpr_predict_input_not_modified():
     GaussianProcessRegressor when setting return_std=True.
 
     Non-regression test for:
-    https://github.com/primakit-learn/primakit-learn/issues/24340
+    https://github.com/scikit-learn/scikit-learn/issues/24340
     """
     gpr = GaussianProcessRegressor(kernel=CustomKernel()).fit(X, y)
 

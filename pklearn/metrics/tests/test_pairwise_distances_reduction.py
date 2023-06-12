@@ -556,7 +556,7 @@ def test_pairwise_distances_reduction_is_usable_for():
     # We prefer not to use those implementations for fused sparse-dense when
     # metric="(sq)euclidean" because it's not yet the most efficient one on
     # all configurations of datasets.
-    # See: https://github.com/primakit-learn/primakit-learn/pull/23585#issuecomment-1247996669  # noqa
+    # See: https://github.com/scikit-learn/scikit-learn/pull/23585#issuecomment-1247996669  # noqa
     # TODO: implement specialisation for (sq)euclidean on fused sparse-dense
     # using sparse-dense routines for matrix-vector multiplications.
     assert not BaseDistancesReductionDispatcher.is_usable_for(
@@ -576,7 +576,7 @@ def test_pairwise_distances_reduction_is_usable_for():
 
     # CSR matrices with int64 indices and indptr (e.g. large nnz, or large n_features)
     # aren't supported as of now.
-    # See: https://github.com/primakit-learn/primakit-learn/issues/23653
+    # See: https://github.com/scikit-learn/scikit-learn/issues/23653
     # TODO: support CSR matrices with int64 indices and indptr
     X_csr_int64 = csr_matrix(X)
     X_csr_int64.indices = X_csr_int64.indices.astype(np.int64)

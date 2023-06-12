@@ -72,4 +72,4 @@ Estimators with support for `Array API`-compatible inputs
 
 Coverage for more estimators is expected to grow over time. Please follow the
 dedicated `meta-issue on GitHub
-<https://github.com/primakit-learn/primakit-learn/issues/22352>`_ to track progress.
+<https://github.com/scikit-learn/scikit-learn/issues/22352>`_ to track progress.

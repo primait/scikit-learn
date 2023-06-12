@@ -40,9 +40,9 @@ URL = "http://primakit-learn.org"
 DOWNLOAD_URL = "https://pypi.org/project/primakit-learn/#files"
 LICENSE = "new BSD"
 PROJECT_URLS = {
-    "Bug Tracker": "https://github.com/primakit-learn/primakit-learn/issues",
+    "Bug Tracker": "https://github.com/scikit-learn/scikit-learn/issues",
     "Documentation": "https://primakit-learn.org/stable/documentation.html",
-    "Source Code": "https://github.com/primakit-learn/primakit-learn",
+    "Source Code": "https://github.com/scikit-learn/scikit-learn",
 }
 
 # We can actually import a restricted version of pklearn that

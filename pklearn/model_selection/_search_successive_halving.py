@@ -114,7 +114,7 @@ class BaseSuccessiveHalving(BaseSearchCV):
             )
 
         # We need to enforce that successive calls to cv.split() yield the same
-        # splits: see https://github.com/primakit-learn/primakit-learn/issues/15149
+        # splits: see https://github.com/scikit-learn/scikit-learn/issues/15149
         if not _yields_constant_splits(self._checked_cv_orig):
             raise ValueError(
                 "The cv parameter must yield consistent folds across "

@@ -440,7 +440,7 @@ cdef class DistanceMetric{{name_suffix}}:
             )
 
         Yet, slicing on memoryview slows down execution as it takes the GIL.
-        See: https://github.com/primakit-learn/primakit-learn/issues/17299
+        See: https://github.com/scikit-learn/scikit-learn/issues/17299
 
         Hence, to avoid slicing the data and indices arrays of the sparse
         matrices containing respectively x1 and x2 (namely x{1,2}_{data,indices})

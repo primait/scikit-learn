@@ -56,7 +56,7 @@ Bug tracker
 
 If you think you've encountered a bug, please report it to the issue tracker:
 
-https://github.com/primakit-learn/primakit-learn/issues
+https://github.com/scikit-learn/scikit-learn/issues
 
 Don't forget to include:
 
@@ -81,7 +81,7 @@ Gitter
 ======
 
 Some developers like to hang out on primakit-learn Gitter room:
-https://gitter.im/primakit-learn/primakit-learn.
+https://gitter.im/scikit-learn/scikit-learn.
 
 
 .. _documentation_resources:

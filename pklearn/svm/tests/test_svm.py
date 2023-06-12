@@ -1184,7 +1184,7 @@ def test_svc_invalid_break_ties_param(SVCClass):
 @pytest.mark.parametrize("SVCClass", [svm.SVC, svm.NuSVC])
 def test_svc_ovr_tie_breaking(SVCClass):
     """Test if predict breaks ties in OVR mode.
-    Related issue: https://github.com/primakit-learn/primakit-learn/issues/8277
+    Related issue: https://github.com/scikit-learn/scikit-learn/issues/8277
     """
     X, y = make_blobs(random_state=0, n_samples=20, n_features=2)
 

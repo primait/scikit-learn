@@ -367,7 +367,7 @@ class CalibratedClassifierCV(ClassifierMixin, MetaEstimatorMixin, BaseEstimator)
                     "sample weights will only be used for the calibration itself. This "
                     "can be caused by a limitation of the current primakit-learn API. "
                     "See the following issue for more details: "
-                    "https://github.com/primakit-learn/primakit-learn/issues/21134. Be "
+                    "https://github.com/scikit-learn/scikit-learn/issues/21134. Be "
                     "warned that the result of the calibration is likely to be "
                     "incorrect."
                 )

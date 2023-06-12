@@ -395,7 +395,7 @@ class _GeneralizedLinearRegressor(RegressorMixin, BaseEstimator):
             D^2 of self.predict(X) w.r.t. y.
         """
         # TODO: Adapt link to User Guide in the docstring, once
-        # https://github.com/primakit-learn/primakit-learn/pull/22118 is merged.
+        # https://github.com/scikit-learn/scikit-learn/pull/22118 is merged.
         #
         # Note, default score defined in RegressorMixin is R^2 score.
         # TODO: make D^2 a score function in module metrics (and thereby get
